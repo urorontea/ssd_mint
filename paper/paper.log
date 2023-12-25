@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2023.5.22)  25 DEC 2023 11:50
+This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2023.5.22)  25 DEC 2023 16:32
  restricted system commands enabled.
  file:line:error style messages enabled.
 **paper.tex
@@ -1215,7 +1215,17 @@ LaTeX Font Info:    Font shape `JY3/HaranoAjiMincho-Regular.otf(0)/b/n' will be
 \tf@toc=\write6
 
 \openout6 = paper.toc
- (./paper.lof)
+ (./paper.lof
+LaTeX Font Info:    Font shape `JT3/HaranoAjiMincho-Regular.otf(0)/b/n' will be
+
+(Font)              scaled to size 9.24713pt on input line 5.
+
+warning  (pdf backend): ignoring duplicate destination with the name 'page.i'
+[1
+
+
+
+])
 \tf@lof=\write7
 
 \openout7 = paper.lof
@@ -1227,16 +1237,7 @@ LaTeX Font Info:    Font shape `JY3/HaranoAjiMincho-Regular.otf(0)/b/n' will be
 \tf@lol=\write9
 
 \openout9 = paper.lol
-LaTeX Font Info:    Font shape `JT3/HaranoAjiMincho-Regular.otf(0)/b/n' will be
 
-(Font)              scaled to size 9.24713pt on input line 9.
-
-warning  (pdf backend): ignoring duplicate destination with the name 'page.i'
-[1
-
-
-
-]
 warning  (pdf backend): ignoring duplicate destination with the name 'page.ii'
 [2]) (./chap1.tex [0
 
@@ -1263,12 +1264,20 @@ warning  (pdf backend): ignoring duplicate destination with the name 'page.2'
 
 ]
 第2章
-(load cache: extra_lmsans12-regular.luc)(load cache: extra_lmmono10-regular.luc)
-[3] [4]
-<chap1/fig/two-scale.pdf, id=216, 567.14886pt x 532.7905pt>
+(load cache: extra_lmsans12-regular.luc)
+
+LaTeX Warning: Reference `FIG' on page 3 undefined on input line 15.
+
+<fig/system.pdf, id=264, 370.5042pt x 110.3322pt>
+File: fig/system.pdf Graphic file (type pdf)
+<use fig/system.pdf>
+Package luatex.def Info: fig/system.pdf  used on input line 18.
+(luatex.def)             Requested size: 455.24411pt x 135.56635pt.
+(load cache: extra_lmmono10-regular.luc) [3<./fig/system.pdf>] [4]
+<chap1/fig/two-scale.pdf, id=300, 567.14886pt x 532.7905pt>
 File: chap1/fig/two-scale.pdf Graphic file (type pdf)
 <use chap1/fig/two-scale.pdf>
-Package luatex.def Info: chap1/fig/two-scale.pdf  used on input line 80.
+Package luatex.def Info: chap1/fig/two-scale.pdf  used on input line 88.
 (luatex.def)             Requested size: 252.94499pt x 237.62352pt.
  [5<./chap1/fig/two-scale.pdf>]
 
@@ -1277,44 +1286,47 @@ Class ltjsbook Warning: deprecated old font command `\gt' used.
 (ltjsbook)              new font selection scheme called NFSS2 with several
 (ltjsbook)              new, combinable font commands. This ltjsbook
 (ltjsbook)              class has defined the old font commands like
-(ltjsbook)              `\gt' only for compatibility on input line 99.
+(ltjsbook)              `\gt' only for compatibility on input line 107.
 
 
-LaTeX Warning: Citation `wavelet-2' on page 6 undefined on input line 99.
+LaTeX Warning: Citation `wavelet-2' on page 6 undefined on input line 107.
 
 File: chap1/fig/two-scale.pdf Graphic file (type pdf)
 <use chap1/fig/two-scale.pdf>
-Package luatex.def Info: chap1/fig/two-scale.pdf  used on input line 117.
+Package luatex.def Info: chap1/fig/two-scale.pdf  used on input line 125.
 (luatex.def)             Requested size: 216.81pt x 203.67381pt.
 
-LaTeX Warning: Reference `tab:scores' on page 6 undefined on input line 146.
+LaTeX Warning: `h' float specifier changed to `ht'.
 
-<chap2/fig/tiger.pdf, id=245, 200.75pt x 40.15pt>
+
+LaTeX Warning: Reference `tab:scores' on page 6 undefined on input line 154.
+
+<chap2/fig/tiger.pdf, id=324, 200.75pt x 40.15pt>
 File: chap2/fig/tiger.pdf Graphic file (type pdf)
 <use chap2/fig/tiger.pdf>
-Package luatex.def Info: chap2/fig/tiger.pdf  used on input line 152.
+Package luatex.def Info: chap2/fig/tiger.pdf  used on input line 160.
 (luatex.def)             Requested size: 455.24411pt x 91.0626pt.
-(load cache: extra_lmroman7-regular.luc)
+[6](load cache: extra_lmroman7-regular.luc)
 LaTeX Font Info:    Font shape `JT3/HaranoAjiMincho-Regular.otf(0)/m/n' will be
 
-(Font)              scaled to size 6.47299pt on input line 159.
+(Font)              scaled to size 6.47299pt on input line 167.
 (load cache: extra_lmroman5-regular.luc)
 LaTeX Font Info:    Font shape `JT3/HaranoAjiMincho-Regular.otf(0)/m/n' will be
 
-(Font)              scaled to size 4.62357pt on input line 159.
-[6]) (./chap3.tex [7<./chap2/fig/tiger.pdf>] [8]
+(Font)              scaled to size 4.62357pt on input line 167.
+ [7<./chap2/fig/tiger.pdf>]) (./chap3.tex [8]
 第3章
-) (./chap4.tex [9
+[9
 
-] [10
-
-]
+]) (./chap4.tex [10]
 第4章
-) (./chap5.tex [11] [12
+[11
 
-]
+]) (./chap5.tex [12]
 第5章
-) (./bibliography.tex [13] [14
+) (./bibliography.tex [13
+
+] [14
 
 ] [15]) [16] (./appendix.tex
 付録A
@@ -1368,18 +1380,18 @@ LaTeX Warning: There were undefined references.
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `paper.out' has not changed.
-(rerunfilecheck)             Checksum: 84564A634885AD415564EF52A1E95445;3322.
+(rerunfilecheck)             Checksum: E0833EF5D69EA081DF7E66380DB5DFED;5194.
 )
 
 Here is how much of LuaTeX's memory you used:
- 20799 strings out of 477805
- 597253,953878 words of node,token memory allocated
- 41086 words of node memory still in use:
-   10 hlist, 2 vlist, 5 rule, 2 glue, 510 kern, 1 glyph, 14067 attribute, 1583 g
-lue_spec, 740 attribute_list, 1 write, 191 user_defined nodes
-   avail lists: 1:54,2:130005,3:770,4:9072,5:2411,6:109,7:8147,8:68,9:9359,10:49
+ 20839 strings out of 477805
+ 597251,953878 words of node,token memory allocated
+ 43406 words of node memory still in use:
+   10 hlist, 2 vlist, 5 rule, 2 glue, 512 kern, 1 glyph, 14490 attribute, 1851 g
+lue_spec, 764 attribute_list, 1 write, 210 user_defined nodes
+   avail lists: 1:54,2:130005,3:770,4:9072,5:2411,6:127,7:7593,8:82,9:9359,10:49
 ,11:439
- 40364 multiletter control sequences out of 65536+600000
+ 40384 multiletter control sequences out of 65536+600000
  129 fonts using 165236047 bytes
  115i,10n,131p,2181b,1089s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf/fonts/opentype/public/lm/lmmono9-regular.otf></usr/share/texmf
@@ -1399,10 +1411,10 @@ m/cmmib10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr1
 0.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></u
 sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/latxfont/lcircle1.pfb>
-Output written on paper.pdf (26 pages, 333586 bytes).
+Output written on paper.pdf (26 pages, 392972 bytes).
 
-PDF statistics: 476 PDF objects out of 1000 (max. 8388607)
- 397 compressed objects within 4 object streams
- 116 named destinations out of 1000 (max. 131072)
- 209 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 563 PDF objects out of 1000 (max. 8388607)
+ 476 compressed objects within 5 object streams
+ 130 named destinations out of 1000 (max. 131072)
+ 313 words of extra memory for PDF output out of 10000 (max. 100000000)
 

@@ -10,3 +10,40 @@
 	\item 作成したモデルの使い方
 	\item 出力されるものについて
 \end{itemize}
+
+\section{YOLOとは}
+YOLOの説明 \\
+YOLOとはYou Only Look Onceの略で，人間のように一目見るだけで物体検出ができることを指している．データセットを作成し学習させることで，任意の物体のみ検出させることが可能である．\\
+YOLOv8の説明   \\
+YOLOv8はYOLOシリーズの最新バージョンであり，ディープラーニングとコンピュータビジョンの最先端の進歩に基づいており，速度と精度の麺で比類のない性能を提供している．
+%https://docs.ultralytics.com/ja/ 参照
+
+\section{学習の実行}
+学習時にモデルの性能がそれまで以上に向上しなくなると学習が強制終了するため，エポック数という学習用データを何回繰り返して学習させるのかを表す数を１０万回程度に設定して学習を進めた．強制終了した際のモデルが使用したデータセットで作れる最高の性能のモデルとなる．
+\section{性能の評価}
+\subsection{分類モデルの評価方法}
+１７種類の各車両の画像をそれぞれ１０枚ずつ集めて画像の分類を行った．
+分類モデルの予測した車両タイプと正解の車両タイプがどの程度あっているのか確かめることで性能の評価を行った．
+
+\subsection{識別モデルの評価方法}
+どうしよう
+
+\section{作成したモデルの使い方}
+識別モデルと分類モデルで使い方はほとんど同じ
+作成したモデルをロードして，モデルに画像または動画を渡すと識別または分類をすることができる\\
+識別
+\begin{verbatimx}
+$from ultralytics import YOLO
+ model = YOLO("作成した識別モデルのパス")
+ results = model.predict("画像のパス", save = True)
+$
+\end{verbatimx}
+
+分類
+\begin{verbatimx}
+$from ultralytics import YOLO
+ model = YOLO("作成した分類モデルのパス")
+ results = model("画像のパス", save = True)
+$
+\end{verbatimx}
+\section{出力されるもの}
