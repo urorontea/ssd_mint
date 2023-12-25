@@ -1,0 +1,446 @@
+% TEX STUDIO MAGIC-COMMAND
+% !TeX document-id = {21ffa6e2-6c8f-4532-897c-386dc477f19a}
+% !TeX root = presen.tex
+% !TeX encoding = utf8
+% !TeX TXS-program:compile = lualatex  -synctex=1 -interaction=nonstopmode -halt-on-error %.tex
+% !TeX TXS-program:quick = txs:///compile | txs:///view-pdf-internal --embedded
+%%%-------------------------------------------------------------------------
+%%% PD3プレゼンプレート
+%%% 作成： 金沢工大・情報工学科・鷹合研究室
+%%%-------------------------------------------------------------------------
+
+\input{tkg_slide.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\lstlistingname}{リスト}
+
+% 図・表・リストのcaption番号を表示するか/表示しないかを選ぶ
+\iffalse
+\usepackage[hang,bf,labelformat = empty,labelsep=none,figurename=Y, tablename=X, singlelinecheck=off,justification=centering,labelfont=bf,textfont=bf]{caption} 
+\else
+\usepackage[hang,bf,labelsep=colon,figurename=図, tablename=表, singlelinecheck=off,justification=centering,labelfont=bf,textfont=bf]{caption} 
+\fi
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+% タイトルスライドのロゴ画像
+% フッタ（左）
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  フッタ（左側）
+
+  \MyLogo{\includegraphics[height=1.1cm]{fig/logo/kit_landscape1.pdf}}
+% \MyLogo{--- 鷹合研究室 ---} % トップスライドの下部中央
+
+  \lfoot{\includegraphics[height=.75cm]{fig/logo/kit_landscape1.pdf}}
+% \lfoot{\small 鷹合研}        % フッタ（左）
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+% フッタ（中央，右）
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\cfoot{\thepage/\pageref{LastPage}} 
+\cfoot{\thepage/\pageref{LastPage}}
+\rfoot{\small 1EP999} % テーマ番号
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ページ番号を1からにしたら，トップスライドの下部のロゴがうまくいかなくなったのでこうしてみた
+\fancypagestyle{myfirstpage}
+{
+  \fancyhf{}
+   \fancyfoot[C]{\includegraphics[height=1.1cm]{fig/logo/kit_landscape1.pdf}}
+%  \fancyfoot[C]{鷹合研究室}
+   \renewcommand{\headrulewidth}{0pt} % removes horizontal header line
+}
+%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+% ここから下を書き換えて下さい 
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title{
+{\normalsize 令和５年度 プロジェクトデザインIII}\\\vspace{10mm}
+{\LARGE 機械学習を用いた電車の車両タイプの\\判別システムの開発}
+}
+\date{令和5年9月19日}
+\author{
+4EP1-68\\ \ruby{野崎}{のざき}\ruby{悠渡}{ゆうと} \and
+4EP4-75\\ \ruby{田村}{たむら}\ruby{優祐}{ゆうすけ} 
+}
+
+
+
+\usepackage{subcaption}
+\usepackage{comment}
+
+
+\begin{document}
+\maketitle % タイトルページ
+\addtocounter{page}{1}
+\thispagestyle{myfirstpage}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{comment}
+ \foilhead{\Large 1. はじめに -- 背景と目的 -- \\ 建前編}
+\begin{itemize}
+ \item 現在，何が問題か（あるいは将来，何が問題になるか）を書く．\\
+ 世の中には似たようなものがたくさん存在している（動物や車，植物など）
+ 詳しく知ろうとしたときに，今見ているものが何なのか判別するまでに大きな労力が必要とされている．
+ \item その問題に対処するためには，どのようなものがあればよいか（あるいは取り組みが必要）かを書く．\\
+ 知りたいと思っているモノの写真から，それが何なのか判別できるシステムがあればこれまでよりも簡単に知ることができる．
+ \item 本プロジェクトでは何を使ってどんなものを作っているかを書く．\\
+ 本プロジェクトではYOLOv8を用いて，モノの識別をするシステムの開発を行う
+\end{itemize}
+\newpage
+\end{comment}
+\foilhead {\Large 1. 役割分担}
+\begin{description}
+	\item [田村] UIの作成~\\
+	各プラットフォームで動作できるか検証し，UIを作る．\\
+	現在,webでの実装を試みている．
+	
+	\item [野崎] モデルの作成~\\
+	画像を集めて学習させ，判断するためのモデルを作成する．
+	
+\end{description}
+
+
+
+\foilhead{\Large 1. はじめに--背景と目的-- \\ }
+\begin{itemize}
+	\item 電車は種類が多く，何系か判断することが難しい．
+	\item この問題を解決するためには，画像から分類や識別ができる\\システムがあれば良い．
+	\item YOLOを使用して，車両タイプを判断するものを開発する．
+\end{itemize}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%\
+\foilhead{\Large 発表の流れ}\
+\begin{enumerate}[itemsep=0.25\zh]
+	\item \textcolor{gray}{はじめに -- 背景と目的 --}
+	\item 概要(UI)
+	\item システム概要
+	\item 評価・考察
+	\item むすび
+    %\item \url{http://www.fujitsu.co.jp}
+\end{enumerate}
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\foilhead {\Large 2. UIの概要}
+\begin{minipage}[]{0.55\textwidth}\vspace{0pt}
+\begin{figure}
+	\centering
+	\includegraphics[width=1.0\linewidth]{fig/tamura/gaiyou}
+	\caption{概要図}
+	\label{fig:gaiyou}
+\end{figure}
+\end{minipage}
+\hfill
+\begin{minipage}[]{0.45\textwidth}\vspace{0pt}
+	\begin{enumerate}
+		\item ユーザがブラウザに画像を\\アップロード
+		\item プレビューを画面に追加
+		\item  ユーザが画像を送信する\\ボタンを押す
+		\item サーバに画像をアップロード
+		\item サーバで画像を判断する\\モデルを用いて処理\\
+		結果をブラウザに送信,表示\\
+	\end{enumerate}
+\end{minipage}
+\newpage
+
+\foilhead {\Large 2. 1 UIの概要}
+\begin{figure}
+	\centering
+	\includegraphics[width=0.6\linewidth]{fig/tamura/gaiyou_point}
+	\caption{今回作成した部分}
+	\label{fig:gaiyoupoint}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\foilhead {\Large 2.2 UIデモ }
+
+\begin{itemize}
+	\item 送信ボタンはあるが，サーバを用意していない状態で押すとエラーが発生するためダミーのボタンを置いている．
+	\item 遷移後の画面も動的サーバから画像，テキストを貰って表示するコードは準備しているが，サーバを用意していないため静的なサイトで遷移後の動作イメージをしやすくしている．\\
+		\href{run:./fig/tamura/web_demo.mp4}{\textcolor[hsb]{0.0, 0.7, 1.0}{\faPlayCircle[regular]}}\\
+\end{itemize}
+
+
+
+
+\foilhead {\Large 2.3 スマホ使用時のイメージ}
+\begin{itemize}
+	\item 	ファイル選択肢の動作
+	\item スマホでも手軽に画像をアップロードすることができる
+\end{itemize}
+	（注）cssを反映しない簡易表示になっている．\\
+		\href{run:./fig/tamura/Phone_demo.mp4}{\textcolor[hsb]{0.0, 0.7, 1.0}{\faPlayCircle[regular]}}\\
+
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\foilhead{\Large 2. 4 むすび(UI)}
+\begin{itemize}
+	\item 今回はブラウザの部分を作成した．
+	\item 今後はサーバ側の実装をしていくとともに，ブラウザのデザイン面での改良を勧めていく．
+\end{itemize}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\foilhead{\Large 3. 1 システム概要}
+
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[scale = 1.3]{fig/system_2.drawio.pdf}
+\caption{システム概要図}
+\end{center}
+\end{figure}
+\newpage
+
+%%%%%%%%%%%%%%% minipage の利用例 %%%%%%%%%%%%%%%%%%%
+%------ 左側
+%\begin{minipage}[t]{0.4\textwidth}\vspace{0pt}
+{\Large YOLOとは}
+\begin{description}
+	\item YOLOはリアルタイムオブジェクト検出アルゴリズムである．
+	\item You Only Look Onceの略で，人間のようにひと目見ただけで物体検出ができる．
+	\item YOLOv5は，物体の識別ができる．
+	\item YOLOv8では，物体の識別と分類，セグメンテーションができる．
+	\newpage
+\end{description}
+
+\begin{figure}
+		\begin{center}
+			\includegraphics[width=200mm]{fig/521_0.jpg}
+		\end{center}
+		\caption{識別}
+		\label{fig:one}
+\end{figure}
+
+\begin{figure}
+		\begin{center}
+			\includegraphics[width=200mm]{fig/521_2.png}
+		\end{center}
+		\caption{分類}
+		\label{fig:two}
+\end{figure}
+
+\begin{figure}
+		\begin{center}
+			\includegraphics[width=200mm]{fig/521_seg.png}
+		\end{center}
+		\caption{セグメンテーション}
+		\label{fig:three}
+\end{figure}
+
+
+%\end{minipage}
+%------ 右側
+%\begin{minipage}[t]{0.6\textwidth}\vspace{0pt}
+%\begin{center}
+%\includegraphics[keepaspectratio, width=.9\linewidth,trim={100mm 0mm 0mm 15mm},clip]{fig/system.pdf}
+%\end{center}
+%\end{minipage}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\foilhead{\Large 3.2 現時点までで行ったこと}
+\begin{description}
+	\item[画像収集の簡略化] ~\\
+	YoutubeのURLと車両タイプを指定することで，YouTubeの動画から車両が写っている場面を保存する．
+	\href{run:./fig/demo.mp4}{\textcolor[hsb]{0.0, 0.7, 1.0}{\faPlayCircle[regular]}}
+	
+	\item[モデルの学習]~\\
+	収集した画像からデータセットを作成して，モデルの学習を行った．
+	\begin{itemize}
+		%\item 電車と新幹線を識別するモデル(YOLOv5)
+		\item ３種類の似ている電車を識別するモデル(YOLOv5)
+		\item 新幹線の各車両を分類するモデル(YOLOv8)
+	\end{itemize}
+\end{description}
+\newpage
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\foilhead{\Large 3. 評価・考察}
+%\begin{itemize}
+%	\item このスライドでは何をどのような方法で評価したかを明記し，結果をグラフで示すこと（表よりグラフのほうが良い）．
+%	\item %システムが動いている様子がわかるようにデモ映像を流すこと（デモ映像には字幕をつけたりするなどしてわかりやすくすること）．
+%	\item 評価の際は，改良の前後でどうなったかを示す．あるいは他の手法などと比較してどうなのかを示すことも必要．
+%	\item 結果について考察も示すこと．
+%\end{itemize}
+%\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\foilhead{\Large 4.1 評価・考察 --識別モデル--}
+\begin{description}
+	\item [似ている電車の識別] ~\\
+	\item 画像が300枚と4000枚のデータセットで，３種類の似ている電車の識別モデルの作成を行った．
+	それぞれ学習した結果を使用してテストデータを識別した．
+	\href{run:./fig/hikaku/hikaku_demo.mp4}{\textcolor[hsb]{0.0, 0.7, 1.0}{\faPlayCircle[regular]}}\\
+	\newpage
+	
+	\item 識別結果からデータセットを増やしていけば，\\似ている電車でも識別することが可能だと考えられる．
+	\item しかし4000枚のデータセットでの学習時間は10時間以上かかっており，\\識別したい電車の種類を増やしていくと学習時間が増えてしまう．
+	\item YOLOv8は処理速度が早く精度が高いという特徴があるので，これ以上の車両タイプを判断する場合にはYOLOv8を使う必要があると考えられる．
+\end{description}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\foilhead{\Large 4. 2 評価・考察 --分類モデル--}
+
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.6\linewidth]{fig/confusion_matrix}
+	\caption{学習の評価}
+	\label{fig:confusionmatrix}
+\end{figure}
+
+\newpage
+
+\begin{description}
+	%\item アノテーションをする際に，バウンディングボックスの中身だけにすると不具合がおきたこと\\
+	%ボックスの中身だけで学習させる際に何故かエポック数が１００回になっていた．
+	%うまくいかないと思っていたがシンプルに学習回数が足りなかった？\\
+	%背景画像の有無で物体認識の精度が悪くなったので，データセットの画像には背景画像が必要なのではないのかな
+	
+	%\item 電車と新幹線の識別モデルの作成→電車は百種類近くあるのでうまく行かなかった
+	%\item 似ている電車を識別モデルを作成する際に，データセットの画像を増やすだけではうまくいかなかったこと\\
+	%\home\nozaki\ML\ultralytics\yolov5\runs\trian\exp21\ に２２５系，２２７系，５２１系の３種類の識別モデルのデータセットがある
+	
+	\item [新幹線の分類モデルの評価]~\\
+	E7系以外の新幹線はうまく分類できている．\\
+	テストデータの分類結果を確認すると，誤分類していたE7系は光を反射して白くなっている面積が他のE7系の画像よりも大きかった．
+	\item [新幹線の分類モデルの考察]~\\
+	新幹線は形は似ているが\\色が特徴的で分類がしやすいと考えられる．\\
+	光の反射などで車体の色が変わってしまう場合の対策を考える必要がある．\\
+	
+\end{description}
+\newpage
+
+
+\begin{figure}[htbp]
+	\begin{minipage}[b]{.5\linewidth}
+		\includegraphics[width=3in]{fig/E7/E7_0000.png}
+		\subcaption{元画像}\label{PIC1}
+	\end{minipage}%
+	\begin{minipage}[b]{.5\linewidth}
+		\includegraphics[width=3in]{fig/E7/E7_0000-1.png}
+		\subcaption{拡大1}\label{PIC2}
+	\end{minipage}%
+	\\ % 改行
+	\begin{minipage}[b]{.5\linewidth}
+		\includegraphics[width=3in]{fig/E7/E7_0000-2.png}
+		\subcaption{拡大2}\label{PIC3.jpg}
+	\end{minipage}%
+	\begin{minipage}[b]{.5\linewidth}
+		\includegraphics[width=3in]{fig/E7/E7_0000-3.png}
+		\subcaption{拡大3}\label{PIC4}
+	\end{minipage}%
+
+	\caption{画像を拡大することによる分類への影響}\label{DENSHA}
+\end{figure}
+
+
+
+\newpage
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\foilhead{\Large 5. むすび}\label{MUSUBI}
+\begin{itemize}
+	%\item 何のために何を作成したかを改めて書く．
+	%\item 現時点での評価結果，考察を簡潔に書く．
+	%\item 来月の報告までに何をするか計画を書く．
+	\item 電車の車両型式を簡単に知るために分類モデルを作成した．
+	\item 新幹線については，分類できるようになった．
+	\item 今後は，新幹線以外の電車の分類モデルを作成する．
+\end{itemize}
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%ここからおまけ
+
+%\href{run:./fig/demo.mp4}{\textcolor[hsb]{0.0, 0.7, 1.0}{\faPlayCircle[regular]}} PDFファイルと同じフォルダにdemo002.mp4があれば再生できる．
+
+
+%\href{https://youtu.be/74agBeJxdFI}{\textcolor{red}{\faYoutube}} YOUTUBEで再生
+
+%\textcolor{red}{\faYoutube}\href{https://youtu.be/74agBeJxdFI}{~\url{https://youtu.be/74agBeJxdFI}}
+
+%\lstinputlisting[language=c, caption=test2.c]{src/hello.c}
+%\lstinputlisting[language=python, caption=test2.py]{src/world.py}
+
+% 色定義
+%\definecolor{mygray}{gray}{0.95}
+%\definecolor{mypink1}{hsb}{0.0, 0.188, 1.0}
+%UNIXv1におけるタスク切り替えが行われるタイミング
+
+%%%%%%%%%%%%%%%%%%%%%%%%55
+%\colorbox{mygray}{%\begin{minipage}{\textwidth}
+%① みなさん
+%\end{minipage}}
+
+%\colorbox{mygray}{\begin{minipage}{\textwidth}
+%② こんにちは 
+%\begin{itemize}
+%\item まんじゅう
+%\item りんご
+%\end{itemize}
+%\end{minipage}}
+
+%\colorbox{mypink1}{\begin{minipage}{\textwidth}
+%③ お元気で\\
+%またあうひまで
+%\end{minipage}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\begin{verbatimx}
+%$ gcc test.c \return
+ %(*_*)
+ %(*_*)
+%        \textcolor{red}{ここで\keytop{CTL}+\keytop{C}を押す}
+%\end{verbatimx}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\newpage
+%~\\
+%\noindent\textbf{謝辞}~~本研究はJSPS科研費21Kxxxxxxxxx助成を受けた
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 参考文献 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{comment}
+	
+
+\begin{thebibliography}{99}
+\small
+\setlength\itemsep{-0.5\zh}%
+\bibitem{book1} K.Thompson，D.M.Ritchie，\textbf{"The UNIX Time-Sharing System"}，Communications of the ACM, Vol.17, No.7, 1974.
+\bibitem{book4} Digital Equipment Corporation: \textbf{PDP11/20-15-r20 Processor Handbook}, 1971.
+\bibitem{Preliminary} T.R. Bashkow, \textbf{"Study of UNIX: Preliminary Release of Unix Implementation Document"}, \url{ http://minnie.tuhs.org/Archive/Distributions/Research/Dennis_v1/PreliminaryUnixImplementationDocument_Jun72.pdf}, Jun. 1972.
+%\bibitem{book2} K. Thompson，D.M. Ritchie，"UNIX PROGRAMER'S MANUAL"，Nov. 1971.
+%\bibitem{web0} Warren Toomey, "The Unix Heritage Society", \url{https://www.tuhs.org/}, Dec. 2015.
+\bibitem{simh} simh, \textbf{"The Computer History Simulation Project"}, \url{https://github.com/simh/simh}, 参照Mar.14, 2022.
+\bibitem{ref0} W.Toomey, \textbf{"First Edition Unix: Its Creation and Restoration"}, IEEE Annals of the History of Computing, 32 (3), pp.74-82, 2010.
+%\bibitem{web1} Jim Huang, "Restoration of 1st Edition UNIX from Bell Laboratories", \url{https://github.com/jserv/unix-v1}, 参照Mar.14, 2022.
+\bibitem{book3} Diomidis.Spinellis，\textbf{"unix-history-repo"},  \url{https://github.com/dspinellis/unix-history-repo/tree/Research-V1}, 参照Mar.14, 2022.
+\bibitem{book5} Digital Equipment Copporation: \textbf{PDP11 Peripherals HandBook}, 1972.
+%\bibitem{book6} \url{https://github.com/No000/unix-v1-utils}
+%\bibitem{book7} \url{https://github.com/No000/UnixV1-SystemCallTracer}
+%\end{thebibliography}
+\end{comment}
+
+%\begin{comment}
+\begin{thebibliography}{99}
+\small
+\setlength\itemsep{-0.5\zh}
+\bibitem{book1} ultralytics,  \textbf{"yolov5"}, \url{https://github.com/ultralytics/yolov5},2023.9.18.
+\bibitem{book1} ultralytics,  \textbf{"yolov8"}, \url{https://github.com/ultralytics/ultralytics}, 2023.9.18.
+\end{thebibliography}
+%\end{comment}
+\end{document} 
+
+
+
+
+
