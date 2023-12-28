@@ -24,9 +24,28 @@ YOLOv8はYOLOシリーズの最新バージョンであり，ディープラー�
 \subsection{分類モデルの評価方法}
 １７種類の各車両の画像をそれぞれ１０枚ずつ集めて画像の分類を行った．
 分類モデルの予測した車両タイプと正解の車両タイプがどの程度あっているのか確かめることで性能の評価を行った．
-
+\subsection{分類モデルの評価}
+%分類モデルの評価を図\ref{CLS}に示す
+\begin{figure}	
+	\centering
+	\includegraphics[width=\linewidth]{fig/hana.pdf}
+	\caption{分類モデルの評価}\label{CLS}
+\end{figure}
+分類モデルの評価を図\ref{CLS}に示す．
+縦軸が予測した車両タイプ，横軸が正解の車両タイプとするグラフである．
 \subsection{識別モデルの評価方法}
-どうしよう
+作成した識別モデルは，次の指標から評価をする．\\
+%https://qiita.com/panchoooon/items/2c972ede2bc883597a87
+
+\begin{itemize}
+	\item mAP(mean Average Precision)
+	\item IoU(Intersection over Union)
+\end{itemize}
+\subsubsection{mAP}
+%mAPの説明
+
+\subsubsection{IoU}
+IoUの説明
 
 \section{作成したモデルの使い方}
 識別モデルと分類モデルで使い方はほとんど同じ

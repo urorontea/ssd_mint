@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2023.5.22)  25 DEC 2023 16:32
+This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2023.5.22)  28 DEC 2023 11:24
  restricted system commands enabled.
  file:line:error style messages enabled.
 **paper.tex
@@ -989,46 +989,39 @@ Package: fancyvrb 2021/12/21 4.1b verbatim text (tvz,hv)
 Package: lltjp-tascmac 2020/12/24 Patch to (t)ascmac for LuaTeX-ja
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 warning  (map file): entry for 'ascgrp' already exists, duplicates ignored
-) (./paper.aux
-
-LaTeX Warning: Label `QWERT' multiply defined.
-
-
-LaTeX Warning: Label `fig-two-scale.pdf' multiply defined.
-
-)
+) (./paper.aux)
 \openout1 = paper.aux
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 20.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 21.
 LaTeX Font Info:    Trying loading font information for TS1+cmr on input line 2
-0.
+1.
  (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for JY3/mc/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for JT3/mc/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-Package hyperref Info: Link coloring ON on input line 20.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for JY3/mc/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for JT3/mc/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+Package hyperref Info: Link coloring ON on input line 21.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
@@ -1041,9 +1034,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count333
 )
-LaTeX Info: Redefining \ref on input line 20.
-LaTeX Info: Redefining \pageref on input line 20.
-LaTeX Info: Redefining \nameref on input line 20.
+LaTeX Info: Redefining \ref on input line 21.
+LaTeX Info: Redefining \pageref on input line 21.
+LaTeX Info: Redefining \nameref on input line 21.
 
 (./paper.out) (./paper.out)
 \@outlinefile=\write5
@@ -1194,8 +1187,15 @@ LaTeX Font Info:    Font shape `JY3/HaranoAjiMincho-Regular.otf(0)/b/n' will be
 LaTeX Font Info:    Font shape `JY3/HaranoAjiMincho-Regular.otf(0)/b/n' will be
 
 (Font)              scaled to size 5.54828pt on input line 15.
- [2]) (./toc.tex
-(./paper.toc
+(load cache: extra_lmroman12-bold.luc)
+LaTeX Font Info:    Font shape `JT3/HaranoAjiMincho-Regular.otf(0)/b/n' will be
+
+(Font)              scaled to size 11.09656pt on input line 46.
+
+
+LaTeX Warning: Reference `fugocho' on page ii undefined on input line 46.
+
+[2]) (./toc.tex (./paper.toc
 LaTeX Font Info:    Font shape `JY3/HaranoAjiMincho-Regular.otf(0)/m/n' will be
 
 (Font)              scaled to size 6.47299pt on input line 1.
@@ -1215,17 +1215,7 @@ LaTeX Font Info:    Font shape `JY3/HaranoAjiMincho-Regular.otf(0)/b/n' will be
 \tf@toc=\write6
 
 \openout6 = paper.toc
- (./paper.lof
-LaTeX Font Info:    Font shape `JT3/HaranoAjiMincho-Regular.otf(0)/b/n' will be
-
-(Font)              scaled to size 9.24713pt on input line 5.
-
-warning  (pdf backend): ignoring duplicate destination with the name 'page.i'
-[1
-
-
-
-])
+ (./paper.lof)
 \tf@lof=\write7
 
 \openout7 = paper.lof
@@ -1233,7 +1223,16 @@ warning  (pdf backend): ignoring duplicate destination with the name 'page.i'
 \tf@lot=\write8
 
 \openout8 = paper.lot
- (./paper.lol)
+LaTeX Font Info:    Font shape `JT3/HaranoAjiMincho-Regular.otf(0)/b/n' will be
+
+(Font)              scaled to size 9.24713pt on input line 8.
+
+warning  (pdf backend): ignoring duplicate destination with the name 'page.i'
+[1
+
+
+
+] (./paper.lol)
 \tf@lol=\write9
 
 \openout9 = paper.lol
@@ -1265,70 +1264,32 @@ warning  (pdf backend): ignoring duplicate destination with the name 'page.2'
 ]
 第2章
 (load cache: extra_lmsans12-regular.luc)
-
-LaTeX Warning: Reference `FIG' on page 3 undefined on input line 15.
-
-<fig/system.pdf, id=264, 370.5042pt x 110.3322pt>
+<fig/system.pdf, id=237, 370.5042pt x 110.3322pt>
 File: fig/system.pdf Graphic file (type pdf)
 <use fig/system.pdf>
-Package luatex.def Info: fig/system.pdf  used on input line 18.
+Package luatex.def Info: fig/system.pdf  used on input line 37.
 (luatex.def)             Requested size: 455.24411pt x 135.56635pt.
-(load cache: extra_lmmono10-regular.luc) [3<./fig/system.pdf>] [4]
-<chap1/fig/two-scale.pdf, id=300, 567.14886pt x 532.7905pt>
-File: chap1/fig/two-scale.pdf Graphic file (type pdf)
-<use chap1/fig/two-scale.pdf>
-Package luatex.def Info: chap1/fig/two-scale.pdf  used on input line 88.
-(luatex.def)             Requested size: 252.94499pt x 237.62352pt.
- [5<./chap1/fig/two-scale.pdf>]
-
-Class ltjsbook Warning: deprecated old font command `\gt' used.
-(ltjsbook)              You should note, that since 1994 LaTeX2e provides a
-(ltjsbook)              new font selection scheme called NFSS2 with several
-(ltjsbook)              new, combinable font commands. This ltjsbook
-(ltjsbook)              class has defined the old font commands like
-(ltjsbook)              `\gt' only for compatibility on input line 107.
-
-
-LaTeX Warning: Citation `wavelet-2' on page 6 undefined on input line 107.
-
-File: chap1/fig/two-scale.pdf Graphic file (type pdf)
-<use chap1/fig/two-scale.pdf>
-Package luatex.def Info: chap1/fig/two-scale.pdf  used on input line 125.
-(luatex.def)             Requested size: 216.81pt x 203.67381pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: Reference `tab:scores' on page 6 undefined on input line 154.
-
-<chap2/fig/tiger.pdf, id=324, 200.75pt x 40.15pt>
-File: chap2/fig/tiger.pdf Graphic file (type pdf)
-<use chap2/fig/tiger.pdf>
-Package luatex.def Info: chap2/fig/tiger.pdf  used on input line 160.
-(luatex.def)             Requested size: 455.24411pt x 91.0626pt.
-[6](load cache: extra_lmroman7-regular.luc)
-LaTeX Font Info:    Font shape `JT3/HaranoAjiMincho-Regular.otf(0)/m/n' will be
-
-(Font)              scaled to size 6.47299pt on input line 167.
-(load cache: extra_lmroman5-regular.luc)
-LaTeX Font Info:    Font shape `JT3/HaranoAjiMincho-Regular.otf(0)/m/n' will be
-
-(Font)              scaled to size 4.62357pt on input line 167.
- [7<./chap2/fig/tiger.pdf>]) (./chap3.tex [8]
+) (./chap3.tex [3] [4<./fig/system.pdf>]
 第3章
-[9
+[5
 
-]) (./chap4.tex [10]
+]) (./chap4.tex [6]
 第4章
-[11
+<fig/hana.pdf, id=275, 845.04684pt x 597.50787pt>
+File: fig/hana.pdf Graphic file (type pdf)
+<use fig/hana.pdf>
+Package luatex.def Info: fig/hana.pdf  used on input line 31.
+(luatex.def)             Requested size: 455.24411pt x 321.89272pt.
+[7
 
-]) (./chap5.tex [12]
+](load cache: extra_lmsans10-regular.luc)(load cache: extra_lmmono10-regular.luc
+) [8<./fig/hana.pdf>]) (./chap5.tex [9] [10
+
+]
 第5章
-) (./bibliography.tex [13
+) (./bibliography.tex [11] [12
 
-] [14
-
-] [15]) [16] (./appendix.tex
+] [13]) [14] (./appendix.tex
 付録A
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
@@ -1365,56 +1326,47 @@ File: lstlang2.sty 2020/03/24 1.8d listings language file
 Removing  `ltj.process_input_buffer' from `process_input_buffer'.
 Inserting `ltj.listings_unicode' at position 1 in `process_input_buffer'.
 Inserting `ltj.process_input_buffer' at position 2 in `process_input_buffer'. [
-17
+15
 
 ]
-Removing  `ltj.listings_unicode' from `process_input_buffer'. [18]
+Removing  `ltj.listings_unicode' from `process_input_buffer'. [16]
 付録B
-) [19
+) [17
 
 ] (./paper.aux)
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: There were multiply-defined labels.
-
 Package rerunfilecheck Info: File `paper.out' has not changed.
-(rerunfilecheck)             Checksum: E0833EF5D69EA081DF7E66380DB5DFED;5194.
+(rerunfilecheck)             Checksum: 965158893CD83EB8B0978126BC989B35;4621.
 )
 
 Here is how much of LuaTeX's memory you used:
- 20839 strings out of 477805
- 597251,953878 words of node,token memory allocated
- 43406 words of node memory still in use:
-   10 hlist, 2 vlist, 5 rule, 2 glue, 512 kern, 1 glyph, 14490 attribute, 1851 g
-lue_spec, 764 attribute_list, 1 write, 210 user_defined nodes
-   avail lists: 1:54,2:130005,3:770,4:9072,5:2411,6:127,7:7593,8:82,9:9359,10:49
+ 20795 strings out of 477805
+ 597267,953878 words of node,token memory allocated
+ 37804 words of node memory still in use:
+   10 hlist, 2 vlist, 5 rule, 2 glue, 485 kern, 1 glyph, 12962 attribute, 1438 g
+lue_spec, 681 attribute_list, 1 write, 165 user_defined nodes
+   avail lists: 1:52,2:130005,3:770,4:9072,5:2411,6:116,7:7593,8:75,9:9359,10:48
 ,11:439
- 40384 multiletter control sequences out of 65536+600000
+ 40366 multiletter control sequences out of 65536+600000
  129 fonts using 165236047 bytes
- 115i,10n,131p,2181b,1089s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 115i,9n,131p,1817b,1089s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf/fonts/opentype/public/lm/lmmono9-regular.otf></usr/share/texmf
 /fonts/opentype/public/lm/lmmono10-regular.otf></usr/share/texmf/fonts/opentype/
-public/lm/lmsans12-regular.otf></usr/share/texmf/fonts/opentype/public/lm/lmsans
-17-regular.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman10-bold.otf></u
-sr/share/texmf/fonts/opentype/public/lm/lmroman10-regular.otf></usr/share/texmf/
-fonts/opentype/public/lm/lmroman17-regular.otf></usr/share/texlive/texmf-dist/fo
-nts/opentype/public/haranoaji/HaranoAjiGothic-Regular.otf></usr/share/texmf/font
-s/opentype/public/lm/lmroman12-regular.otf></usr/share/texlive/texmf-dist/fonts/
-opentype/public/haranoaji/HaranoAjiMincho-Regular.otf></usr/share/texlive/texmf-
-dist/fonts/type1/public/ascmac/ascgrp.pfb></usr/share/texlive/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmmib10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr1
-0.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></u
-sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/latxfont/lcircle1.pfb>
-Output written on paper.pdf (26 pages, 392972 bytes).
+public/lm/lmsans10-regular.otf></usr/share/texmf/fonts/opentype/public/lm/lmsans
+12-regular.otf></usr/share/texmf/fonts/opentype/public/lm/lmsans17-regular.otf><
+/usr/share/texmf/fonts/opentype/public/lm/lmroman10-bold.otf></usr/share/texmf/f
+onts/opentype/public/lm/lmroman12-bold.otf></usr/share/texmf/fonts/opentype/publ
+ic/lm/lmroman10-regular.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman17
+-regular.otf></usr/share/texlive/texmf-dist/fonts/opentype/public/haranoaji/Hara
+noAjiGothic-Regular.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman12-reg
+ular.otf></usr/share/texlive/texmf-dist/fonts/opentype/public/haranoaji/HaranoAj
+iMincho-Regular.otf>
+Output written on paper.pdf (24 pages, 487967 bytes).
 
-PDF statistics: 563 PDF objects out of 1000 (max. 8388607)
- 476 compressed objects within 5 object streams
- 130 named destinations out of 1000 (max. 131072)
- 313 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 469 PDF objects out of 1000 (max. 8388607)
+ 394 compressed objects within 4 object streams
+ 116 named destinations out of 1000 (max. 131072)
+ 281 words of extra memory for PDF output out of 10000 (max. 100000000)
 
