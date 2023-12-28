@@ -1,1 +1,4 @@
-#ssd_mint
+abstruct.pdf 
+paper.pdf
+をたまーに確認してくれ
+
