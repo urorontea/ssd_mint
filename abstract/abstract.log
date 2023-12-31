@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2023.5.22)  24 DEC 2023 17:49
+This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2023.5.22)  31 DEC 2023 12:35
  restricted system commands enabled.
  file:line:error style messages enabled.
 **abstract.tex
@@ -990,7 +990,7 @@ Here is how much of LuaTeX's memory you used:
  22531 words of node memory still in use:
    8 hlist, 1 vlist, 4 rule, 2 glue, 256 kern, 1 glyph, 7604 attribute, 900 glue
 _spec, 408 attribute_list, 1 write, 130 user_defined nodes
-   avail lists: 1:37,2:174511,3:869,4:602,5:77,6:146,7:9783,8:28,9:4686,10:25,11
+   avail lists: 1:37,2:174511,3:865,4:602,5:77,6:146,7:9751,8:28,9:4686,10:25,11
 :118
  30525 multiletter control sequences out of 65536+600000
  72 fonts using 106764855 bytes
@@ -1002,7 +1002,7 @@ tf></usr/share/texmf/fonts/opentype/public/tex-gyre/texgyretermes-bold.otf></usr
 /share/texmf/fonts/opentype/public/tex-gyre/texgyretermes-regular.otf></usr/shar
 e/texlive/texmf-dist/fonts/opentype/public/haranoaji/HaranoAjiMincho-Regular.otf
 >
-Output written on abstract.pdf (3 pages, 278726 bytes).
+Output written on abstract.pdf (3 pages, 277880 bytes).
 
 PDF statistics: 100 PDF objects out of 1000 (max. 8388607)
  59 compressed objects within 1 object stream

@@ -18,16 +18,16 @@
 \contentsline {section}{\numberline {4.1}この章で書くこと}{7}{section.4.1}%
 \contentsline {section}{\numberline {4.2}YOLOとは}{7}{section.4.2}%
 \contentsline {section}{\numberline {4.3}学習の実行}{7}{section.4.3}%
-\contentsline {section}{\numberline {4.4}性能の評価}{7}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}分類モデルの評価方法}{7}{subsection.4.4.1}%
-\contentsline {subsection}{\numberline {4.4.2}分類モデルの評価}{7}{subsection.4.4.2}%
-\contentsline {subsection}{\numberline {4.4.3}識別モデルの評価方法}{8}{subsection.4.4.3}%
-\contentsline {subsubsection}{mAP}{8}{section*.4}%
-\contentsline {subsubsection}{IoU}{8}{section*.5}%
-\contentsline {section}{\numberline {4.5}作成したモデルの使い方}{8}{section.4.5}%
-\contentsline {section}{\numberline {4.6}出力されるもの}{9}{section.4.6}%
+\contentsline {section}{\numberline {4.4}作成したモデルの使い方}{7}{section.4.4}%
+\contentsline {section}{\numberline {4.5}出力されるもの}{8}{section.4.5}%
+\contentsline {section}{\numberline {4.6}性能の評価}{8}{section.4.6}%
+\contentsline {subsection}{\numberline {4.6.1}分類モデルの評価方法}{8}{subsection.4.6.1}%
+\contentsline {subsection}{\numberline {4.6.2}分類モデルの評価}{8}{subsection.4.6.2}%
+\contentsline {subsection}{\numberline {4.6.3}識別モデルの評価方法}{8}{subsection.4.6.3}%
+\contentsline {subsection}{\numberline {4.6.4}識別モデルの評価}{9}{subsection.4.6.4}%
+\contentsline {subsubsection}{ここに表を貼る}{9}{section*.4}%
 \contentsline {chapter}{\numberline {第5章}結論}{11}{chapter.5}%
-\contentsline {chapter}{参考文献}{13}{chapter*.6}%
+\contentsline {chapter}{参考文献}{13}{chapter*.5}%
 \contentsline {chapter}{\numberline {付録A}開発したプログラム}{15}{appendix.A}%
 \contentsline {section}{\numberline {A.1}セットアップ方法}{15}{section.A.1}%
 \contentsline {section}{\numberline {A.2}使い方}{15}{section.A.2}%

@@ -20,6 +20,30 @@ YOLOv8はYOLOシリーズの最新バージョンであり，ディープラー�
 
 \section{学習の実行}
 学習時にモデルの性能がそれまで以上に向上しなくなると学習が強制終了するため，エポック数という学習用データを何回繰り返して学習させるのかを表す数を１０万回程度に設定して学習を進めた．強制終了した際のモデルが使用したデータセットで作れる最高の性能のモデルとなる．
+
+\section{作成したモデルの使い方}
+識別モデルと分類モデルで使い方はほとんど同じ
+作成したモデルをロードして，モデルに画像または動画を渡すと識別または分類をすることができる\\
+識別
+\begin{verbatimx}
+	$from ultralytics import YOLO
+	model = YOLO("作成した識別モデルのパス")
+	results = model.predict("画像のパス", save = True)
+	$
+\end{verbatimx}
+
+分類
+\begin{verbatimx}
+	$from ultralytics import YOLO
+	model = YOLO("作成した分類モデルのパス")
+	results = model("画像のパス", save = True)
+	$
+\end{verbatimx}
+
+\section{出力されるもの}
+ああああああああああああいいいいいいいいいいいいいいい
+
+
 \section{性能の評価}
 \subsection{分類モデルの評価方法}
 １７種類の各車両の画像をそれぞれ１０枚ずつ集めて画像の分類を行った．
@@ -34,35 +58,14 @@ YOLOv8はYOLOシリーズの最新バージョンであり，ディープラー�
 分類モデルの評価を図\ref{CLS}に示す．
 縦軸が予測した車両タイプ，横軸が正解の車両タイプとするグラフである．
 \subsection{識別モデルの評価方法}
-作成した識別モデルは，次の指標から評価をする．\\
 %https://qiita.com/panchoooon/items/2c972ede2bc883597a87
+作成したモデルは，IoUという指標で評価をする．
+作成したモデルが車両タイプAだと認識した領域と車両タイプAの領域がどの程度重なっているのか，を表す指標である．
+0.0 ≦ IoU ≦ 1.0の範囲で表され，IoUは1.0に近いほど正確に予測ができていることがわかる．
+モデルが予測した領域と答えの領域が完全に一致しているときのIoUは1.0となり，全く重なりがない場合のIoUは0.0である．
 
-\begin{itemize}
-	\item mAP(mean Average Precision)
-	\item IoU(Intersection over Union)
-\end{itemize}
-\subsubsection{mAP}
-%mAPの説明
-
-\subsubsection{IoU}
-IoUの説明
-
-\section{作成したモデルの使い方}
-識別モデルと分類モデルで使い方はほとんど同じ
-作成したモデルをロードして，モデルに画像または動画を渡すと識別または分類をすることができる\\
-識別
-\begin{verbatimx}
-$from ultralytics import YOLO
- model = YOLO("作成した識別モデルのパス")
- results = model.predict("画像のパス", save = True)
-$
-\end{verbatimx}
-
-分類
-\begin{verbatimx}
-$from ultralytics import YOLO
- model = YOLO("作成した分類モデルのパス")
- results = model("画像のパス", save = True)
-$
-\end{verbatimx}
-\section{出力されるもの}
+\subsection{識別モデルの評価}
+\subsubsection{ここに表を貼る}
+\red{googleドライブの卒論関係の中にprint.txtがある.}\\
+その中の下の方にある表を貼る\\
+そのままコピペすると，表がぐちゃぐちゃになるのでtex用に変換するよ\\
