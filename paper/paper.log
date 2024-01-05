@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2023.5.22)  31 DEC 2023 13:27
+This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2023.5.22)  5 JAN 2024 15:12
  restricted system commands enabled.
  file:line:error style messages enabled.
 **paper.tex
@@ -985,43 +985,56 @@ Package: fancyvrb 2021/12/21 4.1b verbatim text (tvz,hv)
 \FV@StepNumber=\count332
 \FV@OutFile=\write4
 ))
+(/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
+Package: array 2021/10/04 v2.5f Tabular extension package (FMi)
+\col@sep=\dimen263
+\ar@mcellbox=\box87
+\extrarowheight=\dimen264
+\NC@list=\toks36
+\extratabsurround=\skip97
+\backup@length=\skip98
+\ar@cellbox=\box88
+)
 (/usr/share/texlive/texmf-dist/tex/luatex/luatexja/patches/lltjp-tascmac.sty
 Package: lltjp-tascmac 2020/12/24 Patch to (t)ascmac for LuaTeX-ja
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 warning  (map file): entry for 'ascgrp' already exists, duplicates ignored
-) (./paper.aux)
+) (/usr/share/texlive/texmf-dist/tex/luatex/luatexja/patches/lltjp-array.sty
+Package: lltjp-array 2019-07-18 Patch to array for LuaTeX-ja
+)
+(./paper.aux)
 \openout1 = paper.aux
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 21.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 23.
 LaTeX Font Info:    Trying loading font information for TS1+cmr on input line 2
-1.
+3.
  (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for JY3/mc/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for JT3/mc/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-Package hyperref Info: Link coloring ON on input line 21.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for JY3/mc/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for JT3/mc/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+Package hyperref Info: Link coloring ON on input line 23.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
@@ -1034,9 +1047,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count333
 )
-LaTeX Info: Redefining \ref on input line 21.
-LaTeX Info: Redefining \pageref on input line 21.
-LaTeX Info: Redefining \nameref on input line 21.
+LaTeX Info: Redefining \ref on input line 23.
+LaTeX Info: Redefining \pageref on input line 23.
+LaTeX Info: Redefining \nameref on input line 23.
 
 (./paper.out) (./paper.out)
 \@outlinefile=\write5
@@ -1046,16 +1059,16 @@ LaTeX Info: Redefining \nameref on input line 21.
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count334
-\scratchdimen=\dimen263
-\scratchbox=\box87
+\scratchdimen=\dimen265
+\scratchbox=\box89
 \nofMPsegments=\count335
 \nofMParguments=\count336
-\everyMPshowfont=\toks36
+\everyMPshowfont=\toks37
 \MPscratchCnt=\count337
-\MPscratchDim=\dimen264
+\MPscratchDim=\dimen266
 \MPnumerator=\count338
 \makeMPintoPDFobject=\count339
-\everyMPtoPDFconversion=\toks37
+\everyMPtoPDFconversion=\toks38
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -1264,7 +1277,7 @@ warning  (pdf backend): ignoring duplicate destination with the name 'page.2'
 ]
 第2章
 (load cache: extra_lmsans12-regular.luc)
-<fig/system.pdf, id=237, 370.5042pt x 110.3322pt>
+<fig/system.pdf, id=234, 370.5042pt x 110.3322pt>
 File: fig/system.pdf Graphic file (type pdf)
 <use fig/system.pdf>
 Package luatex.def Info: fig/system.pdf  used on input line 37.
@@ -1278,13 +1291,12 @@ Package luatex.def Info: fig/system.pdf  used on input line 37.
 (load cache: extra_lmmono10-regular.luc) [7
 
 ]
-<fig/hana.pdf, id=280, 845.04684pt x 597.50787pt>
+<fig/hana.pdf, id=277, 845.04684pt x 597.50787pt>
 File: fig/hana.pdf Graphic file (type pdf)
 <use fig/hana.pdf>
 Package luatex.def Info: fig/hana.pdf  used on input line 55.
 (luatex.def)             Requested size: 455.24411pt x 321.89272pt.
-(load cache: extra_lmsans10-regular.luc)) (./chap5.tex [8<./fig/hana.pdf>] [9] 
-[10
+ [8<./fig/hana.pdf>]) (./chap5.tex [9] [10
 
 ]
 第5章
@@ -1339,19 +1351,19 @@ Removing  `ltj.listings_unicode' from `process_input_buffer'. [16]
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `paper.out' has not changed.
-(rerunfilecheck)             Checksum: 23EE26E116B8B930133C7AB51D415B52;4745.
+(rerunfilecheck)             Checksum: 79AA532D361DE311EFC281B0F371966D;4628.
 )
 
 Here is how much of LuaTeX's memory you used:
- 20795 strings out of 477805
+ 20893 strings out of 477805
  597271,953878 words of node,token memory allocated
- 38104 words of node memory still in use:
-   10 hlist, 2 vlist, 5 rule, 2 glue, 485 kern, 1 glyph, 13064 attribute, 1450 g
-lue_spec, 687 attribute_list, 1 write, 171 user_defined nodes
-   avail lists: 1:53,2:130005,3:770,4:9072,5:2411,6:116,7:7593,8:75,9:9359,10:48
+ 38598 words of node memory still in use:
+   10 hlist, 2 vlist, 5 rule, 2 glue, 485 kern, 1 glyph, 13189 attribute, 1492 g
+lue_spec, 694 attribute_list, 1 write, 176 user_defined nodes
+   avail lists: 1:49,2:130005,3:770,4:9072,5:2411,6:115,7:7593,8:74,9:9359,10:49
 ,11:439
- 40366 multiletter control sequences out of 65536+600000
- 129 fonts using 165236047 bytes
+ 40446 multiletter control sequences out of 65536+600000
+ 128 fonts using 165104359 bytes
  115i,9n,131p,1817b,1089s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf/fonts/opentype/public/lm/lmmono9-regular.otf></usr/share/texmf
 /fonts/opentype/public/lm/lmmono10-regular.otf></usr/share/texmf/fonts/opentype/
@@ -1363,10 +1375,10 @@ lic/lm/lmroman17-regular.otf></usr/share/texlive/texmf-dist/fonts/opentype/publi
 c/haranoaji/HaranoAjiGothic-Regular.otf></usr/share/texmf/fonts/opentype/public/
 lm/lmroman12-regular.otf></usr/share/texlive/texmf-dist/fonts/opentype/public/ha
 ranoaji/HaranoAjiMincho-Regular.otf>
-Output written on paper.pdf (24 pages, 491173 bytes).
+Output written on paper.pdf (24 pages, 491514 bytes).
 
-PDF statistics: 462 PDF objects out of 1000 (max. 8388607)
- 390 compressed objects within 4 object streams
+PDF statistics: 461 PDF objects out of 1000 (max. 8388607)
+ 389 compressed objects within 4 object streams
  116 named destinations out of 1000 (max. 131072)
- 281 words of extra memory for PDF output out of 10000 (max. 100000000)
+ 273 words of extra memory for PDF output out of 10000 (max. 100000000)
 
