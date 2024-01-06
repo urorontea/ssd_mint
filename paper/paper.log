@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2023.5.22)  6 JAN 2024 14:41
+This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2023.5.22)  6 JAN 2024 17:31
  restricted system commands enabled.
  file:line:error style messages enabled.
 **paper.tex
@@ -1232,20 +1232,20 @@ LaTeX Font Info:    Font shape `JY3/HaranoAjiMincho-Regular.otf(0)/b/n' will be
 \tf@lof=\write7
 
 \openout7 = paper.lof
- (./paper.lot)
-\tf@lot=\write8
-
-\openout8 = paper.lot
 LaTeX Font Info:    Font shape `JT3/HaranoAjiMincho-Regular.otf(0)/b/n' will be
 
-(Font)              scaled to size 9.24713pt on input line 8.
+(Font)              scaled to size 9.24713pt on input line 7.
 
 warning  (pdf backend): ignoring duplicate destination with the name 'page.i'
 [1
 
 
 
-] (./paper.lol)
+] (./paper.lot)
+\tf@lot=\write8
+
+\openout8 = paper.lot
+ (./paper.lol)
 \tf@lol=\write9
 
 \openout9 = paper.lol
@@ -1277,40 +1277,59 @@ warning  (pdf backend): ignoring duplicate destination with the name 'page.2'
 ]
 第2章
 (load cache: extra_lmsans12-regular.luc)
-<fig/system.pdf, id=236, 370.5042pt x 110.3322pt>
+<fig/system.pdf, id=240, 370.5042pt x 110.3322pt>
 File: fig/system.pdf Graphic file (type pdf)
 <use fig/system.pdf>
 Package luatex.def Info: fig/system.pdf  used on input line 40.
 (luatex.def)             Requested size: 455.24411pt x 135.56635pt.
 ) (./chap3.tex [3] [4<./fig/system.pdf>]
 第3章
+<chap3/fig/test1.png, id=273, 970.62625pt x 482.80376pt>
+File: chap3/fig/test1.png Graphic file (type png)
+<use chap3/fig/test1.png>
+Package luatex.def Info: chap3/fig/test1.png  used on input line 28.
+(luatex.def)             Requested size: 455.24411pt x 226.4463pt.
+<chap3/fig/test2.png, id=274, 773.89125pt x 448.67625pt>
+File: chap3/fig/test2.png Graphic file (type png)
+<use chap3/fig/test2.png>
+Package luatex.def Info: chap3/fig/test2.png  used on input line 33.
+(luatex.def)             Requested size: 455.24411pt x 263.93622pt.
+<chap3/fig/test3.png, id=275, 808.01875pt x 466.74374pt>
+File: chap3/fig/test3.png Graphic file (type png)
+<use chap3/fig/test3.png>
+Package luatex.def Info: chap3/fig/test3.png  used on input line 37.
+(luatex.def)             Requested size: 455.24411pt x 262.97002pt.
+
+LaTeX Warning: Float too large for page by 73.66394pt on input line 40.
+
 [5
 
-]) (./chap4.tex [6]
+]) (./chap4.tex [6] [7<./chap3/fig/test1.png><./chap3/fig/test2.png><./chap3/fig
+/test3.png>] [8
+
+]
 第4章
 (load cache: extra_lmmono10-regular.luc)
 warning  (file fig/a.pdf) (pdf inclusion): PDF inclusion: found PDF version '1.7
 ', but at most version '1.5' allowed
-<fig/a.pdf, id=274, 354.36388pt x 53.23889pt>
+<fig/a.pdf, id=294, 354.36388pt x 53.23889pt>
 File: fig/a.pdf Graphic file (type pdf)
 <use fig/a.pdf>
-Package luatex.def Info: fig/a.pdf  used on input line 46.
+Package luatex.def Info: fig/a.pdf  used on input line 49.
 (luatex.def)             Requested size: 455.24411pt x 68.39818pt.
-[7
-
-]
-<fig/hana.pdf, id=280, 845.04684pt x 597.50787pt>
+[9]
+<fig/hana.pdf, id=301, 845.04684pt x 597.50787pt>
 File: fig/hana.pdf Graphic file (type pdf)
 <use fig/hana.pdf>
-Package luatex.def Info: fig/hana.pdf  used on input line 58.
+Package luatex.def Info: fig/hana.pdf  used on input line 61.
 (luatex.def)             Requested size: 455.24411pt x 321.89272pt.
- [8<./fig/a.pdf><./fig/hana.pdf>]) (./chap5.tex [9] [10
+ [10<./fig/a.pdf><./fig/hana.pdf>]) (./chap5.tex [11] [12
 
 ]
 第5章
-) (./bibliography.tex [11] [12
+) (./bibliography.tex [13] [14
 
-] [13]) [14] (./appendix.tex
+] [15]) [16] (./appendix.tex
 付録A
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
@@ -1347,30 +1366,30 @@ File: lstlang2.sty 2020/03/24 1.8d listings language file
 Removing  `ltj.process_input_buffer' from `process_input_buffer'.
 Inserting `ltj.listings_unicode' at position 1 in `process_input_buffer'.
 Inserting `ltj.process_input_buffer' at position 2 in `process_input_buffer'. [
-15
+17
 
 ]
-Removing  `ltj.listings_unicode' from `process_input_buffer'. [16]
+Removing  `ltj.listings_unicode' from `process_input_buffer'. [18]
 付録B
-) [17
+) [19
 
 ] (./paper.aux)
 
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `paper.out' has not changed.
-(rerunfilecheck)             Checksum: 2596617E2853F86CEA7A91C35CD9BC03;4628.
+(rerunfilecheck)             Checksum: 30259ECC1A7B294BA79BD3207C8F43AD;4628.
 )
 
 Here is how much of LuaTeX's memory you used:
- 20907 strings out of 477805
- 597267,953878 words of node,token memory allocated
- 38923 words of node memory still in use:
-   10 hlist, 2 vlist, 5 rule, 2 glue, 485 kern, 1 glyph, 13308 attribute, 1501 g
-lue_spec, 701 attribute_list, 1 write, 183 user_defined nodes
-   avail lists: 1:48,2:130005,3:770,4:9072,5:2411,6:118,7:7593,8:76,9:9359,10:49
+ 20949 strings out of 477805
+ 597256,953878 words of node,token memory allocated
+ 39872 words of node memory still in use:
+   10 hlist, 2 vlist, 5 rule, 2 glue, 486 kern, 1 glyph, 13569 attribute, 1569 g
+lue_spec, 716 attribute_list, 1 write, 196 user_defined nodes
+   avail lists: 1:48,2:130005,3:770,4:9072,5:2411,6:123,7:7594,8:80,9:9359,10:48
 ,11:439
- 40453 multiletter control sequences out of 65536+600000
+ 40474 multiletter control sequences out of 65536+600000
  128 fonts using 165104359 bytes
  115i,9n,131p,1817b,1089s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf/fonts/opentype/public/lm/lmmono9-regular.otf></usr/share/texmf
@@ -1383,10 +1402,10 @@ lic/lm/lmroman17-regular.otf></usr/share/texlive/texmf-dist/fonts/opentype/publi
 c/haranoaji/HaranoAjiGothic-Regular.otf></usr/share/texmf/fonts/opentype/public/
 lm/lmroman12-regular.otf></usr/share/texlive/texmf-dist/fonts/opentype/public/ha
 ranoaji/HaranoAjiMincho-Regular.otf>
-Output written on paper.pdf (24 pages, 514537 bytes).
+Output written on paper.pdf (26 pages, 634889 bytes).
 
-PDF statistics: 470 PDF objects out of 1000 (max. 8388607)
- 395 compressed objects within 4 object streams
- 117 named destinations out of 1000 (max. 131072)
+PDF statistics: 491 PDF objects out of 1000 (max. 8388607)
+ 410 compressed objects within 5 object streams
+ 120 named destinations out of 1000 (max. 131072)
  273 words of extra memory for PDF output out of 10000 (max. 100000000)
 
