@@ -4,19 +4,12 @@
 \chapter{車両タイプ判別モデルについて}
 \section{この章で書くこと}
 \begin{itemize}
-	\item yoloとは
 	\item 学習の実行
 	\item 性能評価
 	\item 作成したモデルの使い方
 	\item 出力されるものについて
 \end{itemize}
 
-\section{YOLOとは}
-YOLOの説明 \\
-YOLOとはYou Only Look Onceの略で，人間のように一目見るだけで物体検出ができることを指している．データセットを作成し学習させることで，任意の物体のみ検出させることが可能である．\\
-YOLOv8の説明   \\
-YOLOv8はYOLOシリーズの最新バージョンであり，ディープラーニングとコンピュータビジョンの最先端の進歩に基づいており，速度と精度の麺で比類のない性能を提供している．
-%https://docs.ultralytics.com/ja/ 参照
 
 \section{学習の実行}
 学習時にモデルの性能がそれまで以上に向上しなくなると学習が強制終了するため，エポック数という学習用データを何回繰り返して学習させるのかを表す数を１０万回程度に設定して学習を進めた．強制終了した際のモデルが使用したデータセットで作れる最高の性能のモデルとなる．
@@ -60,8 +53,9 @@ YOLOv8はYOLOシリーズの最新バージョンであり，ディープラー�
 	\centering
 	\includegraphics[width=\linewidth]{fig/hana.pdf}
 	\caption{分類モデルの評価}\label{CLS}
+	\red{↑後で変える↑}
 \end{figure}
-分類モデルの評価を図\ref{CLS}に示す．
+分類モデルの評価\red{(評価？)}を図\ref{CLS}に示す．
 縦軸が予測した車両タイプ，横軸が正解の車両タイプとするグラフである．
 \subsection{識別モデルの評価方法}
 %https://qiita.com/panchoooon/items/2c972ede2bc883597a87
@@ -72,7 +66,8 @@ YOLOv8はYOLOシリーズの最新バージョンであり，ディープラー�
 識別失敗数とは間違ったクラスだと判断した数であり，識別不能数とはどのクラスにも当てはまらないと判断した数とする．
 \subsection{識別モデルの評価}
 作成した識別モデルを使用し，テストデータセットの識別をした結果を表\ref{tab:identification_results} に示す.\\
-NaNとは識別成功数または識別失敗数が0のときに，IoUの平均が出せない場合の値である．
+NaNとは識別成功数または識別失敗数が0のときに，IoUの平均が出せない場合の値である．\\
+\red{↓の表からわかることを書く}
 \begin{table}[htbp] 
 	\centering
 	\begin{tabular}{cccccc}
