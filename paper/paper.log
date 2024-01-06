@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2023.5.22)  5 JAN 2024 16:29
+This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2023.5.22)  6 JAN 2024 14:41
  restricted system commands enabled.
  file:line:error style messages enabled.
 **paper.tex
@@ -1280,7 +1280,7 @@ warning  (pdf backend): ignoring duplicate destination with the name 'page.2'
 <fig/system.pdf, id=236, 370.5042pt x 110.3322pt>
 File: fig/system.pdf Graphic file (type pdf)
 <use fig/system.pdf>
-Package luatex.def Info: fig/system.pdf  used on input line 37.
+Package luatex.def Info: fig/system.pdf  used on input line 40.
 (luatex.def)             Requested size: 455.24411pt x 135.56635pt.
 ) (./chap3.tex [3] [4<./fig/system.pdf>]
 第3章
@@ -1359,16 +1359,16 @@ Removing  `ltj.listings_unicode' from `process_input_buffer'. [16]
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `paper.out' has not changed.
-(rerunfilecheck)             Checksum: 8D1BDEE082BC00A01291390F2FE162AC;4628.
+(rerunfilecheck)             Checksum: 2596617E2853F86CEA7A91C35CD9BC03;4628.
 )
 
 Here is how much of LuaTeX's memory you used:
  20907 strings out of 477805
- 597254,953878 words of node,token memory allocated
- 38893 words of node memory still in use:
-   10 hlist, 2 vlist, 5 rule, 2 glue, 485 kern, 1 glyph, 13308 attribute, 1495 g
+ 597267,953878 words of node,token memory allocated
+ 38923 words of node memory still in use:
+   10 hlist, 2 vlist, 5 rule, 2 glue, 485 kern, 1 glyph, 13308 attribute, 1501 g
 lue_spec, 701 attribute_list, 1 write, 183 user_defined nodes
-   avail lists: 1:47,2:130005,3:770,4:9072,5:2411,6:118,7:7593,8:76,9:9359,10:48
+   avail lists: 1:48,2:130005,3:770,4:9072,5:2411,6:118,7:7593,8:76,9:9359,10:49
 ,11:439
  40453 multiletter control sequences out of 65536+600000
  128 fonts using 165104359 bytes
@@ -1383,7 +1383,7 @@ lic/lm/lmroman17-regular.otf></usr/share/texlive/texmf-dist/fonts/opentype/publi
 c/haranoaji/HaranoAjiGothic-Regular.otf></usr/share/texmf/fonts/opentype/public/
 lm/lmroman12-regular.otf></usr/share/texlive/texmf-dist/fonts/opentype/public/ha
 ranoaji/HaranoAjiMincho-Regular.otf>
-Output written on paper.pdf (24 pages, 513293 bytes).
+Output written on paper.pdf (24 pages, 514537 bytes).
 
 PDF statistics: 470 PDF objects out of 1000 (max. 8388607)
  395 compressed objects within 4 object streams

@@ -1,7 +1,7 @@
 \contentsline {chapter}{\numberline {第1章}序論}{1}{chapter.1}%
 \contentsline {chapter}{\numberline {第2章}システム概要}{3}{chapter.2}%
 \contentsline {section}{\numberline {2.1}この章で書くこと}{3}{section.2.1}%
-\contentsline {section}{\numberline {2.2}識別，分類とは}{3}{section.2.2}%
+\contentsline {section}{\numberline {2.2}分類・識別とは}{3}{section.2.2}%
 \contentsline {section}{\numberline {2.3}現存するサービス}{3}{section.2.3}%
 \contentsline {subsection}{\numberline {2.3.1}Googleレンズ}{3}{subsection.2.3.1}%
 \contentsline {subsection}{\numberline {2.3.2}YOLO}{3}{subsection.2.3.2}%
