@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2023.5.22)  7 JAN 2024 22:07
+This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2023.5.22)  10 JAN 2024 14:15
  restricted system commands enabled.
  file:line:error style messages enabled.
 **abstract.tex
@@ -817,31 +817,31 @@ LaTeX Warning: Label `abc' multiply defined.
 )
 \openout1 = abstract.aux
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 60.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 65.
 LaTeX Font Info:    Trying loading font information for TS1+cmr on input line 6
-0.
+5.
  (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for JY3/mc/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for JT3/mc/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for JY3/mc/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for JT3/mc/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: luatex
@@ -902,69 +902,70 @@ e
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 61.
+(Font)              <7> on input line 66.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 61.
+(Font)              <5> on input line 66.
 LaTeX Font Info:    Font shape `JY3/HaranoAjiMincho-Regular.otf(0)/m/n' will be
 
-(Font)              scaled to size 6.47299pt on input line 61.
+(Font)              scaled to size 6.47299pt on input line 66.
 LaTeX Font Info:    Font shape `JY3/HaranoAjiMincho-Regular.otf(0)/m/n' will be
 
-(Font)              scaled to size 4.62357pt on input line 61.
+(Font)              scaled to size 4.62357pt on input line 66.
 LaTeX Font Info:    Font shape `JT3/HaranoAjiMincho-Regular.otf(0)/m/n' will be
 
-(Font)              scaled to size 8.32242pt on input line 61.
+(Font)              scaled to size 8.32242pt on input line 66.
 LaTeX Font Info:    Font shape `JY3/HaranoAjiMincho-Regular.otf(0)/m/n' will be
 
-(Font)              scaled to size 8.32242pt on input line 61.
+(Font)              scaled to size 8.32242pt on input line 66.
 
-Overfull \hbox (1.565pt too wide) in paragraph at lines 61--61
+Overfull \hbox (1.565pt too wide) in paragraph at lines 66--66
 [][] 
  []
 
 
-Overfull \hbox (1.565pt too wide) in paragraph at lines 61--61
+Overfull \hbox (1.565pt too wide) in paragraph at lines 66--66
 [][] 
  []
 
 LaTeX Font Info:    Font shape `JT3/HaranoAjiMincho-Regular.otf(0)/b/n' will be
 
-(Font)              scaled to size 9.24713pt on input line 61.
+(Font)              scaled to size 9.24713pt on input line 66.
 LaTeX Font Info:    Font shape `JY3/HaranoAjiMincho-Regular.otf(0)/b/n' will be
 
-(Font)              scaled to size 9.24713pt on input line 61.
+(Font)              scaled to size 9.24713pt on input line 66.
 LaTeX Font Info:    Font shape `JT3/HaranoAjiMincho-Regular.otf(0)/b/n' will be
 
-(Font)              scaled to size 8.32242pt on input line 61.
+(Font)              scaled to size 8.32242pt on input line 66.
 LaTeX Font Info:    Font shape `JY3/HaranoAjiMincho-Regular.otf(0)/b/n' will be
 
-(Font)              scaled to size 8.32242pt on input line 61.
+(Font)              scaled to size 8.32242pt on input line 66.
 LaTeX Font Info:    Font shape `JT3/HaranoAjiMincho-Regular.otf(0)/b/n' will be
 
-(Font)              scaled to size 9.70949pt on input line 67.
+(Font)              scaled to size 9.70949pt on input line 72.
 LaTeX Font Info:    Font shape `JY3/HaranoAjiMincho-Regular.otf(0)/b/n' will be
 
-(Font)              scaled to size 9.70949pt on input line 67.
+(Font)              scaled to size 9.70949pt on input line 72.
 <obj/system.pdf, id=1, 370.5042pt x 110.3322pt>
 File: obj/system.pdf Graphic file (type pdf)
 <use obj/system.pdf>
-Package luatex.def Info: obj/system.pdf  used on input line 87.
+Package luatex.def Info: obj/system.pdf  used on input line 92.
 (luatex.def)             Requested size: 232.6013pt x 69.26552pt.
-
-warning  (file obj/classify_results.pdf) (pdf inclusion): PDF inclusion: found P
-DF version '1.7', but at most version '1.5' allowed
-<obj/classify_results.pdf, id=2, 394.3533pt x 330.27388pt>
-File: obj/classify_results.pdf Graphic file (type pdf)
-<use obj/classify_results.pdf>
-Package luatex.def Info: obj/classify_results.pdf  used on input line 147.
-(luatex.def)             Requested size: 232.6013pt x 194.8095pt.
+<obj/chart.pdf, id=2, 602.25pt x 372.39125pt>
+File: obj/chart.pdf Graphic file (type pdf)
+<use obj/chart.pdf>
+Package luatex.def Info: obj/chart.pdf  used on input line 108.
+(luatex.def)             Requested size: 232.6013pt x 143.82849pt.
 [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}<./obj/system.pdf>]
-Overfull \hbox (49.76134pt too wide) in paragraph at lines 169--175
- [][][] 
- []
-
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}<./obj/system.pdf><./obj/char
+t.pdf>]
+warning  (file obj/classify_results.pdf) (pdf inclusion): PDF inclusion: found P
+DF version '1.7', but at most version '1.5' allowed
+<obj/classify_results.pdf, id=46, 394.3533pt x 330.27388pt>
+File: obj/classify_results.pdf Graphic file (type pdf)
+<use obj/classify_results.pdf>
+Package luatex.def Info: obj/classify_results.pdf  used on input line 160.
+(luatex.def)             Requested size: 232.6013pt x 194.8095pt.
 
 Package fancyhdr Warning: \headheight is too small (20.0pt): 
 (fancyhdr)                Make it at least 33.0906pt, for example:
@@ -980,25 +981,25 @@ LaTeX Warning: There were multiply-defined labels.
 )
 
 Here is how much of LuaTeX's memory you used:
- 10285 strings out of 477805
- 477805,662416 words of node,token memory allocated
- 19231 words of node memory still in use:
-   8 hlist, 1 vlist, 4 rule, 2 glue, 256 kern, 1 glyph, 7026 attribute, 512 glue
-_spec, 374 attribute_list, 1 write, 96 user_defined nodes
-   avail lists: 1:37,2:147407,3:825,4:616,5:105,6:102,7:9283,8:3,9:3863,10:25,11
-:104
- 30509 multiletter control sequences out of 65536+600000
+ 10295 strings out of 477805
+ 477811,662416 words of node,token memory allocated
+ 22811 words of node memory still in use:
+   8 hlist, 1 vlist, 4 rule, 2 glue, 256 kern, 1 glyph, 8182 attribute, 684 glue
+_spec, 442 attribute_list, 1 write, 164 user_defined nodes
+   avail lists: 1:37,2:137601,3:778,4:608,5:97,6:122,7:8618,8:3,9:3554,10:25,11:
+102
+ 30513 multiletter control sequences out of 65536+600000
  69 fonts using 102723487 bytes
- 128i,21n,131p,1763b,899s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 128i,21n,131p,1747b,952s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/opentype/public/haranoaji/HaranoAjiMincho-B
 old.otf></usr/share/texmf/fonts/opentype/public/tex-gyre/texgyretermes-bold.otf>
 </usr/share/texmf/fonts/opentype/public/tex-gyre/texgyretermes-regular.otf></usr
 /share/texlive/texmf-dist/fonts/opentype/public/haranoaji/HaranoAjiMincho-Regula
 r.otf>
-Output written on abstract.pdf (2 pages, 184850 bytes).
+Output written on abstract.pdf (2 pages, 230571 bytes).
 
-PDF statistics: 61 PDF objects out of 1000 (max. 8388607)
- 35 compressed objects within 1 object stream
+PDF statistics: 78 PDF objects out of 1000 (max. 8388607)
+ 47 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 131072)
  1 words of extra memory for PDF output out of 10000 (max. 100000000)
 
