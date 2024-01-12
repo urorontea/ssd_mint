@@ -72,7 +72,7 @@ Describe about 5 lines of abstract in English here. Describe about 5 lines of ab
 %背景や目的をここに書いてください．
 電車の車両タイプはJRの在来線だけでも100種類近く存在している．
 多くの人は電車を見て電車だと認識することは可能だが，その電車の車両タイプまでを判断できる人は少ない．
-電車についての知識がある人は一目見るだけでその電車の車両タイプを判断できるが，大多数の人は似ている電車の車両タイプを判断することが難しい.本プロジェクトでは簡単に画像や動画に写っている車両が何なのかを判別できるシステムを開発する．
+電車についての知識がある人は一目見るだけでその電車の車両タイプを判断できるが，大多数の人は似ている電車の車両タイプを判断することが難しい.本プロジェクトでは簡単に画像や動画に写っている車両タイプが何なのかを判別できるシステムを開発する．
 
 %\section{関連研究？現存するサービスについて？これいる？？}
 %先行事例と本システムの独自性
@@ -89,14 +89,14 @@ Describe about 5 lines of abstract in English here. Describe about 5 lines of ab
 	\label{abc}
 	\centering
 	\includegraphics[width=\linewidth]{obj/system.pdf}
-	\figcap{後で変える}{aaaaa}{abc}
+	\figcap{後で変える}{System Overview}{abc}
 \end{figure}
 
 \section{判別モデルの開発の流れ}
 電車が写っている画像を集めて，データセットを作成し，学習をするという流れで判別モデルを開発する．
 
 \subsection{データ収集}
-	YouTubeで特定の電車のみが映っている１〜３種類の動画を保存して，指定した枚数のランダムなフレームを保存する．保存した画像を識別して，	電車が映っているものだけ保存する．
+	YouTubeで特定の電車のみが映っている１〜３種類の動画を保存して，指定した枚数のランダムなフレームを保存する．保存した画像を識別して，	電車が映っている画像だけを保存する．
 	動画ごとに電車が写っている時間が異なるため，集めた画像は車両タイプごとに異なる．
 	%各車両タイプが名前になっているディレクトリに保存する．
 	各車両タイプの保存枚数を図\ref{fig:chart}に示す．
@@ -105,8 +105,8 @@ Describe about 5 lines of abstract in English here. Describe about 5 lines of ab
 	\begin{figure}
 		\centering
 		\includegraphics[width=\linewidth]{obj/chart.pdf}
-		\figcap{各車両タイプの保存枚数}{hozonnmaisuuyade}{}
-		\label{fig:chart}
+		\figcap{各車両タイプの保存枚数}{Number of images saved by vehicle type}{fig:chart}
+%		\label{fig:chart}
 	\end{figure}
 \subsection{データセットの作成}
 本プロジェクトで作成するモデルは識別モデル，分類モデルの二種類である．%データセットのディレクトリ構造が識別用と分類用で異なるので，それぞれのデータセットを作成した．識別モデルには画像のアノテーション情報も必要なので，アノテーションを行い，識別モデル用のデータセットを作成した．

@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2023.5.22)  10 JAN 2024 19:12
+This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2023.5.22)  12 JAN 2024 11:12
  restricted system commands enabled.
  file:line:error style messages enabled.
 **abstract.tex
@@ -814,9 +814,6 @@ rs
 
 LaTeX Warning: Label `abc' multiply defined.
 
-
-LaTeX Warning: Label `' multiply defined.
-
 )
 \openout1 = abstract.aux
 
@@ -1007,12 +1004,12 @@ LaTeX Warning: There were multiply-defined labels.
 
 Here is how much of LuaTeX's memory you used:
  10316 strings out of 477805
- 477793,662416 words of node,token memory allocated
- 20741 words of node memory still in use:
-   8 hlist, 1 vlist, 4 rule, 2 glue, 256 kern, 1 glyph, 7162 attribute, 750 glue
+ 477802,662416 words of node,token memory allocated
+ 20756 words of node memory still in use:
+   8 hlist, 1 vlist, 4 rule, 2 glue, 256 kern, 1 glyph, 7162 attribute, 753 glue
 _spec, 382 attribute_list, 1 write, 104 user_defined nodes
-   avail lists: 1:46,2:142754,3:841,4:603,5:62,6:126,7:8843,8:53,9:3700,10:25,11
-:102
+   avail lists: 1:46,2:143681,3:841,4:605,5:62,6:126,7:8919,8:53,9:3710,10:25,11
+:104
  30528 multiletter control sequences out of 65536+600000
  71 fonts using 106633103 bytes
  128i,21n,131p,1747b,946s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1021,7 +1018,7 @@ ive/texmf-dist/fonts/opentype/public/haranoaji/HaranoAjiMincho-Bold.otf></usr/sh
 are/texmf/fonts/opentype/public/tex-gyre/texgyretermes-bold.otf></usr/share/texm
 f/fonts/opentype/public/tex-gyre/texgyretermes-regular.otf></usr/share/texlive/t
 exmf-dist/fonts/opentype/public/haranoaji/HaranoAjiMincho-Regular.otf>
-Output written on abstract.pdf (3 pages, 284184 bytes).
+Output written on abstract.pdf (3 pages, 284296 bytes).
 
 PDF statistics: 105 PDF objects out of 1000 (max. 8388607)
  65 compressed objects within 1 object stream

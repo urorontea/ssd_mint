@@ -1,5 +1,5 @@
 #/home/nozaki/yt-dlp/pythonにある
-#python save.py 00img_sum 000 --type 000
+#python save.py --img_sum 000 --type 000
 
 import project_processing as pp
 import argparse
