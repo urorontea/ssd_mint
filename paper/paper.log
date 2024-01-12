@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2023.5.22)  10 JAN 2024 19:54
+This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2023.5.22)  12 JAN 2024 12:20
  restricted system commands enabled.
  file:line:error style messages enabled.
 **paper.tex
@@ -1351,61 +1351,52 @@ Package luatex.def Info: chap4/fig/chartDET.pdf  used on input line 78.
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
 )
-(/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
-File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
-)
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 29.
+nput line 31.
 (load cache: extra_lmroman9-regular.luc)
 LaTeX Font Info:    Font shape `JT3/HaranoAjiMincho-Regular.otf(0)/m/n' will be
 
-(Font)              scaled to size 8.32242pt on input line 29.
+(Font)              scaled to size 8.32242pt on input line 31.
 LaTeX Font Info:    Font shape `JY3/HaranoAjiMincho-Regular.otf(0)/m/n' will be
 
-(Font)              scaled to size 8.32242pt on input line 29.
+(Font)              scaled to size 8.32242pt on input line 31.
 LaTeX Font Info:    Font shape `JT3/HaranoAjiGothic-Regular.otf(0)/m/n' will be
 
-(Font)              scaled to size 8.32242pt on input line 29.
+(Font)              scaled to size 8.32242pt on input line 31.
 LaTeX Font Info:    Font shape `JY3/HaranoAjiGothic-Regular.otf(0)/m/n' will be
 
-(Font)              scaled to size 8.32242pt on input line 29.
+(Font)              scaled to size 8.32242pt on input line 31.
 Removing  `ltj.process_input_buffer' from `process_input_buffer'.
 Inserting `ltj.listings_unicode' at position 1 in `process_input_buffer'.
 Inserting `ltj.process_input_buffer' at position 2 in `process_input_buffer'.
-(./appendix/src/sample.c)
+(./appendix/src/project_processing.py [17
+
+])
 Removing  `ltj.listings_unicode' from `process_input_buffer'.
-(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2020/03/24 1.8d listings language file
-)
-(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang2.sty
-File: lstlang2.sty 2020/03/24 1.8d listings language file
-)
 Removing  `ltj.process_input_buffer' from `process_input_buffer'.
 Inserting `ltj.listings_unicode' at position 1 in `process_input_buffer'.
-Inserting `ltj.process_input_buffer' at position 2 in `process_input_buffer'. [
-17
+Inserting `ltj.process_input_buffer' at position 2 in `process_input_buffer'. (./appendix/src/save.py [18])
+Removing  `ltj.listings_unicode' from `process_input_buffer'.
+[19] [20
 
 ]
-Removing  `ltj.listings_unicode' from `process_input_buffer'. [18]
 付録B
-) [19
-
-] (./paper.aux)
+) [21] (./paper.aux)
 Package rerunfilecheck Info: File `paper.out' has not changed.
 (rerunfilecheck)             Checksum: 147B0AC2C50798C826713D6BA04CB8C9;3791.
 )
 
 Here is how much of LuaTeX's memory you used:
- 21054 strings out of 477805
- 597246,953878 words of node,token memory allocated
- 39175 words of node memory still in use:
-   10 hlist, 2 vlist, 5 rule, 2 glue, 487 kern, 1 glyph, 13413 attribute, 1501 g
-lue_spec, 707 attribute_list, 1 write, 188 user_defined nodes
-   avail lists: 1:49,2:130005,3:770,4:9072,5:2411,6:116,7:7593,8:75,9:9359,10:48
-,11:439
- 40553 multiletter control sequences out of 65536+600000
+ 21194 strings out of 477805
+ 1822736,953878 words of node,token memory allocated
+ 40612 words of node memory still in use:
+   10 hlist, 2 vlist, 5 rule, 2 glue, 488 kern, 1 glyph, 13467 attribute, 1763 g
+lue_spec, 710 attribute_list, 1 write, 190 user_defined nodes
+   avail lists: 1:57,2:421690,3:1696,4:45659,5:12340,6:156,7:16093,8:151,9:42022
+,10:35,11:1907
+ 40616 multiletter control sequences out of 65536+600000
  127 fonts using 164972607 bytes
- 115i,9n,131p,1817b,1089s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 115i,10n,131p,1743b,1283s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf/fonts/opentype/public/lm/lmmono9-regular.otf></usr/share/texmf
 /fonts/opentype/public/lm/lmmono10-regular.otf></usr/share/texmf/fonts/opentype/
 public/lm/lmsans12-regular.otf></usr/share/texmf/fonts/opentype/public/lm/lmsans
@@ -1415,10 +1406,10 @@ fonts/opentype/public/lm/lmroman17-regular.otf></usr/share/texlive/texmf-dist/fo
 nts/opentype/public/haranoaji/HaranoAjiGothic-Regular.otf></usr/share/texmf/font
 s/opentype/public/lm/lmroman12-regular.otf></usr/share/texlive/texmf-dist/fonts/
 opentype/public/haranoaji/HaranoAjiMincho-Regular.otf>
-Output written on paper.pdf (26 pages, 516315 bytes).
+Output written on paper.pdf (28 pages, 528043 bytes).
 
-PDF statistics: 498 PDF objects out of 1000 (max. 8388607)
- 410 compressed objects within 5 object streams
- 116 named destinations out of 1000 (max. 131072)
+PDF statistics: 598 PDF objects out of 1000 (max. 8388607)
+ 507 compressed objects within 6 object streams
+ 206 named destinations out of 1000 (max. 131072)
  233 words of extra memory for PDF output out of 10000 (max. 100000000)
 

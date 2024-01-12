@@ -26,29 +26,11 @@ Hello WOrld
 
 \section{ソースコード}
 %% ファイル名を指定して、挿入する場合
-\lstinputlisting[language=c,caption=サンプルプログラム,label=sample.c]{appendix/src/sample.c}
+%\lstinputlisting[language=c,caption=サンプルプログラム,label=sample.c]{appendix/src/sample.c}
+%project_processing.pyとsave.py
+\lstinputlisting[language=Python,caption=画像の保存１,label=project_processing.py]{appendix/src/project_processing.py}
+\lstinputlisting[language=Python,caption=画像の保存２,label=save.py]{appendix/src/save.py}
 
-%% 直接プログラムを埋め込む場合
-\begin{lstlisting}[language=ruby,caption=スパゲッティソース,label=test.rb]
-#! /usr/local/bin/ruby -Ks
-# numbers.rb
-print "正の整数値を表す文字列を入力してください。正の整数値を表す文字列を入力してください。\n"
-while true
-	print ">"
-	line = gets.chomp # 改行コードを切り捨てる
-	break if line.empty?
-	begin
-		v = Integer(line) # 文字列を整数化する
-	rescue
-		puts "変換できません。"
-		next
-	end
-	printf ("2進法：%b\n",v)
-	printf ("8進法：%o\n",v)
-	printf ("10進法：%d\n",v)
-	printf ("16進法：%x\n",v)
-end
-puts "Bye."
-\end{lstlisting}
+
 \chapter{いいいいい}
 あああああああああああああああああああああいいいいいいいいいいいいいいいいいいいいいいいいいいいいううううううううううううううううう
