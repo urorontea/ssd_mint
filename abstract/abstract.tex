@@ -38,7 +38,7 @@ Describe about 5 lines of abstract in English here. Describe about 5 lines of ab
 }
 
 %%% キーワード(5個まで)
-\def\KEYWORDS{YOLO，Machine Learning，Qwerty3，Qwerty4，Qwerty5}
+\def\KEYWORDS{YOLO，Machine Learning，node.js，python-shell，python}
 
 %%% 著者リスト
 \def\AUTHORS{
@@ -72,8 +72,12 @@ Describe about 5 lines of abstract in English here. Describe about 5 lines of ab
 %背景や目的をここに書いてください．
 電車の車両タイプはJRの在来線だけでも100種類近く存在している．
 電車を見て電車だと認識することは可能だが，その電車の車両タイプまでを判別できる人は少ない．
-電車の知識がある人は一目見るだけでその電車の車両タイプを判別できるが，電車の知識があまりない人は似ている電車の車両タイプを判別することが難しい.本プロジェクトでは簡単に画像や動画に写っている車両タイプが何なのかを判別できるシステムを開発する．
+電車の知識がある人は一目見るだけでその電車の車両タイプを判別できるが，電車の知識があまりない人は似ている電車の車両タイプを判別することが難しい.本プロジェクトでは簡単に画像や動画に写っている車両タイプが何なのかを分類または識別できるシステムを開発する．
 
+\section{分類と識別について}
+分類はデータやオブジェクトを異なるクラスやカテゴリに分けるプロセスを指す．画像の分類とは，画像が特定のカテゴリやクラスに属するかどうかを判別する作業である．例えば，画像に写っているのが猫か犬かのクラスに分けることである．
+
+識別とは画像のどこに何が写っているのかを判別するプロセスを指す．1枚の画像に複数の物体が存在する場合も識別はできる．動画に写っている電車の車両タイプも判別することができる．
 %\section{関連研究？現存するサービスについて？これいる？？}
 %先行事例と本システムの独自性
 %googleがgoogleレンズというサービスを提供している．これは，画像に写っている物体と同じものが写っているウェブサイトをまとめて表示するサービスである．このサービスの問題点は３つある．
@@ -85,7 +89,7 @@ Describe about 5 lines of abstract in English here. Describe about 5 lines of ab
 
 \section{システム概要}
 %開発するシステムの概要を図 \ref{abc}に示す．
-本システムは，ユーザに画像ないしは動画をブラウザ上で入力してもらい，それをサーバ上で画像認識を用いて処理し，結果をブラウザで表示するWebアプリケーションである．システム概要を図\ref{abc}に示す．
+本システムは，ユーザに画像または動画をブラウザ上で入力してもらい，それをサーバ上で画像認識を用いて処理し，結果をブラウザで表示するWebアプリケーションである．システム概要を図\ref{abc}に示す．
 \begin{figure} % 小さな図
 	\label{abc}
 	\centering
@@ -96,13 +100,13 @@ Describe about 5 lines of abstract in English here. Describe about 5 lines of ab
 \section{システムの機能}
 %本システムの機能として電車の分類と識別を提供する．識別は動画と画像の両方に対応している．
 %画像や動画を入力すると，判別結果が出力される．
-%本システムは，以下の3つの機能を提供する．
-本システムは，電車の分類と電車の画像と動画の識別の３つ機能を提供する
-%\begin{itemize}
-%	\item 電車の画像の分類
-%	\item 電車の画像の識別
-%	\item 電車の動画の識別
-%\end{itemize}
+本システムは，以下の3つの機能を提供する．
+%本システムは，電車の画像の分類と電車の画像と動画の識別の３つ機能を提供する
+\begin{itemize}
+	\item 電車の画像の分類
+	\item 電車の画像の識別
+	\item 電車の動画の識別
+\end{itemize}
 
 \subsection{電車の画像の分類} 
 出力後の画面を図\ref{img_cls}に示す．
@@ -134,7 +138,7 @@ Describe about 5 lines of abstract in English here. Describe about 5 lines of ab
 		\end{minipage}
 		\begin{minipage}[b]{0.3\textwidth}
 			\centering
-			\includegraphics[width=\linewidth]{obj/mov_det.jpg}
+			\includegraphics[width=\linewidth]{obj/mov_identify1.jpg}
 			\figcap{動画の識別}{Video Identification}{mov_det}
 		\end{minipage}
 	\end{tabular}
@@ -159,22 +163,20 @@ Describe about 5 lines of abstract in English here. Describe about 5 lines of ab
 \begin{figure}
 	\centering
 	\includegraphics[width=\linewidth]{obj/chart1.pdf}
-	\figcap{各車両タイプの保存枚数}{aaa}{fig:chart}
+	\figcap{各車両タイプの保存枚数}{Number of images stored for each vehicle}{fig:chart}
 \end{figure}
 \subsection{データセットの作成}
-本プロジェクトで作成するモデルは識別モデル，分類モデルの二種類である．%データセットのディレクトリ構造が識別用と分類用で異なるので，それぞれのデータセットを作成した．識別モデルには画像のアノテーション情報も必要なので，アノテーションを行い，識別モデル用のデータセットを作成した．
+本プロジェクトで作成するモデルは識別モデル，分類モデルの二種類である．
+%データセットのディレクトリ構造が識別用と分類用で異なるので，それぞれのデータセットを作成した．識別モデルには画像のアノテーション情報も必要なので，アノテーションを行い，識別モデル用のデータセットを作成した．
 分類モデルのデータセット内の画像をアノテーションして，識別モデル用のデータセットを作成した．
-様々なウェブサイトから手作業で１７種類の各車両の画像を１０枚ずつ集めて，テストデータセットを作成した．
+様々なウェブサイトから手作業で17種類の各車両の画像を10枚ずつ集めて，170枚の画像が保存されえているテストデータセットを作成した．
 
-\subsubsection{分類と識別について}
-分類はデータやオブジェクトを異なるクラスやカテゴリに分けるプロセスを指す．画像の分類とは，画像が特定のカテゴリやクラスに属するかどうかを判別する作業である．例えば，画像に写っているのが猫か犬かのクラスに分けることである．
 
-識別とは画像のどこに何が写っているのかを判別するプロセスを指す．１枚の画像に複数の物体が存在する場合も識別はできる．動画上の車両タイプも判別することができる．
 
 
 \subsection{モデルの学習}
 %本プロジェクトでは\\
-作成したデータセットとYOLOv8を用いてモデルの学習を行い２種類のモデルを作成した．
+作成したデータセットとYOLOv8を用いてモデルの学習を行い2種類のモデルを作成した．
 分類モデルでは画像での判別しかできない．動画から車両タイプを判別するために識別モデルを作成した．
 
 %\subsubsection{学習の実行}
@@ -191,10 +193,11 @@ Describe about 5 lines of abstract in English here. Describe about 5 lines of ab
 
 \subsection{分類モデルの性能評価}
 作成した分類モデルを用いてテストデータセットの分類を行った結果を図\ref{fig:classifyresults}に示す.
+縦軸が正解の車両タイプを表し，横軸が作成したモデルが予想した車両タイプを表す．
 \begin{figure}
 	\centering
 	\includegraphics[width=\linewidth]{obj/classify_results.pdf}
-	\figcap{性能評価}{seinouhyouka}{def}
+	\figcap{テストデータセットの分類結果}{Classification results for the test data set}{def}
 	\label{fig:classifyresults}
 \end{figure}
 
@@ -202,12 +205,12 @@ Describe about 5 lines of abstract in English here. Describe about 5 lines of ab
 %１７種類の車両タイプの画像をそれぞれ１０枚ずつ集めテストデータを作成し識別を行った．識別の結果を表\ref{detection}に示す．
 %captionを追加するとエラーが発生してしまう
 作成した識別モデルを用いてテストデータセットの識別を行った結果を図\ref{fig:chartdet}に示す．
-識別失敗とは間違った車両タイプだと判断し，識別不能とはどの車両タイプにも当てはまらないと判断したことを指す．
+識別時には，どの車両タイプにも当てはまらないと識別されることがある．その場合の車両タイプは０として識別モデルの性能評価の図を作成した．
 % TODO: \usepackage{graphicx} required
 \begin{figure}
 	\centering
-	\includegraphics[width=\linewidth]{obj/chartDET.pdf}
-	\figcap{テストデータ識別結果}{ababefn}{}
+	\includegraphics[width=\linewidth]{obj/predicted_results.jpg}
+	\figcap{テストデータ識別結果}{Identification results for the test data set}{}
 	\label{fig:chartdet}
 \end{figure}
 
@@ -227,9 +230,9 @@ Describe about 5 lines of abstract in English here. Describe about 5 lines of ab
 
 
 \section{まとめ}
-本プロジェクトでは，機械学習を用いた電車の車両番号を判別するため，２種類のモデルを作成した．また，電車が写っている画像や動画をサーバ上で，分類，識別を行い判別結果を出力するウェブアプリを作成した．
+本プロジェクトでは，機械学習を用いた電車の車両番号を判別するため，２種類のモデルを作成した．また，電車が写っている画像や動画をサーバ上で，分類，識別を行い判別結果を出力するWebアプリを作成した．
 
-モデルを学習させるためのデータセットは，動画から電車が写っている場面だけを保存して作成した．作成したモデルで車両タイプの判別をすると，外見が似ている電車の判別結果が悪く，外見に特徴のある電車の判別結果は良かった．その原因は，車体の特徴がうまく写っていない画像もデータセットに含まれていることだと考えられる．
+モデルを学習させるためのデータセットは，動画から電車が写っている場面だけを保存して作成した．作成したモデルで車両タイプの判別をすると，外見が似ている電車の判別結果が悪く，外見に特徴のある電車の判別結果は良かった．その原因は，車体の特徴がうまく写っていない画像もデータセットに含まれていることだと考えられる．同じ画像を使って，２種類のデータセットを作成した．分類結果の図と識別結果の図が似ているため，車両タイプを知るためのシステムを作る際には，識別モデルのみを作成することで画像と動画の両方に対応した車両判別システムを作成でき，電車の車両タイプを知ることができるようになると考える．
 
 Webアプリケーションの画像の分類、画像の識別、動画の識別の各機能が正常な動作をしていることが電波の弱い場所以外では確認できた．また、電波の弱い場所ではメモリリークが発生していると考えられる．%% 参考文献（必要に応じて追加）
 \begin{thebibliography}{99}
