@@ -43,7 +43,7 @@ Describe about 5 lines of abstract in English here. Describe about 5 lines of ab
 %%% 著者リスト
 \def\AUTHORS{
 \begin{minipage}{13.5cm}
-~\hfill 4EP1-68~野崎 悠渡(NOZAKI Yuto)      ~~~~~ 4EP5-11~田村 優祐(TAMURA Yusuke) \hfill~
+~\hfill 4EP1-68~野崎 悠渡(NOZAKI Yuto)      ~~~~~ 4EP4-75~田村 優祐(TAMURA Yusuke) \hfill~
 \end{minipage}
 }
 
@@ -89,10 +89,62 @@ Describe about 5 lines of abstract in English here. Describe about 5 lines of ab
 \begin{figure} % 小さな図
 	\label{abc}
 	\centering
-	\includegraphics[width=\linewidth]{obj/sys_gaiyou1.pdf}
+	\includegraphics[width=\linewidth]{obj/sys_gaiyou5.pdf}
 	\figcap{システム概要}{System Overview}{abc}
 \end{figure}
 
+\section{システムの機能}
+%本システムの機能として電車の分類と識別を提供する．識別は動画と画像の両方に対応している．
+%画像や動画を入力すると，判別結果が出力される．
+%本システムは，以下の3つの機能を提供する．
+本システムは，電車の分類と電車の画像と動画の識別の３つ機能を提供する
+%\begin{itemize}
+%	\item 電車の画像の分類
+%	\item 電車の画像の識別
+%	\item 電車の動画の識別
+%\end{itemize}
+
+\subsection{電車の画像の分類} 
+出力後の画面を図\ref{img_cls}に示す．
+この機能では，ユーザがブラウザからアップロードした画像に含まれる電車の種類を分類する． 分類の結果，最も可能性が高いものをWebページに出力する．
+\subsection{電車の画像の識別}
+出力後の画面を図\ref{img_det}に示す．
+この機能では，ユーザがブラウザからアップロードした画像に含まれる電車の位置と種類を識別する．  識別の結果，バウンディングボックスが追加された画像をWebページに表示する．
+\subsection{電車の動画の識別} 
+出力後の画面を図\ref{mov_det}に示す．
+この機能では，ユーザがブラウザからアップロードした動画に含まれる電車の位置と種類を識別する． 識別の結果，バウンディングボックスが追加された動画をWebページに表示する．
+
+%\begin{figure}
+%	\centering
+%	\includegraphics[width=0.5\linewidth]{obj/image1.png}
+%	\figcap{画像の分類}{classify image}{cls-img}
+%\end{figure}
+
+\begin{figure}
+	\begin{tabular}{ccc}
+		\begin{minipage}[b]{0.3\textwidth}
+			\centering
+			\includegraphics[width=\linewidth]{obj/img_classify.jpg}
+			\figcap{画像の分類}{Image Classification}{img_cls}
+		\end{minipage}
+		\begin{minipage}[b]{0.3\textwidth}
+			\centering
+			\includegraphics[width=\linewidth]{obj/img_identify.jpg}
+			\figcap{画像の識別}{Image Identification}{img_det}
+		\end{minipage}
+		\begin{minipage}[b]{0.3\textwidth}
+			\centering
+			\includegraphics[width=\linewidth]{obj/mov_det.jpg}
+			\figcap{動画の識別}{Video Identification}{mov_det}
+		\end{minipage}
+	\end{tabular}
+	
+\end{figure}
+%https://link-blog.hatenablog.com/entry/2022/10/15/192639を参照
+\section{動作確認と現状}
+学内ネットワークからWebアプリケーションに接続すると画像の分類，画像の識別，動画の識別の動作を確認できた．
+スマホで4G回線に接続し，学内のVPNを用いた際にも動作したもののアップロードにかなりの時間を要した．その際にnode.jsのプログラムメモリ消費量が増大した．このことから，メモリリークが発生していると思われる．現状，弱い回線での接続をする際には注意が必要である．
+%ここまで田村
 
 \section{判別モデルの開発の流れ}
 電車が写っている画像を集めて，データセットを作成し，学習をするという流れで判別モデルを開発する．
@@ -132,62 +184,6 @@ Describe about 5 lines of abstract in English here. Describe about 5 lines of ab
 %田村のパートに記載してもいいかもしれない
 
 
-\section{システムの機能}
-%本システムの機能として電車の分類と識別を提供する．識別は動画と画像の両方に対応している．
-%画像や動画を入力すると，判別結果が出力される．
-%本システムは，以下の3つの機能を提供する．
-本システムは，電車の分類と電車の画像と動画の識別の３つ機能を提供する
-%\begin{itemize}
-%	\item 電車の画像の分類
-%	\item 電車の画像の識別
-%	\item 電車の動画の識別
-%\end{itemize}
-
-\subsection{電車の画像の分類} 
-出力後の画面を図\ref{img_cls}に示す．
-この機能では，ユーザがブラウザからアップロードした画像に含まれる電車の種類を分類する． 分類の結果，最も可能性が高いものをHTMLページに出力する．
-\subsection{電車の画像の識別}
-出力後の画面を図\ref{img_det}に示す．
-この機能では，ユーザがブラウザからアップロードした画像に含まれる電車の位置と種類を識別する．  識別の結果，バウンディングボックスが追加された画像をHTMLページに表示する．
-\subsection{電車の動画の識別} 
-出力後の画面を図\ref{mov_det}に示す．
-この機能では，ユーザがブラウザからアップロードした動画に含まれる電車の位置と種類を識別する． 識別の結果，バウンディングボックスが追加された動画をHTMLページに表示する．
-
-%\begin{figure}
-%	\centering
-%	\includegraphics[width=0.5\linewidth]{obj/image1.png}
-%	\figcap{画像の分類}{classify image}{cls-img}
-%\end{figure}
-
-\begin{figure}
-	\begin{tabular}{ccc}
-		\begin{minipage}[b]{0.3\textwidth}
-			\centering
-			\includegraphics[width=\linewidth]{obj/img_classify.jpg}
-			\figcap{画像の分類}{classify image}{img_cls}
-		\end{minipage}
-		\begin{minipage}[b]{0.3\textwidth}
-			\centering
-			\includegraphics[width=\linewidth]{obj/img_identify.jpg}
-			\figcap{画像の識別}{detection image}{img_det}
-		\end{minipage}
-		\begin{minipage}[b]{0.3\textwidth}
-			\centering
-			\includegraphics[width=\linewidth]{obj/mov_det.jpg}
-			\figcap{動画の識別}{detection movie}{mov_det}
-		\end{minipage}
-	\end{tabular}
-
-\end{figure}
-%https://link-blog.hatenablog.com/entry/2022/10/15/192639を参照
-\section{動作確認と現状}
-学内ネットワークからWebアプリケーションに接続すると画像の分類，画像の識別，動画の識別の動作を確認できた．
-スマホで4G回線に接続し，学内のVPNを用いた際にも動作したもののアップロードにかなりの時間を要した．その際にnode.jsのプログラムメモリ消費量が増大した．このことから，メモリリークが発生していると思われる．現状，弱い回線での接続をする際には注意が必要である．
-
-
-%ここまで田村
-
-ーーーーーーここまで田村ーーーーーーーー
 
 \section{作成したモデルの評価}
 %\subsection{モデルの性能評価指標}
@@ -235,8 +231,7 @@ Describe about 5 lines of abstract in English here. Describe about 5 lines of ab
 
 モデルを学習させるためのデータセットは，動画から電車が写っている場面だけを保存して作成した．作成したモデルで車両タイプの判別をすると，外見が似ている電車の判別結果が悪く，外見に特徴のある電車の判別結果は良かった．その原因は，車体の特徴がうまく写っていない画像もデータセットに含まれていることだと考えられる．
 
-電車の画像の分類，識別，動画の識別をする機能を持ったWebアプリケーションを作成することができた．電波の弱い場所以外では正常に動作することが確認できた．
-%% 参考文献（必要に応じて追加）
+Webアプリケーションの画像の分類、画像の識別、動画の識別の各機能が正常な動作をしていることが電波の弱い場所以外では確認できた．また、電波の弱い場所ではメモリリークが発生していると考えられる．%% 参考文献（必要に応じて追加）
 \begin{thebibliography}{99}
 %\bibitem{jp2k1} 織田 信長, 明智 光秀, "JPEG2000画像符号化システムにおける係数ビットモデリングと適応算術符号化，"Journal of signal processing(基礎シリーズ), vol.7, no.4, pp.257-266, July 2003.
 %\bibitem{sdkguide}Parrot, "AR.Drone Developer Guide SDK 2.0"
