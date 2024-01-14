@@ -89,7 +89,7 @@ Describe about 5 lines of abstract in English here. Describe about 5 lines of ab
 \begin{figure} % 小さな図
 	\label{abc}
 	\centering
-	\includegraphics[width=\linewidth]{obj/sys_gaiyou.pdf}
+	\includegraphics[width=\linewidth]{obj/sys_gaiyou1.pdf}
 	\figcap{システム概要}{System Overview}{abc}
 \end{figure}
 
@@ -101,24 +101,29 @@ Describe about 5 lines of abstract in English here. Describe about 5 lines of ab
 	YouTubeで特定の電車のみが映っている１〜３種類の動画を保存して，指定した枚数分のランダムなフレームを保存する．保存した画像を識別して，	電車が映っている画像だけを保存する．
 	%動画ごとに電車が写っている時間が異なるため，集めた画像は車両タイプごとに異なる．
 	%各車両タイプが名前になっているディレクトリに保存する．
+各車両タイプの画像の保存枚数を図\ref{fig:chart}に示す．
 
+% TODO: \usepackage{graphicx} required
+\begin{figure}
+	\centering
+	\includegraphics[width=\linewidth]{obj/chart1.pdf}
+	\figcap{各車両タイプの保存枚数}{aaa}{fig:chart}
+\end{figure}
 \subsection{データセットの作成}
 本プロジェクトで作成するモデルは識別モデル，分類モデルの二種類である．%データセットのディレクトリ構造が識別用と分類用で異なるので，それぞれのデータセットを作成した．識別モデルには画像のアノテーション情報も必要なので，アノテーションを行い，識別モデル用のデータセットを作成した．
 分類モデルのデータセット内の画像をアノテーションして，識別モデル用のデータセットを作成した．
 様々なウェブサイトから手作業で１７種類の各車両の画像を１０枚ずつ集めて，テストデータセットを作成した．
 
-
 \subsubsection{分類と識別について}
 分類はデータやオブジェクトを異なるクラスやカテゴリに分けるプロセスを指す．画像の分類とは，画像が特定のカテゴリやクラスに属するかどうかを判別する作業である．例えば，画像に写っているのが猫か犬かのクラスに分けることである．
 
-識別とは画像のどこに何が写っているのかを判別するプロセスを指す．１枚の画像に複数の物体が存在する場合も識別はできる．
-
+識別とは画像のどこに何が写っているのかを判別するプロセスを指す．１枚の画像に複数の物体が存在する場合も識別はできる．動画上の車両タイプも判別することができる．
 
 
 \subsection{モデルの学習}
 %本プロジェクトでは\\
 作成したデータセットとYOLOv8を用いてモデルの学習を行い２種類のモデルを作成した．
-
+分類モデルでは画像での判別しかできない．動画から車両タイプを判別するために識別モデルを作成した．
 
 %\subsubsection{学習の実行}
 %学習を進めると徐々に性能が上がっていき性能が向上しなくなると学習が途中で中断される．
@@ -126,25 +131,25 @@ Describe about 5 lines of abstract in English here. Describe about 5 lines of ab
 %識別モデルと分類モデルをどのように使えば結果が出力されるのかを説明する．pythonのコードを貼り付ける？
 %田村のパートに記載してもいいかもしれない
 
-ーーーーーーここから田村ーーーーーーーー
 
 \section{システムの機能}
 %本システムの機能として電車の分類と識別を提供する．識別は動画と画像の両方に対応している．
 %画像や動画を入力すると，判別結果が出力される．
-本システムは，以下の3つの機能を提供する．
-\begin{itemize}
-	\item 電車の画像の分類
-	\item 電車の画像の識別
-	\item 電車の動画の識別
-\end{itemize}
+%本システムは，以下の3つの機能を提供する．
+本システムは，電車の分類と電車の画像と動画の識別の３つ機能を提供する
+%\begin{itemize}
+%	\item 電車の画像の分類
+%	\item 電車の画像の識別
+%	\item 電車の動画の識別
+%\end{itemize}
 
-\subsubsection{電車の画像の分類} 
+\subsection{電車の画像の分類} 
 出力後の画面を図\ref{img_cls}に示す．
 この機能では，ユーザがブラウザからアップロードした画像に含まれる電車の種類を分類する． 分類の結果，最も可能性が高いものをHTMLページに出力する．
-\subsubsection{電車の画像の識別}
+\subsection{電車の画像の識別}
 出力後の画面を図\ref{img_det}に示す．
 この機能では，ユーザがブラウザからアップロードした画像に含まれる電車の位置と種類を識別する．  識別の結果，バウンディングボックスが追加された画像をHTMLページに表示する．
-\subsubsection{電車の動画の識別} 
+\subsection{電車の動画の識別} 
 出力後の画面を図\ref{mov_det}に示す．
 この機能では，ユーザがブラウザからアップロードした動画に含まれる電車の位置と種類を識別する． 識別の結果，バウンディングボックスが追加された動画をHTMLページに表示する．
 
@@ -159,28 +164,26 @@ Describe about 5 lines of abstract in English here. Describe about 5 lines of ab
 		\begin{minipage}[b]{0.3\textwidth}
 			\centering
 			\includegraphics[width=\linewidth]{obj/img_classify.jpg}
-			\figcap{画像の分類}{aaa}{img_cls}
+			\figcap{画像の分類}{classify image}{img_cls}
 		\end{minipage}
 		\begin{minipage}[b]{0.3\textwidth}
 			\centering
 			\includegraphics[width=\linewidth]{obj/img_identify.jpg}
-			\figcap{画像の識別}{bbb}{img_det}
+			\figcap{画像の識別}{detection image}{img_det}
 		\end{minipage}
 		\begin{minipage}[b]{0.3\textwidth}
 			\centering
 			\includegraphics[width=\linewidth]{obj/mov_det.jpg}
-			\figcap{動画の識別}{ccc}{mov_det}
+			\figcap{動画の識別}{detection movie}{mov_det}
 		\end{minipage}
 	\end{tabular}
 
 \end{figure}
 %https://link-blog.hatenablog.com/entry/2022/10/15/192639を参照
-\section{動作確認}
+\section{動作確認と現状}
 学内ネットワークからWebアプリケーションに接続すると画像の分類，画像の識別，動画の識別の動作を確認できた．
-スマホで4G回線に接続し，学内のVPNを用いた際にも動作したもののアップロードにかなりの時間を要した．その際にnode.jsのプログラムメモリ消費量が増大した．
+スマホで4G回線に接続し，学内のVPNを用いた際にも動作したもののアップロードにかなりの時間を要した．その際にnode.jsのプログラムメモリ消費量が増大した．このことから，メモリリークが発生していると思われる．現状，弱い回線での接続をする際には注意が必要である．
 
-\subsection{システムの考察}
-スマホで4G回線に接続し，学内のVPNを用いた際の時間を要するアップロード時間については，アップロード時にnode.jsのメモリ消費量が増大したことから，メモリリークが発生していると思われる．現状，弱い回線での接続をする際には注意が必要である．
 
 %ここまで田村
 
@@ -222,24 +225,25 @@ Describe about 5 lines of abstract in English here. Describe about 5 lines of ab
 %限られたストレージでは，データセットの画質を変化させて判別結果を向上させることは難しいと考えられる．SSDの容量に制限がない場合，大量の高画質のデータでデータセットを作成することで判別結果が改善される可能性があると考えられる．
 %各車両タイプの画像の枚数に差があったことが判別結果に影響を与えていると考えられる．
 データセットの画像の枚数が少ない車両タイプの判別結果が必ず悪くはならなかった．
-画像の枚数が判別結果に影響を与えるのではなく，車体の特徴が鮮明に写っている画像の枚数が判別結果に影響を与えると考えられる．データセットとして質の悪い画像を大量に集めるのではなく，車体の特徴が鮮明に写っている画像を車両タイプごとに集める必要があったと考えられる．
+画像の枚数が判別結果に影響を与えるのではなく，車体の特徴が鮮明に写っている画像の枚数が判別結果に影響を与えると考えられる．
+判別精度の向上のために，データセットとして質の悪い画像を大量に集めるのではなく，車体の特徴が鮮明に写っている画像を車両タイプごとに集める必要があったと考えられる．
 
 
 
 \section{まとめ}
-本プロジェクトでは，機械学習を用いた電車の車両番号を判別するための２種類もモデルを作成した．また，画像や動画をサーバ上で処理して判別結果を出力するウェブアプリも作ったよ．
+本プロジェクトでは，機械学習を用いた電車の車両番号を判別するため，２種類のモデルを作成した．また，電車が写っている画像や動画をサーバ上で，分類，識別を行い判別結果を出力するウェブアプリを作成した．
 
-動画から電車が写っている場面だけを保存してデータセットを作成した．作成したモデルで車両タイプの判別をすると，外見が似ている電車の判別結果が悪く，外見に特徴のある電車の判別結果は良かった．その原因は，車体の特徴がうまく写っていない画像もデータセットに含まれていることだと考えられる．
+モデルを学習させるためのデータセットは，動画から電車が写っている場面だけを保存して作成した．作成したモデルで車両タイプの判別をすると，外見が似ている電車の判別結果が悪く，外見に特徴のある電車の判別結果は良かった．その原因は，車体の特徴がうまく写っていない画像もデータセットに含まれていることだと考えられる．
 
-ウェブアプリのまとめめめめめめ
+電車の画像の分類，識別，動画の識別をする機能を持ったWebアプリケーションを作成することができた．電波の弱い場所以外では正常に動作することが確認できた．
 %% 参考文献（必要に応じて追加）
 \begin{thebibliography}{99}
 %\bibitem{jp2k1} 織田 信長, 明智 光秀, "JPEG2000画像符号化システムにおける係数ビットモデリングと適応算術符号化，"Journal of signal processing(基礎シリーズ), vol.7, no.4, pp.257-266, July 2003.
 %\bibitem{sdkguide}Parrot, "AR.Drone Developer Guide SDK 2.0"
 %\bibitem{bk1} "金沢の暮らし", \url{http://www.kanazawa-it.ac.jp}
 %\bibitem{bk2} 山田 太郎, "金沢の一人暮らし", トンチンカン出版, 2016.
-\bibitem{bk0}"Ultralytics YOLOv8 ドキュメント",\url{https://docs.ultralytics.com/ja}
-\bibitem{bk1}"アノテーションとは - 定義と重要性，必要な準備や注意点を解説",\url{https://www.dir.co.jp/world/entry/solution/annotation}
+%\bibitem{bk0}"Ultralytics YOLOv8 ドキュメント",\url{https://docs.ultralytics.com/ja}
+%\bibitem{bk1}"アノテーションとは - 定義と重要性，必要な準備や注意点を解説",\url{https://www.dir.co.jp/world/entry/solution/annotation}
 \end{thebibliography}
 
 %\noindent\textbf{本プロジェクトに関する業績} % 学部
