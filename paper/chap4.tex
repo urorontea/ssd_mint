@@ -49,15 +49,14 @@
 
 \subsection{分類モデルの評価}
 %分類モデルの評価を図\ref{CLS}に示す
-\begin{figure}	
+作成した分類モデルを用いてテストデータセットの分類を行った結果をを図\ref{CLS}に示す．
+縦軸が予測した車両タイプ，横軸が正解の車両タイプとするグラフである．
+\begin{figure}	[H]
 	\centering
 	\includegraphics[width=\linewidth]{chap4/fig/classify_results.pdf}
 	\caption{分類モデルの混合行列}
 	\label{CLS}
 \end{figure}
-作成した分類モデルを用いてテストデータセットの分類を行った結果をを図\ref{CLS}に示す．
-縦軸が予測した車両タイプ，横軸が正解の車両タイプとするグラフである．
-
 
 \subsection{識別モデルの評価}
 識別時には，どの車両タイプにも当てはまらないと識別されることがある．その場合の車両タイプは０として識別モデルの混合行列を作成した．

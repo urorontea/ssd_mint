@@ -95,7 +95,7 @@ This project aims to create a system to identify train car types using YOLO. The
 \begin{figure} % 小さな図
 	\label{abc}
 	\centering
-	\includegraphics[width=\linewidth]{obj/sys_gaiyou5.pdf}
+	\includegraphics[width=\linewidth]{obj/sys_gaiyou6.pdf}
 	\figcap{システム概要}{System Overview}{abc}
 \end{figure}
 
@@ -146,9 +146,11 @@ This project aims to create a system to identify train car types using YOLO. The
 	\end{tabular}
 \end{figure}
 %https://link-blog.hatenablog.com/entry/2022/10/15/192639を参照
+
 \section{動作確認と現状}
 学内ネットワークからWebアプリケーションに接続すると画像の分類，画像の識別，動画の識別の動作を確認できた．
-スマホで4G回線に接続し，学内のVPNを用いた際にも動作したもののアップロードにかなりの時間を要した．その際にnode.jsのプログラムメモリ消費量が増大した．このことから，メモリリークが発生していると思われる．現状，弱い回線での接続をする際には注意が必要である．
+しかしスマホで4G回線に接続し，学内のVPNを用いた際の結果が返される速度と学内ネットワークを用いた際の結果が返される時間に大きな差が出てしまう．
+今後，メモリ使用量や，CPU使用量，ネットワーク使用量について調査する．
 %ここまで田村
 
 \section{判別モデルの開発の流れ}
@@ -158,11 +160,6 @@ This project aims to create a system to identify train car types using YOLO. The
 YouTubeで特定の電車のみが映っている１〜３種類の動画を保存し，指定した枚数分のランダムなフレームを保存する．保存した画像を識別し電車が映っている画像だけを保存してトレーニングデータとバリデーションデータを収集した．テストデータは様々なウェブサイトから手作業で17種類の各車両の画像を10枚ずつ収集した．
 各車両タイプの画像の保存枚数を図\ref{fig:chart}に示す．
 % TODO: \usepackage{graphicx} required
-\begin{figure}
-	\centering
-	\includegraphics[width=\linewidth]{obj/chart2.pdf}
-	\figcap{各車両タイプの保存枚数}{Number of images stored for each vehicle}{fig:chart}
-\end{figure}
 \subsection{データセットの作成}
 本プロジェクトで作成するモデルは識別モデル，分類モデルの二種類である．
 %データセットのディレクトリ構造が識別用と分類用で異なるので，それぞれのデータセットを作成した．識別モデルには画像のアノテーション情報も必要なので，アノテーションを行い，識別モデル用のデータセットを作成した．
@@ -186,11 +183,6 @@ YouTubeで特定の電車のみが映っている１〜３種類の動画を保�
 \subsection{分類モデルの評価}
 作成した分類モデルを用いてテストデータセットの分類を行って得られた混合行列を図\ref{fig:classifyresults}に示す.
 縦軸は正解の車両タイプを表し，横軸は作成したモデルが予想した車両タイプを表す．
-\begin{figure}
-	\centering
-	\includegraphics[width=\linewidth]{obj/classify_results.pdf}
-	\figcap{分類モデルの混合行列}{Mixture matrix of classification models}{fig:classifyresults}
-\end{figure}
 
 \subsection{識別モデルの評価}
 %１７種類の車両タイプの画像をそれぞれ１０枚ずつ集めテストデータを作成し識別を行った．識別の結果を表\ref{detection}に示す．
@@ -198,11 +190,6 @@ YouTubeで特定の電車のみが映っている１〜３種類の動画を保�
 作成した識別モデルを用いてテストデータセットの識別を行って得られた混合行列を図\ref{fig:chartdet}に示す．
 識別時には，どの車両タイプにも当てはまらないと識別されることがある．その場合の車両タイプは０として識別モデルの混合行列を作成した．
 % TODO: \usepackage{graphicx} required
-\begin{figure}
-	\centering
-	\includegraphics[width=\linewidth]{obj/predicted_results.jpg}
-	\figcap{識別モデルの混合行列}{Mixture matrix of identification models}{fig:chartdet}
-\end{figure}
 
 
 
@@ -219,14 +206,53 @@ YouTubeで特定の電車のみが映っている１〜３種類の動画を保�
 判別精度の向上のために，データセットとして質の悪い画像を大量に集めるのではなく，車体の特徴が鮮明に写っている画像を車両タイプごとに集める必要があったと考えられる．
 
 同じ画像を使って，２種類のデータセットを作成した．分類結果の図と識別結果の図が似ているため，車両タイプを知るためのシステムを作る際には，識別モデルのみを作成することで画像と動画の両方に対応した車両判別システムを作成でき，電車の車両タイプを知ることができるようになると考える．
+
+\section{まとめ}
+本プロジェクトでは，機械学習を用いた電車の車両タイプを判別するため，２種類のモデルを作成した．また，電車が写っている画像や動画をサーバ上で，分類，識別を行い判別結果を出力するWebアプリを作成した．
+
+本システムを利用することで電車の知識がない人でも画像または動画に写る一部の車両タイプが何なのかを知ることができる．
+4G回線と学内のVPNを利用して判別した場合と，学内ネットワークを利用して判別した場合では，結果が返ってくる時間に大きな差があった．
+今後，メモリ使用量やCPU使用量，ネットワーク使用量について調査をする．
+
+\begin{thebibliography}{99}
+	%\bibitem{jp2k1} 織田 信長, 明智 光秀, "JPEG2000画像符号化システムにおける係数ビットモデリングと適応算術符号化，"Journal of signal processing(基礎シリーズ), vol.7, no.4, pp.257-266, July 2003.
+	%\bibitem{sdkguide}Parrot, "AR.Drone Developer Guide SDK 2.0"
+	%\bibitem{bk1} "金沢の暮らし", \url{http://www.kanazawa-it.ac.jp}
+	%\bibitem{bk2} 山田 太郎, "金沢の一人暮らし", トンチンカン出版, 2016.
+	\bibitem{bk0}"Ultralytics YOLOv8 ドキュメント",\url{https://docs.ultralytics.com/ja}
+	%\bibitem{bk1}"アノテーションとは - 定義と重要性，必要な準備や注意点を解説",\url{https://www.dir.co.jp/world/entry/solution/annotation}
+\end{thebibliography}
+
+
+\begin{figure}
+	\centering
+	\includegraphics[width=\linewidth]{obj/chart2.pdf}
+	\figcap{各車両タイプの保存枚数}{Number of images stored for each type}{fig:chart}
+\end{figure}
+
+
+\begin{figure}
+	\centering
+	\includegraphics[width=\linewidth]{obj/classify_results.pdf}
+	\figcap{分類モデルの混合行列}{Mixture matrix of classification models}{fig:classifyresults}
+\end{figure}
+
+
+\begin{figure}
+	\centering
+	\includegraphics[width=\linewidth]{obj/predicted_results.jpg}
+	\figcap{識別モデルの混合行列}{Mixture matrix of identification models}{fig:chartdet}
+\end{figure}
+
+
 \begin{figure}
 	\begin{tabular}{cc}
-		\begin{minipage}[b]{0.5\textwidth}
+		\begin{minipage}[b]{0.45\textwidth}
 			\centering
 			\includegraphics[width=\linewidth]{obj/287.jpg}
 			\figcap{287系}{287 serise}{287}
 		\end{minipage}
-		\begin{minipage}[b]{0.5\textwidth}
+		\begin{minipage}[b]{0.45\textwidth}
 			\centering
 			\includegraphics[width=\linewidth]{obj/683.jpg}
 			\figcap{683系}{683 serise}{683}
@@ -234,21 +260,8 @@ YouTubeで特定の電車のみが映っている１〜３種類の動画を保�
 	\end{tabular}
 \end{figure}
 
-\section{まとめ}
-本プロジェクトでは，機械学習を用いた電車の車両タイプを判別するため，２種類のモデルを作成した．また，電車が写っている画像や動画をサーバ上で，分類，識別を行い判別結果を出力するWebアプリを作成した．
-
-本システムを利用することで電車の知識がない人でも画像または動画に写る一部の車両タイプが何なのかを知ることができる．
 
 
-Webアプリケーションの画像の分類、画像の識別、動画の識別の各機能が正常な動作をしていることが電波の弱い場所以外では確認できた．また、電波の弱い場所ではメモリリークが発生していると考えられる．%% 参考文献（必要に応じて追加）
-\begin{thebibliography}{99}
-%\bibitem{jp2k1} 織田 信長, 明智 光秀, "JPEG2000画像符号化システムにおける係数ビットモデリングと適応算術符号化，"Journal of signal processing(基礎シリーズ), vol.7, no.4, pp.257-266, July 2003.
-%\bibitem{sdkguide}Parrot, "AR.Drone Developer Guide SDK 2.0"
-%\bibitem{bk1} "金沢の暮らし", \url{http://www.kanazawa-it.ac.jp}
-%\bibitem{bk2} 山田 太郎, "金沢の一人暮らし", トンチンカン出版, 2016.
-\bibitem{bk0}"Ultralytics YOLOv8 ドキュメント",\url{https://docs.ultralytics.com/ja}
-%\bibitem{bk1}"アノテーションとは - 定義と重要性，必要な準備や注意点を解説",\url{https://www.dir.co.jp/world/entry/solution/annotation}
-\end{thebibliography}
 
 %\noindent\textbf{本プロジェクトに関する業績} % 学部
 % \noindent\textbf{本研究に関する業績} % 院生の場合

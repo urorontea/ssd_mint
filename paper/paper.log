@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2023.5.22)  15 JAN 2024 16:30
+This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2023.5.22)  15 JAN 2024 16:58
  restricted system commands enabled.
  file:line:error style messages enabled.
 **paper.tex
@@ -1239,17 +1239,16 @@ LaTeX Font Info:    Font shape `JY3/HaranoAjiMincho-Regular.otf(0)/b/n' will be
 \tf@lot=\write8
 
 \openout8 = paper.lot
- (./paper.lol
 LaTeX Font Info:    Font shape `JT3/HaranoAjiMincho-Regular.otf(0)/b/n' will be
 
-(Font)              scaled to size 9.24713pt on input line 3.
+(Font)              scaled to size 9.24713pt on input line 8.
 
 warning  (pdf backend): ignoring duplicate destination with the name 'page.i'
 [1
 
 
 
-])
+] (./paper.lol)
 \tf@lol=\write9
 
 \openout9 = paper.lol
@@ -1283,24 +1282,24 @@ warning  (pdf backend): ignoring duplicate destination with the name 'page.2'
 (load cache: extra_lmsans12-regular.luc)
 warning  (file chap2/fig/sys_gaiyou5.pdf) (pdf inclusion): PDF inclusion: found 
 PDF version '1.7', but at most version '1.5' allowed
-<chap2/fig/sys_gaiyou5.pdf, id=207, 565.15138pt x 198.7425pt>
+<chap2/fig/sys_gaiyou5.pdf, id=212, 565.15138pt x 198.7425pt>
 File: chap2/fig/sys_gaiyou5.pdf Graphic file (type pdf)
 <use chap2/fig/sys_gaiyou5.pdf>
 Package luatex.def Info: chap2/fig/sys_gaiyou5.pdf  used on input line 38.
 (luatex.def)             Requested size: 455.24411pt x 160.09805pt.
 ) (./chap3.tex [3] [4<./chap2/fig/sys_gaiyou5.pdf>]
 第3章
-<chap3/fig/test1.png, id=241, 970.62625pt x 482.80376pt>
+<chap3/fig/test1.png, id=246, 970.62625pt x 482.80376pt>
 File: chap3/fig/test1.png Graphic file (type png)
 <use chap3/fig/test1.png>
 Package luatex.def Info: chap3/fig/test1.png  used on input line 27.
 (luatex.def)             Requested size: 455.24411pt x 226.4463pt.
-<chap3/fig/test2.png, id=242, 773.89125pt x 448.67625pt>
+<chap3/fig/test2.png, id=247, 773.89125pt x 448.67625pt>
 File: chap3/fig/test2.png Graphic file (type png)
 <use chap3/fig/test2.png>
 Package luatex.def Info: chap3/fig/test2.png  used on input line 32.
 (luatex.def)             Requested size: 409.71692pt x 237.54396pt.
-<chap3/fig/test3.png, id=243, 808.01875pt x 466.74374pt>
+<chap3/fig/test3.png, id=248, 808.01875pt x 466.74374pt>
 File: chap3/fig/test3.png Graphic file (type png)
 <use chap3/fig/test3.png>
 Package luatex.def Info: chap3/fig/test3.png  used on input line 37.
@@ -1308,7 +1307,7 @@ Package luatex.def Info: chap3/fig/test3.png  used on input line 37.
 [5
 
 <./chap3/fig/test1.png>]
-<chap3/fig/chart2.pdf, id=250, 602.25pt x 239.89626pt>
+<chap3/fig/chart2.pdf, id=255, 602.25pt x 239.89626pt>
 File: chap3/fig/chart2.pdf Graphic file (type pdf)
 <use chap3/fig/chart2.pdf>
 Package luatex.def Info: chap3/fig/chart2.pdf  used on input line 52.
@@ -1321,7 +1320,7 @@ Package luatex.def Info: chap3/fig/chart2.pdf  used on input line 52.
 (load cache: extra_lmmono10-regular.luc)
 warning  (file fig/a.pdf) (pdf inclusion): PDF inclusion: found PDF version '1.7
 ', but at most version '1.5' allowed
-<fig/a.pdf, id=282, 354.36388pt x 53.23889pt>
+<fig/a.pdf, id=287, 354.36388pt x 53.23889pt>
 File: fig/a.pdf Graphic file (type pdf)
 <use fig/a.pdf>
 Package luatex.def Info: fig/a.pdf  used on input line 44.
@@ -1329,29 +1328,29 @@ Package luatex.def Info: fig/a.pdf  used on input line 44.
 
 warning  (file chap4/fig/classify_results.pdf) (pdf inclusion): PDF inclusion: f
 ound PDF version '1.7', but at most version '1.5' allowed
-<chap4/fig/classify_results.pdf, id=283, 394.3533pt x 330.27388pt>
+<chap4/fig/classify_results.pdf, id=289, 394.3533pt x 330.27388pt>
 File: chap4/fig/classify_results.pdf Graphic file (type pdf)
 <use chap4/fig/classify_results.pdf>
-Package luatex.def Info: chap4/fig/classify_results.pdf  used on input line 54.
+Package luatex.def Info: chap4/fig/classify_results.pdf  used on input line 56.
 
 (luatex.def)             Requested size: 455.24411pt x 381.2785pt.
 [9<./fig/a.pdf>]
-<chap4/fig/predicted_results.jpg, id=299, 393.8715pt x 327.3831pt>
+<chap4/fig/predicted_results.jpg, id=304, 393.8715pt x 327.3831pt>
 File: chap4/fig/predicted_results.jpg Graphic file (type jpg)
 <use chap4/fig/predicted_results.jpg>
-Package luatex.def Info: chap4/fig/predicted_results.jpg  used on input line 69
+Package luatex.def Info: chap4/fig/predicted_results.jpg  used on input line 68
 .
 (luatex.def)             Requested size: 455.24411pt x 378.42087pt.
  [10<./chap4/fig/classify_results.pdf>]
-<chap4/fig/287.jpg, id=309, 1927.2pt x 1284.8pt>
+<chap4/fig/287.jpg, id=314, 1927.2pt x 1284.8pt>
 File: chap4/fig/287.jpg Graphic file (type jpg)
 <use chap4/fig/287.jpg>
-Package luatex.def Info: chap4/fig/287.jpg  used on input line 91.
+Package luatex.def Info: chap4/fig/287.jpg  used on input line 90.
 (luatex.def)             Requested size: 318.66948pt x 212.43375pt.
-<chap4/fig/683.jpg, id=310, 642.4pt x 428.60126pt>
+<chap4/fig/683.jpg, id=315, 642.4pt x 428.60126pt>
 File: chap4/fig/683.jpg Graphic file (type jpg)
 <use chap4/fig/683.jpg>
-Package luatex.def Info: chap4/fig/683.jpg  used on input line 99.
+Package luatex.def Info: chap4/fig/683.jpg  used on input line 98.
 (luatex.def)             Requested size: 318.66948pt x 212.61934pt.
 ) (./chap5.tex [11<./chap4/fig/predicted_results.jpg>] [12<./chap4/fig/287.jpg><
 ./chap4/fig/683.jpg>]
@@ -1396,18 +1395,18 @@ Removing  `ltj.listings_unicode' from `process_input_buffer'. [18]
 
 ] (./paper.aux)
 Package rerunfilecheck Info: File `paper.out' has not changed.
-(rerunfilecheck)             Checksum: 40DA33FC99B323B9AB2B475EF1C6DFBE;3437.
+(rerunfilecheck)             Checksum: 3BB2521ABD13B7EA7ACFCF3484CD0DA4;3547.
 )
 
 Here is how much of LuaTeX's memory you used:
- 21178 strings out of 477805
- 1458177,953878 words of node,token memory allocated
- 37630 words of node memory still in use:
-   10 hlist, 2 vlist, 5 rule, 2 glue, 486 kern, 1 glyph, 12801 attribute, 1481 g
-lue_spec, 671 attribute_list, 1 write, 152 user_defined nodes
-   avail lists: 1:54,2:360419,3:1538,4:38946,5:10541,6:142,7:13546,8:136,9:35822
-,10:35,11:1616
- 40608 multiletter control sequences out of 65536+600000
+ 21180 strings out of 477805
+ 1458171,953878 words of node,token memory allocated
+ 37148 words of node memory still in use:
+   10 hlist, 2 vlist, 5 rule, 2 glue, 486 kern, 1 glyph, 12594 attribute, 1481 g
+lue_spec, 659 attribute_list, 1 write, 141 user_defined nodes
+   avail lists: 1:48,2:360419,3:1538,4:38946,5:10541,6:142,7:13546,8:136,9:35822
+,10:49,11:1616
+ 40609 multiletter control sequences out of 65536+600000
  127 fonts using 164972607 bytes
  115i,9n,131p,1743b,1285s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf/fonts/opentype/public/lm/lmmono9-regular.otf></usr/share/texmf
@@ -1419,10 +1418,10 @@ fonts/opentype/public/lm/lmroman17-regular.otf></usr/share/texlive/texmf-dist/fo
 nts/opentype/public/haranoaji/HaranoAjiGothic-Regular.otf></usr/share/texmf/font
 s/opentype/public/lm/lmroman12-regular.otf></usr/share/texlive/texmf-dist/fonts/
 opentype/public/haranoaji/HaranoAjiMincho-Regular.otf>
-Output written on paper.pdf (26 pages, 2514393 bytes).
+Output written on paper.pdf (26 pages, 2515454 bytes).
 
-PDF statistics: 543 PDF objects out of 1000 (max. 8388607)
- 456 compressed objects within 5 object streams
- 174 named destinations out of 1000 (max. 131072)
- 209 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 548 PDF objects out of 1000 (max. 8388607)
+ 461 compressed objects within 5 object streams
+ 175 named destinations out of 1000 (max. 131072)
+ 217 words of extra memory for PDF output out of 10000 (max. 100000000)
 
