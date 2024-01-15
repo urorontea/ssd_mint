@@ -22,7 +22,7 @@
 
 %%% タイトル
 \def\TITLEJP{機械学習用いた電車の車両タイプの判別システムの開発}
-\def\TITLEEN{Development of a train car type identification system using machine learning}
+\def\TITLEEN{Development Of A Train Type Identification System Using Machine Learning}
 \def\CENTERADJ{3.3} % ここを書き換えて，表紙の「プロジェクトテーマ」という文字列がセル中心になるよう調整してください
 
 %%% 教員名
@@ -32,9 +32,12 @@
 % 最低：100ワード，最大：300ワード前後
 % 英文部分については，句読点は半角にすること．つまり", "か". "を使う
 \def\ABSTRACT{
-Describe about 5 lines of abstract in English here. Describe about 5 lines of abstract in English here. Describe about 5 lines of abstract in English here. Describe about 5 lines of abstract in English here. Describe about 5 lines of abstract in English here. Describe about 5 lines of abstract in English here. 
-\textbf{（何が問題で，それをどんな手法で取り組んで，どういう結果であったかなどを英語で要約して下さい）}
- Describe about 5 lines of abstract in English here. Describe about 5 lines of abstract in English here. Describe about 5 lines of abstract in English here.
+There are nearly 100 types of train cars for JR's conventional lines alone.
+There are nearly 100 types of train cars on JR's conventional lines alone. It is difficult for those who do not have much knowledge of trains to distinguish similar train car types. In this project
+This project aims to create a system to identify train car types using YOLO. The classification and discrimination models were created using the same image dataset, and the discrimination results were similar. A web application was also created using the created models.
+%Describe about 5 lines of abstract in English here. Describe about 5 lines of abstract in English here. Describe about 5 lines of abstract in English here. Describe about 5 lines of abstract in English here. Describe about 5 lines of abstract in English here. Describe about 5 lines of abstract in English here. 
+%\textbf{（何が問題で，それをどんな手法で取り組んで，どういう結果であったかなどを英語で要約して下さい）}
+ %Describe about 5 lines of abstract in English here. Describe about 5 lines of abstract in English here. Describe about 5 lines of abstract in English here.
 }
 
 %%% キーワード(5個まで)
@@ -71,11 +74,10 @@ Describe about 5 lines of abstract in English here. Describe about 5 lines of ab
 \section{はじめに}
 %背景や目的をここに書いてください．
 電車の車両タイプはJRの在来線だけでも100種類近く存在している．
-電車を見て電車だと認識することは可能だが，その電車の車両タイプまでを判別できる人は少ない．
 電車の知識がある人は一目見るだけでその電車の車両タイプを判別できるが，電車の知識があまりない人は似ている電車の車両タイプを判別することが難しい.本プロジェクトでは簡単に画像や動画に写っている車両タイプが何なのかを分類または識別できるシステムを開発する．
 
-\section{分類と識別について}
-分類はデータやオブジェクトを異なるクラスやカテゴリに分けるプロセスを指す．画像の分類とは，画像が特定のカテゴリやクラスに属するかどうかを判別する作業である．例えば，画像に写っているのが猫か犬かのクラスに分けることである．
+\section{画像の分類と識別について}
+画像の分類とは，画像が特定のカテゴリやクラスに属するかどうかを判別する作業である．例えば，画像に写っているのが猫か犬かのクラスに分けることである．
 
 識別とは画像のどこに何が写っているのかを判別するプロセスを指す．1枚の画像に複数の物体が存在する場合も識別はできる．動画に写っている電車の車両タイプも判別することができる．
 %\section{関連研究？現存するサービスについて？これいる？？}
@@ -142,7 +144,6 @@ Describe about 5 lines of abstract in English here. Describe about 5 lines of ab
 			\figcap{動画の識別}{Video Identification}{mov_det}
 		\end{minipage}
 	\end{tabular}
-	
 \end{figure}
 %https://link-blog.hatenablog.com/entry/2022/10/15/192639を参照
 \section{動作確認と現状}
@@ -154,30 +155,24 @@ Describe about 5 lines of abstract in English here. Describe about 5 lines of ab
 電車が写っている画像を集めて，データセットを作成し，学習をするという流れで判別モデルを開発する．
 
 \subsection{データ収集}
-	YouTubeで特定の電車のみが映っている１〜３種類の動画を保存して，指定した枚数分のランダムなフレームを保存する．保存した画像を識別して，	電車が映っている画像だけを保存する．
-	%動画ごとに電車が写っている時間が異なるため，集めた画像は車両タイプごとに異なる．
-	%各車両タイプが名前になっているディレクトリに保存する．
+YouTubeで特定の電車のみが映っている１〜３種類の動画を保存し，指定した枚数分のランダムなフレームを保存する．保存した画像を識別し電車が映っている画像だけを保存してトレーニングデータとバリデーションデータを収集した．テストデータは様々なウェブサイトから手作業で17種類の各車両の画像を10枚ずつ収集した．
 各車両タイプの画像の保存枚数を図\ref{fig:chart}に示す．
-
 % TODO: \usepackage{graphicx} required
 \begin{figure}
 	\centering
-	\includegraphics[width=\linewidth]{obj/chart1.pdf}
+	\includegraphics[width=\linewidth]{obj/chart2.pdf}
 	\figcap{各車両タイプの保存枚数}{Number of images stored for each vehicle}{fig:chart}
 \end{figure}
 \subsection{データセットの作成}
 本プロジェクトで作成するモデルは識別モデル，分類モデルの二種類である．
 %データセットのディレクトリ構造が識別用と分類用で異なるので，それぞれのデータセットを作成した．識別モデルには画像のアノテーション情報も必要なので，アノテーションを行い，識別モデル用のデータセットを作成した．
 分類モデルのデータセット内の画像をアノテーションして，識別モデル用のデータセットを作成した．
-様々なウェブサイトから手作業で17種類の各車両の画像を10枚ずつ集めて，170枚の画像が保存されえているテストデータセットを作成した．
-
-
 
 
 \subsection{モデルの学習}
 %本プロジェクトでは\\
-作成したデータセットとYOLOv8を用いてモデルの学習を行い2種類のモデルを作成した．
-分類モデルでは画像での判別しかできない．動画から車両タイプを判別するために識別モデルを作成した．
+作成したデータセットとYOLOv8~\cite{bk0}を用いてモデルの学習を行い，分類用と識別用の2種類のモデルを作成した．
+分類モデルでは静止画での判別しかできない．動画から車両タイプを判別するために識別モデルを作成した．
 
 %\subsubsection{学習の実行}
 %学習を進めると徐々に性能が上がっていき性能が向上しなくなると学習が途中で中断される．
@@ -187,39 +182,35 @@ Describe about 5 lines of abstract in English here. Describe about 5 lines of ab
 
 
 
-\section{作成したモデルの評価}
-%\subsection{モデルの性能評価指標}
-%本プロジェクトで作成する分類モデルは混合行列から性能の評価を行う．混合行列とは実際のデータと予測データを比較するためのもので，正しくラベル設定ができているのか，及び予測の精確度を把握することができる．
-
-\subsection{分類モデルの性能評価}
-作成した分類モデルを用いてテストデータセットの分類を行った結果を図\ref{fig:classifyresults}に示す.
-縦軸が正解の車両タイプを表し，横軸が作成したモデルが予想した車両タイプを表す．
+\section{作成したモデルの評価と考察}
+\subsection{分類モデルの評価}
+作成した分類モデルを用いてテストデータセットの分類を行って得られた混合行列を図\ref{fig:classifyresults}に示す.
+縦軸は正解の車両タイプを表し，横軸は作成したモデルが予想した車両タイプを表す．
 \begin{figure}
 	\centering
 	\includegraphics[width=\linewidth]{obj/classify_results.pdf}
-	\figcap{テストデータセットの分類結果}{Classification results for the test data set}{def}
-	\label{fig:classifyresults}
+	\figcap{分類モデルの混合行列}{Mixture matrix of classification models}{fig:classifyresults}
 \end{figure}
 
-\subsection{識別モデルの性能評価}
+\subsection{識別モデルの評価}
 %１７種類の車両タイプの画像をそれぞれ１０枚ずつ集めテストデータを作成し識別を行った．識別の結果を表\ref{detection}に示す．
 %captionを追加するとエラーが発生してしまう
-作成した識別モデルを用いてテストデータセットの識別を行った結果を図\ref{fig:chartdet}に示す．
-識別時には，どの車両タイプにも当てはまらないと識別されることがある．その場合の車両タイプは０として識別モデルの性能評価の図を作成した．
+作成した識別モデルを用いてテストデータセットの識別を行って得られた混合行列を図\ref{fig:chartdet}に示す．
+識別時には，どの車両タイプにも当てはまらないと識別されることがある．その場合の車両タイプは０として識別モデルの混合行列を作成した．
 % TODO: \usepackage{graphicx} required
 \begin{figure}
 	\centering
 	\includegraphics[width=\linewidth]{obj/predicted_results.jpg}
-	\figcap{テストデータ識別結果}{Identification results for the test data set}{}
-	\label{fig:chartdet}
+	\figcap{識別モデルの混合行列}{Mixture matrix of identification models}{fig:chartdet}
 \end{figure}
 
 
 
 
 
-\section{作成したモデルの考察}
-正解率は電車によって異なることがわかる．特に外見が似ている電車だと，誤判別していることが多かった．
+\subsection{考察}
+正解率は電車によって異なることがわかる．287系と683系のように外見が似ている電車だと，誤判別していることが多かった．
+287系を図\ref{287}，683系を図\ref{683}に示す．
 %データセットの画質を落とすと誤判別が増えた．特に誤分類が多かった三種類の電車の画質を上げても結果はあまり変わらなかった．
 %限られたストレージでは，データセットの画質を変化させて判別結果を向上させることは難しいと考えられる．SSDの容量に制限がない場合，大量の高画質のデータでデータセットを作成することで判別結果が改善される可能性があると考えられる．
 %各車両タイプの画像の枚数に差があったことが判別結果に影響を与えていると考えられる．
@@ -227,12 +218,27 @@ Describe about 5 lines of abstract in English here. Describe about 5 lines of ab
 画像の枚数が判別結果に影響を与えるのではなく，車体の特徴が鮮明に写っている画像の枚数が判別結果に影響を与えると考えられる．
 判別精度の向上のために，データセットとして質の悪い画像を大量に集めるのではなく，車体の特徴が鮮明に写っている画像を車両タイプごとに集める必要があったと考えられる．
 
-
+同じ画像を使って，２種類のデータセットを作成した．分類結果の図と識別結果の図が似ているため，車両タイプを知るためのシステムを作る際には，識別モデルのみを作成することで画像と動画の両方に対応した車両判別システムを作成でき，電車の車両タイプを知ることができるようになると考える．
+\begin{figure}
+	\begin{tabular}{cc}
+		\begin{minipage}[b]{0.5\textwidth}
+			\centering
+			\includegraphics[width=\linewidth]{obj/287.jpg}
+			\figcap{287系}{287 serise}{287}
+		\end{minipage}
+		\begin{minipage}[b]{0.5\textwidth}
+			\centering
+			\includegraphics[width=\linewidth]{obj/683.jpg}
+			\figcap{683系}{683 serise}{683}
+		\end{minipage}
+	\end{tabular}
+\end{figure}
 
 \section{まとめ}
-本プロジェクトでは，機械学習を用いた電車の車両番号を判別するため，２種類のモデルを作成した．また，電車が写っている画像や動画をサーバ上で，分類，識別を行い判別結果を出力するWebアプリを作成した．
+本プロジェクトでは，機械学習を用いた電車の車両タイプを判別するため，２種類のモデルを作成した．また，電車が写っている画像や動画をサーバ上で，分類，識別を行い判別結果を出力するWebアプリを作成した．
 
-モデルを学習させるためのデータセットは，動画から電車が写っている場面だけを保存して作成した．作成したモデルで車両タイプの判別をすると，外見が似ている電車の判別結果が悪く，外見に特徴のある電車の判別結果は良かった．その原因は，車体の特徴がうまく写っていない画像もデータセットに含まれていることだと考えられる．同じ画像を使って，２種類のデータセットを作成した．分類結果の図と識別結果の図が似ているため，車両タイプを知るためのシステムを作る際には，識別モデルのみを作成することで画像と動画の両方に対応した車両判別システムを作成でき，電車の車両タイプを知ることができるようになると考える．
+本システムを利用することで電車の知識がない人でも画像または動画に写る一部の車両タイプが何なのかを知ることができる．
+
 
 Webアプリケーションの画像の分類、画像の識別、動画の識別の各機能が正常な動作をしていることが電波の弱い場所以外では確認できた．また、電波の弱い場所ではメモリリークが発生していると考えられる．%% 参考文献（必要に応じて追加）
 \begin{thebibliography}{99}
@@ -240,7 +246,7 @@ Webアプリケーションの画像の分類、画像の識別、動画の識�
 %\bibitem{sdkguide}Parrot, "AR.Drone Developer Guide SDK 2.0"
 %\bibitem{bk1} "金沢の暮らし", \url{http://www.kanazawa-it.ac.jp}
 %\bibitem{bk2} 山田 太郎, "金沢の一人暮らし", トンチンカン出版, 2016.
-%\bibitem{bk0}"Ultralytics YOLOv8 ドキュメント",\url{https://docs.ultralytics.com/ja}
+\bibitem{bk0}"Ultralytics YOLOv8 ドキュメント",\url{https://docs.ultralytics.com/ja}
 %\bibitem{bk1}"アノテーションとは - 定義と重要性，必要な準備や注意点を解説",\url{https://www.dir.co.jp/world/entry/solution/annotation}
 \end{thebibliography}
 

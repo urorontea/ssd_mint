@@ -2,14 +2,16 @@
 \addvspace {10\jsc@mpt }
 \contentsline {figure}{\numberline {2.1}{\ignorespaces システム概要図\relax }}{4}{figure.caption.2}%
 \addvspace {10\jsc@mpt }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces 動画のダウンロード1\relax }}{7}{figure.caption.3}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces 動画のダウンロード2\relax }}{7}{figure.caption.3}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces 動画のダウンロード3\relax }}{7}{figure.caption.3}%
-\contentsline {figure}{\numberline {3.4}{\ignorespaces 車両タイプ別画像の枚数\relax }}{8}{figure.caption.4}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces 動画のダウンロード1\relax }}{5}{figure.caption.3}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces 動画のダウンロード2\relax }}{6}{figure.caption.4}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces 動画のダウンロード3\relax }}{6}{figure.caption.5}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces 各車両タイプ（全17種）の保存枚数}}{7}{figure.caption.6}%
 \addvspace {10\jsc@mpt }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces 端末に出力されるもの\relax }}{10}{figure.caption.5}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces 分類モデルの評価\relax }}{10}{figure.caption.6}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces 識別結果}}{11}{figure.caption.7}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces 端末に出力されるもの\relax }}{9}{figure.caption.7}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces 分類モデルの混合行列\relax }}{10}{figure.caption.8}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces 識別モデルの混合行列\relax }}{11}{figure.caption.9}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces 287系\relax }}{12}{figure.caption.10}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces 683系\relax }}{12}{figure.caption.11}%
 \addvspace {10\jsc@mpt }
 \addvspace {10\jsc@mpt }
 \addvspace {10\jsc@mpt }
