@@ -22,7 +22,7 @@
 
 %%% タイトル
 \def\TITLEJP{機械学習用いた電車の車両タイプの判別システムの開発}
-\def\TITLEEN{Development Of A Train Type Identification System Using Machine Learning}
+\def\TITLEEN{Development of a Train Type Identification System Using Machine Learning}
 \def\CENTERADJ{3.3} % ここを書き換えて，表紙の「プロジェクトテーマ」という文字列がセル中心になるよう調整してください
 
 %%% 教員名
@@ -91,7 +91,7 @@ This project aims to create a system to identify train car types using YOLO. The
 
 \section{システム概要}
 %開発するシステムの概要を図 \ref{abc}に示す．
-本システムは，ユーザに画像または動画をブラウザ上で入力してもらい，それをサーバ上で画像認識を用いて処理し，結果をブラウザで表示するWebアプリケーションである．システム概要を図\ref{abc}に示す．
+本システムは，ユーザに画像または動画をブラウザ上で入力してもらい，それをサーバ上で画像認識を用いて処理し，結果をブラウザで表示するWebアプリケーションである．Webサイトのテンプレートにはw3.school~\cite{bk0}のものを使用した．システム概要を図\ref{abc}に示す．
 \begin{figure} % 小さな図
 	\label{abc}
 	\centering
@@ -168,7 +168,7 @@ YouTubeで特定の電車のみが映っている１〜３種類の動画を保�
 
 \subsection{モデルの学習}
 %本プロジェクトでは\\
-作成したデータセットとYOLOv8~\cite{bk0}を用いてモデルの学習を行い，分類用と識別用の2種類のモデルを作成した．
+作成したデータセットとYOLOv8~\cite{bk1}を用いてモデルの学習を行い，分類モデルと識別モデルを作成した．
 分類モデルでは静止画での判別しかできない．動画から車両タイプを判別するために識別モデルを作成した．
 
 %\subsubsection{学習の実行}
@@ -219,8 +219,11 @@ YouTubeで特定の電車のみが映っている１〜３種類の動画を保�
 	%\bibitem{sdkguide}Parrot, "AR.Drone Developer Guide SDK 2.0"
 	%\bibitem{bk1} "金沢の暮らし", \url{http://www.kanazawa-it.ac.jp}
 	%\bibitem{bk2} 山田 太郎, "金沢の一人暮らし", トンチンカン出版, 2016.
-	\bibitem{bk0}"Ultralytics YOLOv8 ドキュメント",\url{https://docs.ultralytics.com/ja}
+
 	%\bibitem{bk1}"アノテーションとは - 定義と重要性，必要な準備や注意点を解説",\url{https://www.dir.co.jp/world/entry/solution/annotation}
+	
+	\bibitem{bk0}"W3.CSS Templates",\url{https://www.w3schools.com/w3css/w3css_templates.asp?ssp=1&darkschemeovr=1&setlang=ja-JP&safesearch=moderate}
+	\bibitem{bk1}"Ultralytics YOLOv8 ドキュメント",\url{https://docs.ultralytics.com/ja}
 \end{thebibliography}
 
 
