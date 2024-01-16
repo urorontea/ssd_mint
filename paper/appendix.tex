@@ -2,7 +2,10 @@
 
 
 \appendix %付録
-\chapter{開発したプログラム}
+\chapter{サーバ用プログラム}
+リスト\ref{js}はブラウザから画像を受け取り，車両タイプの判別を行い，結果の出力を行うプログラムである．
+\lstinputlisting[caption=server.js,label=js]{appendix/src/img_rec_server.js}
+\chapter{モデル作成時に使用したプログラム}
 \section{使い方}
 リスト\ref{project_processing.py}には保存した動画から電車の画像を保存するための関数が定義されている．リスト\ref{save.py}ではリスト\ref{project_processing.py}の関数を利用して画像を保存する．リスト\ref{save.py}を実行する際には引数に保存する画像の枚数と車両タイプを指定してから実行する．
 
@@ -24,5 +27,4 @@
 %\lstinputlisting[language=html,caption=input_urls_3.html ,label= input3]{appendix/src/input_urls_3.html}
 
 
-\chapter{いいいいい}
-あああああああああああああああああああああいいいいいいいいいいいいいいいいいいいいいいいいいいいいううううううううううううううううう
+

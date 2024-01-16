@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2023.5.22)  16 JAN 2024 17:25
+This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2023.5.22)  16 JAN 2024 20:22
  restricted system commands enabled.
  file:line:error style messages enabled.
 **paper.tex
@@ -1238,7 +1238,7 @@ LaTeX Font Info:    Font shape `JY3/HaranoAjiMincho-Regular.otf(0)/b/n' will be
  (./paper.lof
 LaTeX Font Info:    Font shape `JT3/HaranoAjiMincho-Regular.otf(0)/b/n' will be
 
-(Font)              scaled to size 9.24713pt on input line 11.
+(Font)              scaled to size 9.24713pt on input line 4.
 
 warning  (pdf backend): ignoring duplicate destination with the name 'page.i'
 [1
@@ -1253,13 +1253,13 @@ warning  (pdf backend): ignoring duplicate destination with the name 'page.i'
 \tf@lot=\write8
 
 \openout8 = paper.lot
- (./paper.lol)
+ (./paper.lol
+warning  (pdf backend): ignoring duplicate destination with the name 'page.ii'
+[2])
 \tf@lol=\write9
 
 \openout9 = paper.lol
-
-warning  (pdf backend): ignoring duplicate destination with the name 'page.ii'
-[2]) (./chap1.tex
+ [3]) (./chap1.tex
 第1章
 LaTeX Font Info:    Font shape `JT3/HaranoAjiMincho-Regular.otf(0)/m/n' will be
 
@@ -1287,151 +1287,186 @@ warning  (pdf backend): ignoring duplicate destination with the name 'page.2'
 (load cache: extra_lmsans12-regular.luc)
 warning  (file chap2/fig/sys_gaiyou6.pdf) (pdf inclusion): PDF inclusion: found 
 PDF version '1.7', but at most version '1.5' allowed
-<chap2/fig/sys_gaiyou6.pdf, id=279, 616.22218pt x 198.7425pt>
+<chap2/fig/sys_gaiyou6.pdf, id=321, 616.22218pt x 198.7425pt>
 File: chap2/fig/sys_gaiyou6.pdf Graphic file (type pdf)
 <use chap2/fig/sys_gaiyou6.pdf>
 Package luatex.def Info: chap2/fig/sys_gaiyou6.pdf  used on input line 38.
 (luatex.def)             Requested size: 455.24411pt x 146.82452pt.
-[3]
-<chap2/fig/img_classify.jpg, id=290, 752.8125pt x 1339.0025pt>
-File: chap2/fig/img_classify.jpg Graphic file (type jpg)
-<use chap2/fig/img_classify.jpg>
-Package luatex.def Info: chap2/fig/img_classify.jpg  used on input line 74.
-(luatex.def)             Requested size: 136.57462pt x 242.91019pt.
-<chap2/fig/img_identify.jpg, id=291, 752.8125pt x 1339.0025pt>
-File: chap2/fig/img_identify.jpg Graphic file (type jpg)
-<use chap2/fig/img_identify.jpg>
-Package luatex.def Info: chap2/fig/img_identify.jpg  used on input line 80.
-(luatex.def)             Requested size: 136.57462pt x 242.91019pt.
-<chap2/fig/mov_identify1.jpg, id=292, 752.8125pt x 1339.0025pt>
-File: chap2/fig/mov_identify1.jpg Graphic file (type jpg)
-<use chap2/fig/mov_identify1.jpg>
-Package luatex.def Info: chap2/fig/mov_identify1.jpg  used on input line 86.
-(luatex.def)             Requested size: 136.57462pt x 242.91019pt.
- [4<./chap2/fig/sys_gaiyou6.pdf><./chap2/fig/img_classify.jpg><./chap2/fig/img_i
-dentify.jpg><./chap2/fig/mov_identify1.jpg>]
-<chap2/fig/pc_index.png, id=319, 1012.78375pt x 915.42pt>
+[3] [4<./chap2/fig/sys_gaiyou6.pdf>]
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2020/03/24 1.8d listings language file
+)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2020/03/24 1.8d listings language file
+) [5]
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
+nput line 137.
+(load cache: extra_lmroman9-regular.luc)
+LaTeX Font Info:    Font shape `JT3/HaranoAjiMincho-Regular.otf(0)/m/n' will be
+
+(Font)              scaled to size 8.32242pt on input line 137.
+LaTeX Font Info:    Font shape `JY3/HaranoAjiMincho-Regular.otf(0)/m/n' will be
+
+(Font)              scaled to size 8.32242pt on input line 137.
+LaTeX Font Info:    Font shape `JT3/HaranoAjiGothic-Regular.otf(0)/m/n' will be
+
+(Font)              scaled to size 8.32242pt on input line 137.
+LaTeX Font Info:    Font shape `JY3/HaranoAjiGothic-Regular.otf(0)/m/n' will be
+
+(Font)              scaled to size 8.32242pt on input line 137.
+Removing  `ltj.process_input_buffer' from `process_input_buffer'.
+Inserting `ltj.listings_unicode' at position 1 in `process_input_buffer'.
+Inserting `ltj.process_input_buffer' at position 2 in `process_input_buffer'.
+Removing  `ltj.listings_unicode' from `process_input_buffer'.
+Removing  `ltj.process_input_buffer' from `process_input_buffer'.
+Inserting `ltj.listings_unicode' at position 1 in `process_input_buffer'.
+Inserting `ltj.process_input_buffer' at position 2 in `process_input_buffer'.
+Removing  `ltj.listings_unicode' from `process_input_buffer'.
+Removing  `ltj.process_input_buffer' from `process_input_buffer'.
+Inserting `ltj.listings_unicode' at position 1 in `process_input_buffer'.
+Inserting `ltj.process_input_buffer' at position 2 in `process_input_buffer'.
+Removing  `ltj.listings_unicode' from `process_input_buffer'.
+<chap2/fig/pc_index.png, id=367, 1012.78375pt x 915.42pt>
 File: chap2/fig/pc_index.png Graphic file (type png)
 <use chap2/fig/pc_index.png>
-Package luatex.def Info: chap2/fig/pc_index.png  used on input line 148.
+Package luatex.def Info: chap2/fig/pc_index.png  used on input line 180.
 (luatex.def)             Requested size: 204.85846pt x 185.162pt.
-<chap2/fig/pc_template.png, id=320, 1014.79124pt x 911.405pt>
+<chap2/fig/pc_template.png, id=368, 1014.79124pt x 911.405pt>
 File: chap2/fig/pc_template.png Graphic file (type png)
 <use chap2/fig/pc_template.png>
-Package luatex.def Info: chap2/fig/pc_template.png  used on input line 153.
+Package luatex.def Info: chap2/fig/pc_template.png  used on input line 185.
 (luatex.def)             Requested size: 204.85846pt x 183.98831pt.
- [5]) (./chap3.tex [6<./chap2/fig/pc_index.png><./chap2/fig/pc_template.png>]
+ [6<./chap2/fig/pc_index.png><./chap2/fig/pc_template.png>]
+<chap2/fig/img_classify.jpg, id=395, 752.8125pt x 1339.0025pt>
+File: chap2/fig/img_classify.jpg Graphic file (type jpg)
+<use chap2/fig/img_classify.jpg>
+Package luatex.def Info: chap2/fig/img_classify.jpg  used on input line 214.
+(luatex.def)             Requested size: 136.57462pt x 242.91019pt.
+<chap2/fig/img_identify.jpg, id=396, 752.8125pt x 1339.0025pt>
+File: chap2/fig/img_identify.jpg Graphic file (type jpg)
+<use chap2/fig/img_identify.jpg>
+Package luatex.def Info: chap2/fig/img_identify.jpg  used on input line 220.
+(luatex.def)             Requested size: 136.57462pt x 242.91019pt.
+<chap2/fig/mov_identify1.jpg, id=397, 752.8125pt x 1339.0025pt>
+File: chap2/fig/mov_identify1.jpg Graphic file (type jpg)
+<use chap2/fig/mov_identify1.jpg>
+Package luatex.def Info: chap2/fig/mov_identify1.jpg  used on input line 226.
+(luatex.def)             Requested size: 136.57462pt x 242.91019pt.
+) (./chap3.tex [7<./chap2/fig/img_classify.jpg><./chap2/fig/img_identify.jpg><./
+chap2/fig/mov_identify1.jpg>]
+[8
+
+]
 第3章
-<densya/205.jpg, id=335, 642.4pt x 428.60126pt>
+<densya/205.jpg, id=409, 642.4pt x 428.60126pt>
 File: densya/205.jpg Graphic file (type jpg)
 <use densya/205.jpg>
 Package luatex.def Info: densya/205.jpg  used on input line 25.
 (luatex.def)             Requested size: 68.28383pt x 45.55708pt.
-<densya/207.jpg, id=336, 642.4pt x 428.60126pt>
+<densya/207.jpg, id=410, 642.4pt x 428.60126pt>
 File: densya/207.jpg Graphic file (type jpg)
 <use densya/207.jpg>
 Package luatex.def Info: densya/207.jpg  used on input line 30.
 (luatex.def)             Requested size: 68.28383pt x 45.55708pt.
-<densya/213.jpg, id=337, 642.4pt x 213.79875pt>
+<densya/213.jpg, id=411, 642.4pt x 213.79875pt>
 File: densya/213.jpg Graphic file (type jpg)
 <use densya/213.jpg>
 Package luatex.def Info: densya/213.jpg  used on input line 35.
 (luatex.def)             Requested size: 68.28383pt x 22.72519pt.
-<densya/221.jpg, id=338, 642.4pt x 360.34625pt>
+<densya/221.jpg, id=412, 642.4pt x 360.34625pt>
 File: densya/221.jpg Graphic file (type jpg)
 <use densya/221.jpg>
 Package luatex.def Info: densya/221.jpg  used on input line 40.
 (luatex.def)             Requested size: 68.28383pt x 38.30208pt.
-<densya/223.png, id=339, 1494.58376pt x 1111.15125pt>
+<densya/223.png, id=413, 1494.58376pt x 1111.15125pt>
 File: densya/223.png Graphic file (type png)
 <use densya/223.png>
 Package luatex.def Info: densya/223.png  used on input line 45.
 (luatex.def)             Requested size: 68.28383pt x 50.7626pt.
-<densya/225.jpg, id=340, 1484.54625pt x 1113.15875pt>
+<densya/225.jpg, id=414, 1484.54625pt x 1113.15875pt>
 File: densya/225.jpg Graphic file (type jpg)
 <use densya/225.jpg>
 Package luatex.def Info: densya/225.jpg  used on input line 50.
 (luatex.def)             Requested size: 68.28383pt x 51.19403pt.
-<densya/227.png, id=341, 1567.8575pt x 1289.81876pt>
+<densya/227.png, id=415, 1567.8575pt x 1289.81876pt>
 File: densya/227.png Graphic file (type png)
 <use densya/227.png>
 Package luatex.def Info: densya/227.png  used on input line 61.
 (luatex.def)             Requested size: 68.28383pt x 56.16963pt.
-<densya/271.png, id=342, 1087.06125pt x 664.4825pt>
+<densya/271.png, id=416, 1087.06125pt x 664.4825pt>
 File: densya/271.png Graphic file (type png)
 <use densya/271.png>
 Package luatex.def Info: densya/271.png  used on input line 66.
 (luatex.def)             Requested size: 68.28383pt x 41.73283pt.
-<densya/281.jpg, id=343, 4047.12pt x 3035.34pt>
+<densya/281.jpg, id=417, 4047.12pt x 3035.34pt>
 File: densya/281.jpg Graphic file (type jpg)
 <use densya/281.jpg>
 Package luatex.def Info: densya/281.jpg  used on input line 71.
 (luatex.def)             Requested size: 68.28383pt x 51.17862pt.
-<densya/283.jpg, id=344, 1007.765pt x 862.22125pt>
+<densya/283.jpg, id=418, 1007.765pt x 862.22125pt>
 File: densya/283.jpg Graphic file (type jpg)
 <use densya/283.jpg>
 Package luatex.def Info: densya/283.jpg  used on input line 76.
 (luatex.def)             Requested size: 68.28383pt x 58.4145pt.
-<densya/285.jpg, id=345, 1180.41pt x 1333.98375pt>
+<densya/285.jpg, id=419, 1180.41pt x 1333.98375pt>
 File: densya/285.jpg Graphic file (type jpg)
 <use densya/285.jpg>
 Package luatex.def Info: densya/285.jpg  used on input line 81.
 (luatex.def)             Requested size: 68.28383pt x 77.16553pt.
-<densya/287.png, id=346, 1108.14pt x 994.71625pt>
+<densya/287.png, id=420, 1108.14pt x 994.71625pt>
 File: densya/287.png Graphic file (type png)
 <use densya/287.png>
 Package luatex.def Info: densya/287.png  used on input line 86.
 (luatex.def)             Requested size: 68.28383pt x 61.28928pt.
-<densya/321.png, id=347, 828.09375pt x 597.23125pt>
+<densya/321.png, id=421, 828.09375pt x 597.23125pt>
 File: densya/321.png Graphic file (type png)
 <use densya/321.png>
 Package luatex.def Info: densya/321.png  used on input line 97.
 (luatex.def)             Requested size: 68.28383pt x 49.24666pt.
-<densya/323.jpg, id=348, 4047.12pt x 3035.34pt>
+<densya/323.jpg, id=422, 4047.12pt x 3035.34pt>
 File: densya/323.jpg Graphic file (type jpg)
 <use densya/323.jpg>
 Package luatex.def Info: densya/323.jpg  used on input line 103.
 (luatex.def)             Requested size: 68.28383pt x 51.17862pt.
-<densya/381.jpg, id=349, 1524.69624pt x 1386.17876pt>
+<densya/381.jpg, id=423, 1524.69624pt x 1386.17876pt>
 File: densya/381.jpg Graphic file (type jpg)
 <use densya/381.jpg>
 Package luatex.def Info: densya/381.jpg  used on input line 108.
 (luatex.def)             Requested size: 68.28383pt x 62.07922pt.
-<densya/521.jpg, id=350, 1445.4pt x 1084.05pt>
+<densya/521.jpg, id=424, 1445.4pt x 1084.05pt>
 File: densya/521.jpg Graphic file (type jpg)
 <use densya/521.jpg>
 Package luatex.def Info: densya/521.jpg  used on input line 113.
 (luatex.def)             Requested size: 68.28383pt x 51.2117pt.
-<densya/683.jpg, id=351, 642.4pt x 428.60126pt>
+<densya/683.jpg, id=425, 642.4pt x 428.60126pt>
 File: densya/683.jpg Graphic file (type jpg)
 <use densya/683.jpg>
 Package luatex.def Info: densya/683.jpg  used on input line 118.
 (luatex.def)             Requested size: 68.28383pt x 45.55708pt.
-[7
-
-<./densya/205.jpg><./densya/207.jpg><./densya/213.jpg><./densya/221.jpg><./densy
-a/223.png><./densya/225.jpg><./densya/227.png><./densya/271.png><./densya/281.jp
-g><./densya/283.jpg><./densya/285.jpg><./densya/287.png><./densya/321.png><./den
-sya/323.jpg><./densya/381.jpg><./densya/521.jpg><./densya/683.jpg>]
-<chap3/fig/django.pdf, id=360, 722.7pt x 406.51875pt>
+[9<./densya/205.jpg><./densya/207.jpg><./densya/213.jpg><./densya/221.jpg><./den
+sya/223.png><./densya/225.jpg><./densya/227.png><./densya/271.png><./densya/281.
+jpg><./densya/283.jpg><./densya/285.jpg><./densya/287.png><./densya/321.png><./d
+ensya/323.jpg><./densya/381.jpg><./densya/521.jpg><./densya/683.jpg>]
+<chap3/fig/django.pdf, id=434, 722.7pt x 406.51875pt>
 File: chap3/fig/django.pdf Graphic file (type pdf)
 <use chap3/fig/django.pdf>
 Package luatex.def Info: chap3/fig/django.pdf  used on input line 136.
 (luatex.def)             Requested size: 409.71692pt x 230.46509pt.
-<chap3/fig/chart2.pdf, id=362, 602.25pt x 239.89626pt>
+<chap3/fig/chart2.pdf, id=436, 602.25pt x 239.89626pt>
 File: chap3/fig/chart2.pdf Graphic file (type pdf)
 <use chap3/fig/chart2.pdf>
 Package luatex.def Info: chap3/fig/chart2.pdf  used on input line 151.
 (luatex.def)             Requested size: 455.24411pt x 181.34567pt.
 
-[8<./chap3/fig/django.pdf><./chap3/fig/chart2.pdf>]) (./chap4.tex [9] [10
+[10<./chap3/fig/django.pdf><./chap3/fig/chart2.pdf>]) (./chap4.tex [11]
+[12
 
 ]
 第4章
 (load cache: extra_lmmono10-regular.luc)
 warning  (file fig/a.pdf) (pdf inclusion): PDF inclusion: found PDF version '1.7
 ', but at most version '1.5' allowed
-<fig/a.pdf, id=412, 354.36388pt x 53.23889pt>
+<fig/a.pdf, id=487, 354.36388pt x 53.23889pt>
 File: fig/a.pdf Graphic file (type pdf)
 <use fig/a.pdf>
 Package luatex.def Info: fig/a.pdf  used on input line 43.
@@ -1439,63 +1474,55 @@ Package luatex.def Info: fig/a.pdf  used on input line 43.
 
 warning  (file chap4/fig/classify_results.pdf) (pdf inclusion): PDF inclusion: f
 ound PDF version '1.7', but at most version '1.5' allowed
-<chap4/fig/classify_results.pdf, id=414, 394.3533pt x 330.27388pt>
+<chap4/fig/classify_results.pdf, id=489, 394.3533pt x 330.27388pt>
 File: chap4/fig/classify_results.pdf Graphic file (type pdf)
 <use chap4/fig/classify_results.pdf>
 Package luatex.def Info: chap4/fig/classify_results.pdf  used on input line 55.
 
 (luatex.def)             Requested size: 455.24411pt x 381.2785pt.
-[11<./fig/a.pdf>]
-<chap4/fig/predicted_results.jpg, id=428, 393.8715pt x 327.3831pt>
+[13<./fig/a.pdf>]
+<chap4/fig/predicted_results.jpg, id=503, 393.8715pt x 327.3831pt>
 File: chap4/fig/predicted_results.jpg Graphic file (type jpg)
 <use chap4/fig/predicted_results.jpg>
 Package luatex.def Info: chap4/fig/predicted_results.jpg  used on input line 67
 .
 (luatex.def)             Requested size: 455.24411pt x 378.42087pt.
- [12<./chap4/fig/classify_results.pdf>]
-<chap4/fig/287.jpg, id=439, 1927.2pt x 1284.8pt>
+ [14<./chap4/fig/classify_results.pdf>]
+<chap4/fig/287.jpg, id=514, 1927.2pt x 1284.8pt>
 File: chap4/fig/287.jpg Graphic file (type jpg)
 <use chap4/fig/287.jpg>
 Package luatex.def Info: chap4/fig/287.jpg  used on input line 89.
 (luatex.def)             Requested size: 318.66948pt x 212.43375pt.
-<chap4/fig/683.jpg, id=442, 642.4pt x 428.60126pt>
+<chap4/fig/683.jpg, id=517, 642.4pt x 428.60126pt>
 File: chap4/fig/683.jpg Graphic file (type jpg)
 <use chap4/fig/683.jpg>
 Package luatex.def Info: chap4/fig/683.jpg  used on input line 97.
 (luatex.def)             Requested size: 318.66948pt x 212.61934pt.
-) (./chap5.tex [13<./chap4/fig/predicted_results.jpg>] [14<./chap4/fig/287.jpg><
+) (./chap5.tex [15<./chap4/fig/predicted_results.jpg>] [16<./chap4/fig/287.jpg><
 ./chap4/fig/683.jpg>]
 第5章
-) (./bibliography.tex [15
+) (./bibliography.tex [17
 
-] [16
+] [18
 
-]) [17] (./appendix.tex [18
+]) [19] (./appendix.tex [20
 
 ]
 付録A
+Removing  `ltj.process_input_buffer' from `process_input_buffer'.
+Inserting `ltj.listings_unicode' at position 1 in `process_input_buffer'.
+Inserting `ltj.process_input_buffer' at position 2 in `process_input_buffer'. (./appendix/src/img_rec_server.js [21] [22])
+Removing  `ltj.listings_unicode' from `process_input_buffer'. [23] [24
+
+]
+付録B
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
 )
-Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 16.
-(load cache: extra_lmroman9-regular.luc)
-LaTeX Font Info:    Font shape `JT3/HaranoAjiMincho-Regular.otf(0)/m/n' will be
-
-(Font)              scaled to size 8.32242pt on input line 16.
-LaTeX Font Info:    Font shape `JY3/HaranoAjiMincho-Regular.otf(0)/m/n' will be
-
-(Font)              scaled to size 8.32242pt on input line 16.
-LaTeX Font Info:    Font shape `JT3/HaranoAjiGothic-Regular.otf(0)/m/n' will be
-
-(Font)              scaled to size 8.32242pt on input line 16.
-LaTeX Font Info:    Font shape `JY3/HaranoAjiGothic-Regular.otf(0)/m/n' will be
-
-(Font)              scaled to size 8.32242pt on input line 16.
 Removing  `ltj.process_input_buffer' from `process_input_buffer'.
 Inserting `ltj.listings_unicode' at position 1 in `process_input_buffer'.
 Inserting `ltj.process_input_buffer' at position 2 in `process_input_buffer'.
-(./appendix/src/project_processing.py [19])
+(./appendix/src/project_processing.py [25])
 Removing  `ltj.listings_unicode' from `process_input_buffer'.
 Removing  `ltj.process_input_buffer' from `process_input_buffer'.
 Inserting `ltj.listings_unicode' at position 1 in `process_input_buffer'.
@@ -1504,37 +1531,41 @@ Removing  `ltj.listings_unicode' from `process_input_buffer'.
 Removing  `ltj.process_input_buffer' from `process_input_buffer'.
 Inserting `ltj.listings_unicode' at position 1 in `process_input_buffer'.
 Inserting `ltj.process_input_buffer' at position 2 in `process_input_buffer'.
-(./appendix/src/views.py [20] [21] [22])
+(./appendix/src/views.py [26] [27] [28])
 Removing  `ltj.listings_unicode' from `process_input_buffer'.
 Removing  `ltj.process_input_buffer' from `process_input_buffer'.
 Inserting `ltj.listings_unicode' at position 1 in `process_input_buffer'.
-Inserting `ltj.process_input_buffer' at position 2 in `process_input_buffer'. (./appendix/src/forms.py [23])
-Removing  `ltj.listings_unicode' from `process_input_buffer'.
-[24]
-付録B
-) [25
-
-] (./paper.aux)
+Inserting `ltj.process_input_buffer' at position 2 in `process_input_buffer'. (./appendix/src/forms.py [29])
+Removing  `ltj.listings_unicode' from `process_input_buffer'.)
+[30] (./paper.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package rerunfilecheck Info: File `paper.out' has not changed.
-(rerunfilecheck)             Checksum: 9497AB75B939E60D9B1F779B83ED021E;4702.
+
+Package rerunfilecheck Warning: File `paper.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `paper.out':
+(rerunfilecheck)             Before: 167846291AEA9BF54AF3A80114FC6499;5877
+(rerunfilecheck)             After:  2ACD99C09AEE63F6DB8687D202C4484E;5750.
 )
 
 Here is how much of LuaTeX's memory you used:
- 21823 strings out of 477805
- 1822751,1144653 words of node,token memory allocated
- 48330 words of node memory still in use:
-   10 hlist, 2 vlist, 5 rule, 2 glue, 492 kern, 1 glyph, 15009 attribute, 2581 g
-lue_spec, 800 attribute_list, 1 write, 276 user_defined nodes
-   avail lists: 1:50,2:380004,3:1638,4:40582,5:10469,6:157,7:17036,8:155,9:37353
+ 22265 strings out of 477805
+ 1822730,1144653 words of node,token memory allocated
+ 53113 words of node memory still in use:
+   10 hlist, 2 vlist, 5 rule, 2 glue, 496 kern, 1 glyph, 15531 attribute, 3292 g
+lue_spec, 830 attribute_list, 1 write, 302 user_defined nodes
+   avail lists: 1:48,2:380514,3:1638,4:40584,5:10492,6:157,7:17064,8:155,9:37367
 ,10:49,11:1679
- 40850 multiletter control sequences out of 65536+600000
+ 41090 multiletter control sequences out of 65536+600000
  127 fonts using 164972607 bytes
- 115i,14n,131p,1743b,1285s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texmf/fonts/opentype/public/lm/lmmono9-regular.otf></usr/share/texmf
-/fonts/opentype/public/lm/lmmono10-regular.otf></usr/share/texmf/fonts/opentype/
+ 115i,14n,131p,1743b,1256s stack positions out of 5000i,500n,10000p,200000b,80000s
+
+warning  (pdf backend): unreferenced destination with name 'section.A.1'
+</usr/share/texmf/fonts/opentype/public/lm/lmmono10-regular.otf></usr/share/texm
+f/fonts/opentype/public/lm/lmmono9-regular.otf></usr/share/texmf/fonts/opentype/
 public/lm/lmsans12-regular.otf></usr/share/texmf/fonts/opentype/public/lm/lmsans
 17-regular.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman10-bold.otf></u
 sr/share/texmf/fonts/opentype/public/lm/lmroman10-regular.otf></usr/share/texmf/
@@ -1542,10 +1573,10 @@ fonts/opentype/public/lm/lmroman17-regular.otf></usr/share/texlive/texmf-dist/fo
 nts/opentype/public/haranoaji/HaranoAjiGothic-Regular.otf></usr/share/texmf/font
 s/opentype/public/lm/lmroman12-regular.otf></usr/share/texlive/texmf-dist/fonts/
 opentype/public/haranoaji/HaranoAjiMincho-Regular.otf>
-Output written on paper.pdf (31 pages, 18245122 bytes).
+Output written on paper.pdf (37 pages, 18277691 bytes).
 
-PDF statistics: 950 PDF objects out of 1000 (max. 8388607)
- 825 compressed objects within 9 object streams
- 433 named destinations out of 1000 (max. 131072)
- 273 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 1187 PDF objects out of 1200 (max. 8388607)
+ 1054 compressed objects within 11 object streams
+ 605 named destinations out of 1000 (max. 131072)
+ 321 words of extra memory for PDF output out of 10000 (max. 100000000)
 
