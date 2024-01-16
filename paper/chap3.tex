@@ -15,27 +15,123 @@
 本プロジェクトでは，JR西日本の在来線の電車を識別または分類する．\\
 205  207  213  221  223  225  227  271  281  283  285  287  321  323  381  521  683 \\
 上記の１７種類の画像を集める．
-\subsection{動画の保存}
+% TODO: \usepackage{graphicx} required
+
+\begin{figure}[htbp]
+	\begin{tabular}{cc}
+	\begin{minipage}[b]{0.15\linewidth}
+			\centering
+			\includegraphics[width=\linewidth]{densya/205.jpg}
+			\caption{205系}
+			\label{fig:205}
+	\end{minipage}
+	\begin{minipage}[b]{0.15\textwidth}
+		\includegraphics[width=\linewidth]{densya/207.jpg}
+		\caption{207系}
+		\label{fig:207}
+	\end{minipage}
+	\begin{minipage}[b]{0.15\textwidth}
+		\includegraphics[width=\linewidth]{densya/213.jpg}
+		\caption{213系}
+		\label{fig:213}
+	\end{minipage}
+	\begin{minipage}[b]{0.15\textwidth}
+		\includegraphics[width=\linewidth]{densya/221.jpg}
+		\caption{221系}
+		\label{fig:221}
+	\end{minipage}
+	\begin{minipage}[b]{0.15\textwidth}
+		\includegraphics[width=\linewidth]{densya/223.png}
+		\caption{223系}
+		\label{fig:223}
+	\end{minipage}
+	\begin{minipage}[b]{0.15\textwidth}
+		\includegraphics[width=\linewidth]{densya/225.jpg}
+		\caption{225}
+		\label{fig:225}
+	\end{minipage}
+	\end{tabular}
+\end{figure}
+
+\begin{figure}[htbp]
+	\begin{tabular}{cc}
+		\begin{minipage}[b]{0.15\linewidth}
+			\centering
+			\includegraphics[width=\linewidth]{densya/227.png}
+			\caption{227系}
+			\label{fig:227}
+		\end{minipage}
+		\begin{minipage}[b]{0.15\textwidth}
+			\includegraphics[width=\linewidth]{densya/271.png}
+			\caption{271系}
+			\label{fig:271}
+		\end{minipage}
+		\begin{minipage}[b]{0.15\textwidth}
+			\includegraphics[width=\linewidth]{densya/281.jpg}
+			\caption{281系}
+			\label{fig:281}
+		\end{minipage}
+	\begin{minipage}[b]{0.15\textwidth}
+		\includegraphics[width=\linewidth]{densya/283.jpg}
+		\caption{283系}
+		\label{fig:283}
+	\end{minipage}
+		\begin{minipage}[b]{0.15\textwidth}
+			\includegraphics[width=\linewidth]{densya/285.jpg}
+			\caption{285系}
+			\label{fig:285}
+		\end{minipage}
+		\begin{minipage}[b]{0.15\textwidth}
+			\includegraphics[width=\linewidth]{densya/287.png}
+			\caption{287系}
+			\label{fig:287}
+		\end{minipage}
+	
+	\end{tabular}
+\end{figure}
+
+\begin{figure}[htbp]
+	\begin{tabular}{cc}
+		\begin{minipage}[b]{0.15\textwidth}
+			\includegraphics[width=\linewidth]{densya/321.png}
+			\caption{321系}
+			\label{fig:321}
+		\end{minipage}
+		\begin{minipage}[b]{0.15\linewidth}
+			\centering
+			\includegraphics[width=\linewidth]{densya/323.jpg}
+			\caption{323系}
+			\label{fig:323}
+		\end{minipage}
+		\begin{minipage}[b]{0.15\textwidth}
+			\includegraphics[width=\linewidth]{densya/381.jpg}
+			\caption{381系}
+			\label{fig:381}
+		\end{minipage}
+		\begin{minipage}[b]{0.15\textwidth}
+			\includegraphics[width=\linewidth]{densya/521.jpg}
+			\caption{521系}
+			\label{fig:521}
+		\end{minipage}
+		\begin{minipage}[b]{0.15\textwidth}
+			\includegraphics[width=\linewidth]{densya/683.jpg}
+			\caption{683系}
+			\label{fig:683}
+		\end{minipage}
+	\end{tabular}
+\end{figure}
+
+
+\subsection{動画の連結と保存}
 動画の保存にはyt-dlpという動画や音声をダウンロードするプログラムを使う．
-１〜３種類の動画の任意の秒数をダウンロードしてそれぞれの動画を連結して一つの動画にするwebアプリケーションをPythonのフレームワークの一つであるDjangoを使って作成した．\\
+１〜３種類の動画の任意の秒数をダウンロードしてそれぞれの動画を連結して一つの動画にするwebアプリケーションをPythonのフレームワークの一つであるDjangoを使って作成した．
 %	\red{画像は後で変える，大きさを揃える}\\
-	作成したwebアプリケーションは，図\ref{test1} 図\ref{test2}  図\ref{test3}のようになっている．
+	作成したwebアプリケーションは，図\ref{test3}のようになっている．
 	YouTube上の動画のURLと開始時刻(秒),終了時刻(秒),車両タイプ名を入力して，1〜3種類の動画を保存し連結して一つの動画にしている．
 	
 \begin{figure}[H]
-	\centering
-	\includegraphics [width=\linewidth]{chap3/fig/test1.png}
-	\caption{動画のダウンロード1}
-	\label{test1}
-\end{figure}
-\begin{figure}[H]
-	\includegraphics [width=0.9\linewidth]{chap3/fig/test2.png}
-	\caption{動画のダウンロード2}
-	\label{test2}
-\end{figure}
-\begin{figure}[H]
 	\includegraphics [width=0.9\linewidth]{chap3/fig/test3.png}
-	\caption{動画のダウンロード3}
+	\caption{動画のダウンロード3，あとで画像を差し替え}
 	\label{test3}
 \end{figure}
 
@@ -50,7 +146,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\linewidth]{chap3/fig/chart2}
-	\caption[各車両タイプ（全17種）の保存枚数]{}
+	\caption{各車両タイプ（全17種）の保存枚数}
 	\label{fig:chart}
 \end{figure}
 

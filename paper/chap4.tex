@@ -1,7 +1,7 @@
 % !TeX root = paper.tex
 
 
-\chapter{車両タイプ判別モデルについて}
+\chapter{車両タイプ判別モデルについて}\label{model}
 %\section{この章で書くこと}
 %\begin{itemize}
 %	\item 学習の実行
@@ -19,21 +19,20 @@
 \section{作成したモデルの使い方}
 識別モデルと分類モデルで使い方はほぼ同じである．
 作成したモデルをロードして，モデルに画像または動画を渡すと識別または分類をすることができる．\\
-識別
+識別 )
 \begin{verbatimx}
 	from ultralytics import YOLO
 	model = YOLO("作成した識別モデルのパス")
 	results = model.predict("画像または動画のパス")
 \end{verbatimx}
-
-分類
+分類 )
 \begin{verbatimx}
 	from ultralytics import YOLO
 	model = YOLO("作成した分類モデルのパス")
 	results = model("画像のパス")
 \end{verbatimx}
 
-\section{出力されるもの}
+\section{テストデータの識別結果出力}
 １７種類の車両が各１０枚ずつ，合計１７０枚のテストデータセットを識別した際にターミナルに出力されるものを図 \ref{output}に示す．
 左端のimageから，「何枚目か」「画像のパス」「入力画像のサイズ」「予想クラス番号」「予想クラス番号に対応する車両タイプ」「識別にかかった時間」が画像ごとに出力される．
 識別時にsave = Trueを追加すると入力画像に識別結果が追記された画像が出力される．
@@ -42,7 +41,7 @@
 \begin{figure}	
 	\centering
 	\includegraphics[width=\linewidth]{fig/a.pdf}
-	\caption{端末に出力されるもの}\label{output}
+	\caption{テストデータの識別結果出力}\label{output}
 \end{figure}
 
 \section{作成したモデルの評価と考察}
@@ -88,7 +87,7 @@
 \begin{figure}
 	\centering
 	\includegraphics[width=0.7\linewidth]{chap4/fig/287}
-	\caption{287系}
+	\caption{287系,\cite{ac}より引用}
 	\label{fig:287}
 \end{figure}
 
@@ -96,7 +95,7 @@
 \begin{figure}
 	\centering
 	\includegraphics[width=0.7\linewidth]{chap4/fig/683}
-	\caption{683系}
+	\caption{683系,\cite{ac}より引用}
 	\label{fig:683}
 \end{figure}
 

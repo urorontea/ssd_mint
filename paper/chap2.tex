@@ -1,7 +1,7 @@
 % !TeX root = paper.tex
 
 
-\chapter{システムについて}
+\chapter{システムについて}\label{system}
 %\section{この章で書くこと}
 %\begin{itemize}
 %	\item 識別，分類とは
@@ -25,21 +25,25 @@ Google レンズとは画像の分類を行うアプリである．単に分類�
 
 
 \section{YOLO}
-YOLOとはYou Only Look Onceの略で，人間のように一目見るだけで物体検出ができることを指している\cite{bk1}．データセットを作成し学習させることで，任意の物体のみ検出させることが可能である．
+YOLOとはYou Only Look Onceの略で，人間のように一目見るだけで物体検出ができることを指している\cite{YOLO}．データセットを作成し学習させることで，任意の物体のみ検出させることが可能である．
 YOLOv8はYOLOシリーズの最新バージョンであり，ディープラーニングとコンピュータビジョンの最先端の進歩に基づいており，速度と精度の麺で比類のない性能を提供している．
 %https://docs.ultralytics.com/ja/ 参照
 本プロジェクトでは，YOLOv8を用いて電車の車両タイプを識別，分類する２つのモデルを開発する．
+
+＝＝＝＝ここから田村＝＝＝＝＝
 
 \section{システム概要図}
 本プロジェクトで開発するシステム概要を図\ref{FIG}に示す．システムは車両判別部とUIに分けられる．
 
 \begin{figure}
 	\centering
-	\includegraphics [width=\linewidth]{chap2/fig/sys_gaiyou5.pdf}
+	\includegraphics [width=\linewidth]{chap2/fig/sys_gaiyou6.pdf}
 	\caption{システム概要図}
 	\label{FIG}
 \end{figure}
 
+\section{動作環境，開発環境}
+動作環境，開発環境
 \section{システムの機能}
 分類，識別，
 \section{動作確認と現状}
