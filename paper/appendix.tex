@@ -5,6 +5,8 @@
 \chapter{開発したプログラム}
 \section{使い方}
 リスト\ref{project_processing.py}には保存した動画から電車の画像を保存するための関数が定義されている．リスト\ref{save.py}ではリスト\ref{project_processing.py}の関数を利用して画像を保存する．リスト\ref{save.py}を実行する際には引数に保存する画像の枚数と車両タイプを指定してから実行する．
+
+図\ref{downloadApp}で入力されたデータをリスト\ref{forms.py}を使用して受け取る．受け取ったデータをリスト\ref{views.py}に送り，１〜３種類の動画を保存し，連結する．
 %%%%%%%%%%%%% プログラムの埋め込み %%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{ソースコード}
@@ -13,6 +15,13 @@
 %project_processing.pyとsave.py
 \lstinputlisting[language=Python,caption=project\_processing.py,label=project_processing.py]{appendix/src/project_processing.py}
 \lstinputlisting[language=Python,caption=save.py ,label=save.py]{appendix/src/save.py}
+
+%\Istinputlisting[language=Python,caption=views.py,label=views.py]{appendix/src/views.py}
+
+\lstinputlisting[language=Python,caption=views.py ,label=views.py]{appendix/src/views.py}
+\lstinputlisting[language=Python,caption=forms.py ,label=forms.py]{appendix/src/forms.py}
+
+%\lstinputlisting[language=html,caption=input_urls_3.html ,label= input3]{appendix/src/input_urls_3.html}
 
 
 \chapter{いいいいい}

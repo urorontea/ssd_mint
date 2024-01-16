@@ -1,0 +1,45 @@
+{% extends 'DownloadApp/base.html' %}
+
+{% block content %}
+    <form method="POST">{% csrf_token %}
+        <div>
+            1つ目の動画の情報:
+            {{ form.url_1.label_tag }}
+            {{ form.url_1 }}
+            {{ form.start_1.label_tag}}
+            {{ form.start_1}}
+            {{ form.end_1.label_tag}}
+            {{ form.end_1}}
+        </div>
+        <div>
+            2つ目の動画の情報:
+            {{ form.url_2.label_tag }}
+            {{ form.url_2 }}
+            {{ form.start_2.label_tag}}
+            {{ form.start_2}}
+            {{ form.end_2.label_tag}}
+            {{ form.end_2}}
+        </div>
+        <div>
+            3つ目の動画の情報:
+            {{ form.url_3.label_tag }}
+            {{ form.url_3 }}
+            {{ form.start_3.label_tag}}
+            {{ form.start_3}}
+            {{ form.end_3.label_tag}}
+            {{ form.end_3}}
+        </div>
+        <div>
+            保存する動画の名前→
+            {{ form.name.label_tag}}
+            {{ form.name }}
+            
+        </div>
+        <div>
+            車両タイプ→
+            {{ form.type.label_tag}}
+            {{ form.type}}
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+{% endblock %}

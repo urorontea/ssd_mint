@@ -15,6 +15,7 @@
 本プロジェクトでは，JR西日本の在来線の電車を識別または分類する．\\
 205  207  213  221  223  225  227  271  281  283  285  287  321  323  381  521  683 \\
 上記の１７種類の画像を集める．
+収集した車両タイプを図\ref{fig:205}から図\ref{fig:6833}に示す．
 % TODO: \usepackage{graphicx} required
 
 \begin{figure}[htbp]
@@ -47,7 +48,7 @@
 	\end{minipage}
 	\begin{minipage}[b]{0.15\textwidth}
 		\includegraphics[width=\linewidth]{densya/225.jpg}
-		\caption{225}
+		\caption{225系}
 		\label{fig:225}
 	\end{minipage}
 	\end{tabular}
@@ -116,7 +117,7 @@
 		\begin{minipage}[b]{0.15\textwidth}
 			\includegraphics[width=\linewidth]{densya/683.jpg}
 			\caption{683系}
-			\label{fig:683}
+			\label{fig:6833}
 		\end{minipage}
 	\end{tabular}
 \end{figure}
@@ -124,15 +125,17 @@
 
 \subsection{動画の連結と保存}
 動画の保存にはyt-dlpという動画や音声をダウンロードするプログラムを使う．
-１〜３種類の動画の任意の秒数をダウンロードしてそれぞれの動画を連結して一つの動画にするwebアプリケーションをPythonのフレームワークの一つであるDjangoを使って作成した．
-%	\red{画像は後で変える，大きさを揃える}\\
-	作成したwebアプリケーションは，図\ref{test3}のようになっている．
-	YouTube上の動画のURLと開始時刻(秒),終了時刻(秒),車両タイプ名を入力して，1〜3種類の動画を保存し連結して一つの動画にしている．
+１〜３種類の動画の任意の秒数をダウンロードしてそれぞれの動画を連結して一つの動画にするWebアプリケーションをPythonのフレームワークの一つであるDjangoを使って作成した(リスト\ref{views.py},リスト\ref{forms.py}).
+このWebアプリケーションは開発サーバ上でのみ利用できる．URLなど入力するためのWebページを図\ref{downloadApp}に示す
+
+Djangoのコードを貼り付ける・起動方法？を記載する．
+
+YouTube上の動画のURLと開始時刻(秒),終了時刻(秒),車両タイプ名を入力して，1〜3種類の動画を保存し連結して一つの動画にしている．
 	
 \begin{figure}[H]
-	\includegraphics [width=0.9\linewidth]{chap3/fig/test3.png}
-	\caption{動画のダウンロード3，あとで画像を差し替え}
-	\label{test3}
+	\includegraphics [width=0.9\linewidth]{chap3/fig/django.pdf}
+	\caption{動画のダウンロードと連結を行うWebアプリケーション}
+	\label{downloadApp}
 \end{figure}
 
 \subsection{画像の保存}

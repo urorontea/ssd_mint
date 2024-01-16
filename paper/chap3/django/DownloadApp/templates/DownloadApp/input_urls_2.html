@@ -1,0 +1,31 @@
+{% extends 'DownloadApp/base.html' %}
+
+{% block content %}
+    <form method="POST">{% csrf_token %}
+        <div>
+            {{ form.url_1.label_tag }}
+            {{ form.url_1 }}
+            {{ form.start_1.label_tag}}
+            {{ form.start_1}}
+            {{ form.end_1.label_tag}}
+            {{ form.end_1}}
+    
+        </div>
+        <div>
+            {{ form.url_2.label_tag }}
+            {{ form.url_2 }}
+            {{ form.start_2.label_tag}}
+            {{ form.start_2}}
+            {{ form.end_2.label_tag}}
+            {{ form.end_2}}
+    
+        </div>
+       
+        {{ form.name.label_tag}}
+        {{ form.name }}
+        {{ form.type.label_tag}}
+        {{ form.type}}
+        
+        <button type="submit">Submit</button>
+    </form>
+{% endblock %}
