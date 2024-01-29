@@ -96,319 +96,68 @@
 \end{itemize}
 \newpage
 \end{comment}
-\foilhead {\Large 1. 役割分担}
-\begin{description}
-	\item [田村] UIの作成~\\
-	各プラットフォームで動作できるか検証し，UIを作る．\\
-	現在,webでの実装を試みている．
-	
-	\item [野崎] モデルの作成~\\
-	画像を集めて学習させ，判断するためのモデルを作成する．
-	
-\end{description}
+\foilhead {\Large 1. 判別対象とする車両タイプ一覧}
+電車の画像をいっぱい載せる
 
-
-
-\foilhead{\Large 1. はじめに--背景と目的-- \\ }
-\begin{itemize}
-	\item 電車は種類が多く，何系か判断することが難しい．
-	\item この問題を解決するためには，画像から分類や識別ができる\\システムがあれば良い．
-	\item YOLOを使用して，車両タイプを判断するものを開発する．
-\end{itemize}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%\
-\foilhead{\Large 発表の流れ}\
-\begin{enumerate}[itemsep=0.25\zh]
-	\item \textcolor{gray}{はじめに -- 背景と目的 --}
-	\item 概要(UI)
-	\item システム概要
-	\item 評価・考察
-	\item むすび
-    %\item \url{http://www.fujitsu.co.jp}
+\foilhead{\Large 2.データセット作成の流れ}
+\begin{enumerate}
+	\item YouTubeから１種類の車両タイプのみが写っている動画を保存する
+	\item ランダムなフレームを5000枚保存する
+	\item ultralytics社が配布するモデル(yolov8n.pt)を利用して2.で保存した画像の識別を行い，電車が一つだけ写っている画像のみ保存する
+	\item  (識別用データセット作成時のみ)\\3.で画像の識別をした際に，電車が写っている座標情報をテキストファイルに保存する
 \end{enumerate}
+各車両タイプごとに行い１７種類の車両タイプのデータセットを作成した
+
+\foilhead{\Large 3.動画の保存と連結を行うWebアプリ}
+ブラウザの画像を挿入する
+
+デモ動画を流す
 \newpage
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\foilhead {\Large 2. UIの概要}
-\begin{minipage}[]{0.55\textwidth}\vspace{0pt}
-\begin{figure}
-	\centering
-	\includegraphics[width=1.0\linewidth]{fig/tamura/gaiyou}
-	\caption{概要図}
-	\label{fig:gaiyou}
-\end{figure}
-\end{minipage}
-\hfill
-\begin{minipage}[]{0.45\textwidth}\vspace{0pt}
-	\begin{enumerate}
-		\item ユーザがブラウザに画像を\\アップロード
-		\item プレビューを画面に追加
-		\item  ユーザが画像を送信する\\ボタンを押す
-		\item サーバに画像をアップロード
-		\item サーバで画像を判断する\\モデルを用いて処理\\
-		結果をブラウザに送信,表示\\
-	\end{enumerate}
-\end{minipage}
-\newpage
+車両タイプごとの画像の保存枚数の画像を挿入する
 
-\foilhead {\Large 2. 1 UIの概要}
-\begin{figure}
-	\centering
-	\includegraphics[width=0.6\linewidth]{fig/tamura/gaiyou_point}
-	\caption{今回作成した部分}
-	\label{fig:gaiyoupoint}
-\end{figure}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\foilhead {\Large 2.2 UIデモ }
+\foilhead{\Large 4.モデルの学習}
+分類モデルと識別モデルを学習させた．
 
+分類モデルは動画に写る車両タイプを判別できないので，\\
+識別モデルを作成した．
+\foilhead{\Large 5.作成したモデルの評価}
+識別モデルと分類モデルは同様の方法で評価を行う．
 \begin{itemize}
-	\item 送信ボタンはあるが，サーバを用意していない状態で押すとエラーが発生するためダミーのボタンを置いている．
-	\item 遷移後の画面も動的サーバから画像，テキストを貰って表示するコードは準備しているが，サーバを用意していないため静的なサイトで遷移後の動作イメージをしやすくしている．\\
-		\href{run:./fig/tamura/web_demo.mp4}{\textcolor[hsb]{0.0, 0.7, 1.0}{\faPlayCircle[regular]}}\\
-\end{itemize}
-
-
-
-
-\foilhead {\Large 2.3 スマホ使用時のイメージ}
-\begin{itemize}
-	\item 	ファイル選択肢の動作
-	\item スマホでも手軽に画像をアップロードすることができる
-\end{itemize}
-	（注）cssを反映しない簡易表示になっている．\\
-		\href{run:./fig/tamura/Phone_demo.mp4}{\textcolor[hsb]{0.0, 0.7, 1.0}{\faPlayCircle[regular]}}\\
-
-\newpage
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\foilhead{\Large 2. 4 むすび(UI)}
-\begin{itemize}
-	\item 今回はブラウザの部分を作成した．
-	\item 今後はサーバ側の実装をしていくとともに，ブラウザのデザイン面での改良を勧めていく．
-\end{itemize}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\foilhead{\Large 3. 1 システム概要}
-
-
-\begin{figure}[h]
-\begin{center}
-\includegraphics[scale = 1.3]{fig/system_2.drawio.pdf}
-\caption{システム概要図}
-\end{center}
-\end{figure}
-\newpage
-
-%%%%%%%%%%%%%%% minipage の利用例 %%%%%%%%%%%%%%%%%%%
-%------ 左側
-%\begin{minipage}[t]{0.4\textwidth}\vspace{0pt}
-{\Large YOLOとは}
-\begin{description}
-	\item YOLOはリアルタイムオブジェクト検出アルゴリズムである．
-	\item You Only Look Onceの略で，人間のようにひと目見ただけで物体検出ができる．
-	\item YOLOv5は，物体の識別ができる．
-	\item YOLOv8では，物体の識別と分類，セグメンテーションができる．
+	\item 評価方法
+	
+	モデルを動かしたときに出てくるログから混同行列を作成し，テストデータセットを判別した際の正解数を測定する．
+	
 	\newpage
-\end{description}
-
-\begin{figure}
-		\begin{center}
-			\includegraphics[width=200mm]{fig/521_0.jpg}
-		\end{center}
-		\caption{識別}
-		\label{fig:one}
-\end{figure}
-
-\begin{figure}
-		\begin{center}
-			\includegraphics[width=200mm]{fig/521_2.png}
-		\end{center}
-		\caption{分類}
-		\label{fig:two}
-\end{figure}
-
-\begin{figure}
-		\begin{center}
-			\includegraphics[width=200mm]{fig/521_seg.png}
-		\end{center}
-		\caption{セグメンテーション}
-		\label{fig:three}
-\end{figure}
-
-
-%\end{minipage}
-%------ 右側
-%\begin{minipage}[t]{0.6\textwidth}\vspace{0pt}
-%\begin{center}
-%\includegraphics[keepaspectratio, width=.9\linewidth,trim={100mm 0mm 0mm 15mm},clip]{fig/system.pdf}
-%\end{center}
-%\end{minipage}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\foilhead{\Large 3.2 現時点までで行ったこと}
-\begin{description}
-	\item[画像収集の簡略化] ~\\
-	YoutubeのURLと車両タイプを指定することで，YouTubeの動画から車両が写っている場面を保存する．
-	\href{run:./fig/demo.mp4}{\textcolor[hsb]{0.0, 0.7, 1.0}{\faPlayCircle[regular]}}
+	\item 評価
 	
-	\item[モデルの学習]~\\
-	収集した画像からデータセットを作成して，モデルの学習を行った．
-	\begin{itemize}
-		%\item 電車と新幹線を識別するモデル(YOLOv5)
-		\item ３種類の似ている電車を識別するモデル(YOLOv5)
-		\item 新幹線の各車両を分類するモデル(YOLOv8)
-	\end{itemize}
-\end{description}
-\newpage
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\foilhead{\Large 3. 評価・考察}
-%\begin{itemize}
-%	\item このスライドでは何をどのような方法で評価したかを明記し，結果をグラフで示すこと（表よりグラフのほうが良い）．
-%	\item %システムが動いている様子がわかるようにデモ映像を流すこと（デモ映像には字幕をつけたりするなどしてわかりやすくすること）．
-%	\item 評価の際は，改良の前後でどうなったかを示す．あるいは他の手法などと比較してどうなのかを示すことも必要．
-%	\item 結果について考察も示すこと．
-%\end{itemize}
-%\newpage
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\foilhead{\Large 4.1 評価・考察 --識別モデル--}
-\begin{description}
-	\item [似ている電車の識別] ~\\
-	\item 画像が300枚と4000枚のデータセットで，３種類の似ている電車の識別モデルの作成を行った．
-	それぞれ学習した結果を使用してテストデータを識別した．
-	\href{run:./fig/hikaku/hikaku_demo.mp4}{\textcolor[hsb]{0.0, 0.7, 1.0}{\faPlayCircle[regular]}}\\
-	\newpage
+	２種類の混同行列を作成すると似たようなものが作成された．
+	\vskip\baselineskip %空白行を追加する
+	２種類のモデルを動かした結果，外見が似ている車両タイプの正解数は少なく，外見が特徴的なものの正解数は多かった．
+	\vskip\baselineskip
+	データセットに含まれる各車両タイプの画像の枚数には差があるが、画像の枚数が少ない車両タイプの正解率が低く、画像の枚数が多い車両タイプの正解率が高くなるわけではなかった。
 	
-	\item 識別結果からデータセットを増やしていけば，\\似ている電車でも識別することが可能だと考えられる．
-	\item しかし4000枚のデータセットでの学習時間は10時間以上かかっており，\\識別したい電車の種類を増やしていくと学習時間が増えてしまう．
-	\item YOLOv8は処理速度が早く精度が高いという特徴があるので，これ以上の車両タイプを判断する場合にはYOLOv8を使う必要があると考えられる．
-\end{description}
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\foilhead{\Large 4. 2 評価・考察 --分類モデル--}
-
-
-\begin{figure}
-	\centering
-	\includegraphics[width=0.6\linewidth]{fig/confusion_matrix}
-	\caption{学習の評価}
-	\label{fig:confusionmatrix}
-\end{figure}
-
-\newpage
-
-\begin{description}
-	%\item アノテーションをする際に，バウンディングボックスの中身だけにすると不具合がおきたこと\\
-	%ボックスの中身だけで学習させる際に何故かエポック数が１００回になっていた．
-	%うまくいかないと思っていたがシンプルに学習回数が足りなかった？\\
-	%背景画像の有無で物体認識の精度が悪くなったので，データセットの画像には背景画像が必要なのではないのかな
-	
-	%\item 電車と新幹線の識別モデルの作成→電車は百種類近くあるのでうまく行かなかった
-	%\item 似ている電車を識別モデルを作成する際に，データセットの画像を増やすだけではうまくいかなかったこと\\
-	%\home\nozaki\ML\ultralytics\yolov5\runs\trian\exp21\ に２２５系，２２７系，５２１系の３種類の識別モデルのデータセットがある
-	
-	\item [新幹線の分類モデルの評価]~\\
-	E7系以外の新幹線はうまく分類できている．\\
-	テストデータの分類結果を確認すると，誤分類していたE7系は光を反射して白くなっている面積が他のE7系の画像よりも大きかった．
-	\item [新幹線の分類モデルの考察]~\\
-	新幹線は形は似ているが\\色が特徴的で分類がしやすいと考えられる．\\
-	光の反射などで車体の色が変わってしまう場合の対策を考える必要がある．\\
-	
-\end{description}
-\newpage
-
-
-\begin{figure}[htbp]
-	\begin{minipage}[b]{.5\linewidth}
-		\includegraphics[width=3in]{fig/E7/E7_0000.png}
-		\subcaption{元画像}\label{PIC1}
-	\end{minipage}%
-	\begin{minipage}[b]{.5\linewidth}
-		\includegraphics[width=3in]{fig/E7/E7_0000-1.png}
-		\subcaption{拡大1}\label{PIC2}
-	\end{minipage}%
-	\\ % 改行
-	\begin{minipage}[b]{.5\linewidth}
-		\includegraphics[width=3in]{fig/E7/E7_0000-2.png}
-		\subcaption{拡大2}\label{PIC3.jpg}
-	\end{minipage}%
-	\begin{minipage}[b]{.5\linewidth}
-		\includegraphics[width=3in]{fig/E7/E7_0000-3.png}
-		\subcaption{拡大3}\label{PIC4}
-	\end{minipage}%
-
-	\caption{画像を拡大することによる分類への影響}\label{DENSHA}
-\end{figure}
-
-
-
-\newpage
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\foilhead{\Large 5. むすび}\label{MUSUBI}
-\begin{itemize}
-	%\item 何のために何を作成したかを改めて書く．
-	%\item 現時点での評価結果，考察を簡潔に書く．
-	%\item 来月の報告までに何をするか計画を書く．
-	\item 電車の車両型式を簡単に知るために分類モデルを作成した．
-	\item 新幹線については，分類できるようになった．
-	\item 今後は，新幹線以外の電車の分類モデルを作成する．
 \end{itemize}
 \newpage
+２種類の混同行列の画像を挿入する．
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%ここからおまけ
+%識別と分類で正解数が低い車両タイプと高い車両タイプを並べて，識別モデルと分類モデルは似たような結果になることを示す．
 
-%\href{run:./fig/demo.mp4}{\textcolor[hsb]{0.0, 0.7, 1.0}{\faPlayCircle[regular]}} PDFファイルと同じフォルダにdemo002.mp4があれば再生できる．
+\foilhead{\Large 5.考察}
+
+データセット内の画像には車体の側面だけが映っているものもあった。
+
+動画や画像の集め方に問題があり、データセットの質が悪くなってしまった．
+
+車両タイプの判別をするときは、基本的に電車の顔が映っている画像を入力するはずなので、データセットに含まれる画像は全て電車の顔が映っているものに限定する必要があると考えられる。
+
+電車の特徴が鮮明に写った画像を集めると判別結果が良くなると考えられる。
 
 
-%\href{https://youtu.be/74agBeJxdFI}{\textcolor{red}{\faYoutube}} YOUTUBEで再生
 
-%\textcolor{red}{\faYoutube}\href{https://youtu.be/74agBeJxdFI}{~\url{https://youtu.be/74agBeJxdFI}}
 
-%\lstinputlisting[language=c, caption=test2.c]{src/hello.c}
-%\lstinputlisting[language=python, caption=test2.py]{src/world.py}
 
-% 色定義
-%\definecolor{mygray}{gray}{0.95}
-%\definecolor{mypink1}{hsb}{0.0, 0.188, 1.0}
-%UNIXv1におけるタスク切り替えが行われるタイミング
-
-%%%%%%%%%%%%%%%%%%%%%%%%55
-%\colorbox{mygray}{%\begin{minipage}{\textwidth}
-%① みなさん
-%\end{minipage}}
-
-%\colorbox{mygray}{\begin{minipage}{\textwidth}
-%② こんにちは 
-%\begin{itemize}
-%\item まんじゅう
-%\item りんご
-%\end{itemize}
-%\end{minipage}}
-
-%\colorbox{mypink1}{\begin{minipage}{\textwidth}
-%③ お元気で\\
-%またあうひまで
-%\end{minipage}}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%\begin{verbatimx}
-%$ gcc test.c \return
- %(*_*)
- %(*_*)
-%        \textcolor{red}{ここで\keytop{CTL}+\keytop{C}を押す}
-%\end{verbatimx}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\newpage
-%~\\
-%\noindent\textbf{謝辞}~~本研究はJSPS科研費21Kxxxxxxxxx助成を受けた
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 参考文献 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{comment}
 	
 
@@ -428,7 +177,7 @@
 %\bibitem{book6} \url{https://github.com/No000/unix-v1-utils}
 %\bibitem{book7} \url{https://github.com/No000/UnixV1-SystemCallTracer}
 %\end{thebibliography}
-\end{comment}
+%\end{comment}
 
 %\begin{comment}
 \begin{thebibliography}{99}
@@ -437,7 +186,7 @@
 \bibitem{book1} ultralytics,  \textbf{"yolov5"}, \url{https://github.com/ultralytics/yolov5},2023.9.18.
 \bibitem{book1} ultralytics,  \textbf{"yolov8"}, \url{https://github.com/ultralytics/ultralytics}, 2023.9.18.
 \end{thebibliography}
-%\end{comment}
+\end{comment}
 \end{document} 
 
 
