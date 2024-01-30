@@ -97,38 +97,74 @@
 \newpage
 \end{comment}
 \foilhead {\Large 1. 判別対象とする車両タイプ一覧}
-電車の画像をいっぱい載せる
 
-\foilhead{\Large 2.データセット作成の流れ}
+\begin{figure}
+	\centering
+	\includegraphics[width=0.65\linewidth]{densya/densya}
+	\caption[車両タイプ一覧]{車両タイプ一覧}
+	\label{fig:densya}
+\end{figure}
+
+
+
+\foilhead{\Large 2-1.データセット作成の流れ}
 \begin{enumerate}
-	\item YouTubeから１種類の車両タイプのみが写っている動画を保存する
+	\item YouTubeから動画を保存する
 	\item ランダムなフレームを5000枚保存する
-	\item ultralytics社が配布するモデル(yolov8n.pt)を利用して2.で保存した画像の識別を行い，電車が一つだけ写っている画像のみ保存する
-	\item  (識別用データセット作成時のみ)\\3.で画像の識別をした際に，電車が写っている座標情報をテキストファイルに保存する
+	\item 電車が写っていないものを削除する
+	\item  (識別用データセット作成時のみ)アノテーションをする
 \end{enumerate}
 各車両タイプごとに行い１７種類の車両タイプのデータセットを作成した
 
-\foilhead{\Large 3.動画の保存と連結を行うWebアプリ}
-ブラウザの画像を挿入する
+\foilhead{\Large 2-2.動画の保存と連結を行うWebアプリ}
 
-デモ動画を流す
-\newpage
-車両タイプごとの画像の保存枚数の画像を挿入する
+\begin{figure}
+	\centering
+	\includegraphics[width=0.65\linewidth]{../paper/chap3/fig/django}
+	\label{fig:django}
+	\caption{動画情報の入力画面}
+\end{figure}
+
+デモ動画
+\href{run:./fig/demo1.mp4}{\textcolor[hsb]{0.0, 0.7, 1.0}{\faPlayCircle[regular]}} 
+
+車両タイプによって保存できた画像の枚数に差が生まれてしまった．
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\linewidth]{fig/chart2}
+	\caption{車両タイプ別の画像の保存枚数}
+	\label{fig:chart2}
+\end{figure}
 
 
-\foilhead{\Large 4.モデルの学習}
-分類モデルと識別モデルを学習させた．
 
-分類モデルは動画に写る車両タイプを判別できないので，\\
-識別モデルを作成した．
-\foilhead{\Large 5.作成したモデルの評価}
+\foilhead{\Large 3-1.モデルの学習}
+%分類モデルと識別モデルを学習させた．
+
+\begin{figure}[htbp]
+	\begin{minipage}[b]{0.28\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{fig/results_cls.png}
+		\caption{分類モデルの学習曲線}
+	\end{minipage}
+	\begin{minipage}[b]{0.6\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{fig/results_det.png}
+		\caption{識別モデルの学習曲線}
+	\end{minipage}
+\end{figure}
+\foilhead{\Large 3-2.作成したモデルの評価}
 識別モデルと分類モデルは同様の方法で評価を行う．
 \begin{itemize}
 	\item 評価方法
 	
-	モデルを動かしたときに出てくるログから混同行列を作成し，テストデータセットを判別した際の正解数を測定する．
+	混同行列を作成する．
+	
+	テストデータセットを判別した際の正解数を測定する．
 	
 	\newpage
+	全削除もあり
 	\item 評価
 	
 	２種類の混同行列を作成すると似たようなものが作成された．
@@ -140,23 +176,38 @@
 
 \end{itemize}
 \newpage
-２種類の混同行列の画像を挿入する．
-
-%識別と分類で正解数が低い車両タイプと高い車両タイプを並べて，識別モデルと分類モデルは似たような結果になることを示す．
-
-\foilhead{\Large 5.考察}
-
-データセット内の画像には車体の側面だけが映っているものもあった。
-
-動画や画像の集め方に問題があり、データセットの質が悪くなってしまった．
-
-車両タイプの判別をするときは、基本的に電車の顔が映っている画像を入力するはずなので、データセットに含まれる画像は全て電車の顔が映っているものに限定する必要があると考えられる。
-
-電車の特徴が鮮明に写った画像を集めると判別結果が良くなると考えられる。
-
+\begin{figure}[htbp]
+	\begin{minipage}[b]{0.5\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{../paper/chap4/fig/classify_results}
+		\caption{分類モデルの混同行列}
+	\end{minipage}
+  \begin{minipage}[b]{0.5\linewidth}
+ 	\centering
+  	\includegraphics[width=\linewidth]{../paper/chap4/fig/predicted_results}
+  	\caption{識別モデルの混同行列}
+  \end{minipage}
+\end{figure}
 
 
+\foilhead{\Large 4.考察}
 
+ データセットの質が悪かった．
+
+\begin{itemize}	
+	\item データセット内の画像の枚数を揃えたほうが良いかもしれない．
+	
+	\item 電車の特徴が鮮明に写る画像を集めたほうが良い
+	
+	\item 電車の顔が写っている画像を集めたほうが良い
+	
+	
+\end{itemize}
+
+
+\foilhead{\Large 5.まとめ}
+一部の車両タイプでは\\
+正確に電車の車両タイプを判別することができるようになった．
 
 \begin{comment}
 	
