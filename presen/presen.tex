@@ -96,15 +96,16 @@
 \end{itemize}
 \newpage
 \end{comment}
-\foilhead {\Large 5.データセットの作成}
-\foilhead {\Large 5-1. 判別対象とする車両タイプ(全１７種)}
+\foilhead {\Large 5.データセットの作成 5-1. 判別対象の車両タイプ}
 
 \begin{figure}
 	\centering
-	\includegraphics[width=0.65\linewidth]{densya/densya}
-	\caption[車両タイプ一覧]{車両タイプ一覧}
-	\label{fig:densya}
+	\includegraphics[width=0.6\linewidth]{fig/densya0202.png}
+	\caption{車両タイプ一覧}
+	\label{fig:densya0202}
 \end{figure}
+
+
 
 
 
@@ -117,17 +118,31 @@
 \end{enumerate}
 各車両タイプごとに行い１７種類の車両タイプのデータセットを作成した．
 
-電車が映る動画を効率的に保存するためのWebアプリを作成した．
+動画を効率的に保存するためのWebアプリを作成した．
 
-\foilhead{\Large 5-3.電車の画像を効率的に集めるWebアプリ}
-\begin{figure}
-	\centering
-	\includegraphics[width=0.65\linewidth]{../paper/chap3/fig/django}
-	\label{fig:django}
-	\caption{動画情報の入力画面}	
+\foilhead{\Large 5-3.動画を効率的に集めるWebアプリ}
+
+\begin{itemize}
+	\item 一つの動画に複数種類の電車が写っていると\\データセットをうまく作れない．
+	\item 特定の車両タイプのみが写っている動画を集める必要がある.
+	\item 特定の車両タイプのみが写っている場面を元の動画から\\切り抜きできれば良い.
+\end{itemize}
+	
+
+\newpage
+
+\begin{figure}[htbp]
+
+			\centering
+			\includegraphics[width=0.75\linewidth]{../paper/chap3/fig/django}
+			\label{fig:django}
+			\caption{動画情報の入力画面}
+			デモ動画\href{run:./fig/demo1.mp4}{\textcolor[hsb]{0.0, 0.7, 1.0}{\faPlayCircle[regular]}} 	
+
 \end{figure}
 
-\href{run:./fig/demo1.mp4}{\textcolor[hsb]{0.0, 0.7, 1.0}{\faPlayCircle[regular]}} 
+
+%デモ動画\href{run:./fig/demo1.mp4}{\textcolor[hsb]{0.0, 0.7, 1.0}{\faPlayCircle[regular]}} 	
 
 \newpage
 
@@ -142,8 +157,7 @@
 \end{figure}
 
 
-\foilhead{\Large 6.モデルの作成}
-\foilhead{\Large 6-1.モデルの学習}
+\foilhead{\Large  6.モデルの作成 6-1.モデルの学習}
 %分類モデルと識別モデルを学習させた．
 
 \begin{figure}[htbp]
@@ -183,6 +197,7 @@
  	\centering
   	\includegraphics[width=\linewidth]{../paper/chap4/fig/predicted_results}
   	\caption{識別モデルの混同行列}
+  	\label{det_confusion}
   \end{minipage}
 \end{figure}
 
@@ -190,20 +205,18 @@
 
 \newpage
 \begin{figure}[htbp]
-	\begin{minipage}[b]{0.2\linewidth}
+	\centering
+	\begin{minipage}[b]{0.25\linewidth}
 		\centering
 		\includegraphics[width=\linewidth]{fig/287.jpg}
 		\caption{287系}
-	\end{minipage}
-	\begin{minipage}[b]{0.2\linewidth}
-		\centering
 		\includegraphics[width=\linewidth]{fig/683.jpg}
 		\caption{683系}
 	\end{minipage}
     \begin{minipage}[b]{0.5\linewidth}
 		\centering
 		\includegraphics[width=\linewidth]{../paper/chap4/fig/predicted_results}
-		\caption{識別モデルの混同行列}
+		\textbf{図 \ref{det_confusion} :識別モデルの混同行列}
 	\end{minipage}
 \end{figure}
 
@@ -227,7 +240,8 @@
 \foilhead{\Large 7.むすび}
 
 \begin{itemize}
-	\item 画像や動画に写る電車の車両タイプを判別するシステムを開発した．
+	\item 動画を効率的に保存するためのWebアプリを開発した．
+	\item 画像や動画に写る電車の車両タイプを判別するWebアプリを開発した．
 	\item 一部の車両タイプは正確に判別できるようになった．
 \end{itemize}
 
