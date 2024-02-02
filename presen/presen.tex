@@ -96,7 +96,8 @@
 \end{itemize}
 \newpage
 \end{comment}
-\foilhead {\Large 1. 判別対象とする車両タイプ一覧}
+\foilhead {\Large 5.データセットの作成}
+\foilhead {\Large 5-1. 判別対象とする車両タイプ(全１７種)}
 
 \begin{figure}
 	\centering
@@ -107,39 +108,42 @@
 
 
 
-\foilhead{\Large 2-1.データセット作成の流れ}
+\foilhead{\Large 5-2.データセット作成の流れ}
 \begin{enumerate}
 	\item YouTubeから動画を保存する
 	\item ランダムなフレームを5000枚保存する
 	\item 電車が写っていないものを削除する
 	\item  (識別用データセット作成時のみ)アノテーションをする
 \end{enumerate}
-各車両タイプごとに行い１７種類の車両タイプのデータセットを作成した
+各車両タイプごとに行い１７種類の車両タイプのデータセットを作成した．
 
-\foilhead{\Large 2-2.動画の保存と連結を行うWebアプリ}
+電車が映る動画を効率的に保存するためのWebアプリを作成した．
 
+\foilhead{\Large 5-3.電車の画像を効率的に集めるWebアプリ}
 \begin{figure}
 	\centering
 	\includegraphics[width=0.65\linewidth]{../paper/chap3/fig/django}
 	\label{fig:django}
-	\caption{動画情報の入力画面}
+	\caption{動画情報の入力画面}	
 \end{figure}
 
-デモ動画
 \href{run:./fig/demo1.mp4}{\textcolor[hsb]{0.0, 0.7, 1.0}{\faPlayCircle[regular]}} 
+
+\newpage
 
 車両タイプによって保存できた画像の枚数に差が生まれてしまった．
 
+保存した画像は7:3の割合でトレーニングとバリデーションに分けた.
 \begin{figure}
 	\centering
-	\includegraphics[width=0.7\linewidth]{fig/chart2}
+	\includegraphics[width=0.8\linewidth]{fig/chart2}
 	\caption{車両タイプ別の画像の保存枚数}
 	\label{fig:chart2}
 \end{figure}
 
 
-
-\foilhead{\Large 3-1.モデルの学習}
+\foilhead{\Large 6.モデルの作成}
+\foilhead{\Large 6-1.モデルの学習}
 %分類モデルと識別モデルを学習させた．
 
 \begin{figure}[htbp]
@@ -154,7 +158,9 @@
 		\caption{識別モデルの学習曲線}
 	\end{minipage}
 \end{figure}
-\foilhead{\Large 3-2.作成したモデルの評価}
+
+
+\foilhead{\Large 6-2.作成したモデルの評価}
 識別モデルと分類モデルは同様の方法で評価を行う．
 \begin{itemize}
 	\item 評価方法
@@ -163,15 +169,6 @@
 	
 	テストデータセットを判別した際の正解数を測定する．
 	
-	\newpage
-	全削除もあり
-	\item 評価
-	
-	２種類の混同行列を作成すると似たようなものが作成された．
-	\vskip\baselineskip %空白行を追加する
-	２種類のモデルを動かした結果，外見が似ている車両タイプの正解数は少なく，外見が特徴的なものの正解数は多かった．
-	\vskip\baselineskip
-	データセットに含まれる各車両タイプの画像の枚数には差があるが、画像の枚数が少ない車両タイプの正解率が低く、画像の枚数が多い車両タイプの正解率が高くなるわけではなかった。
 	
 
 \end{itemize}
@@ -190,7 +187,27 @@
 \end{figure}
 
 
-\foilhead{\Large 4.モデルに関する考察}
+
+\newpage
+\begin{figure}[htbp]
+	\begin{minipage}[b]{0.2\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{fig/287.jpg}
+		\caption{287系}
+	\end{minipage}
+	\begin{minipage}[b]{0.2\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{fig/683.jpg}
+		\caption{683系}
+	\end{minipage}
+    \begin{minipage}[b]{0.5\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{../paper/chap4/fig/predicted_results}
+		\caption{識別モデルの混同行列}
+	\end{minipage}
+\end{figure}
+
+\foilhead{\Large 6-3.モデルに関する考察}
 
  似た車両で誤判別が多かった．
  
@@ -207,7 +224,7 @@
 \end{itemize}
 
 
-\foilhead{\Large 5.まとめ}
+\foilhead{\Large 7.むすび}
 
 \begin{itemize}
 	\item 画像や動画に写る電車の車両タイプを判別するシステムを開発した．
