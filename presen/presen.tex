@@ -158,11 +158,29 @@
 
 
 \foilhead{\Large  6.モデルの作成 6-1.モデルの学習}
+
+\begin{itemize}
+	\item bestモデル：最高性能のモデル
+	\item lastモデル：最後に作られたモデル（毎回更新される）
+\end{itemize}
+
+学習が一回行われるとlastモデルが更新される．
+
+bestモデルと比較して性能が高いほうが新たなbestモデルになる．
+
+bestモデルが変わらなくなると学習を中断する．
+
+
+
+\newpage
+
+
+%\foilhead{\Large  6-1.モデルの学習}
 %分類モデルと識別モデルを学習させた．
 
 \begin{figure}
 	\centering
-	\includegraphics[width=0.65\linewidth]{fig/results_cls}
+	\includegraphics[width=0.8\linewidth]{fig/results_cls}
 	\caption[分類モデルの学習曲線]{分類モデルの学習曲線}
 	\label{fig:resultscls}
 \end{figure}
