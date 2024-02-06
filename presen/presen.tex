@@ -111,23 +111,33 @@
 
 \foilhead{\Large 5-2.データセット作成の流れ}
 \begin{enumerate}
-	\item YouTubeから動画を保存する
+	\item 作成したWebアプリを用いて(効率的に)YouTubeから動画を保存する
 	\item ランダムなフレームを5000枚保存する
 	\item 電車が写っていないものを削除する
 	\item  (識別用データセット作成時のみ)アノテーションをする
 \end{enumerate}
-各車両タイプごとに行い１７種類の車両タイプのデータセットを作成した．
+17種類の車両タイプのデータセットを作成した．
 
 動画を効率的に保存するためのWebアプリを作成した．
 
 \foilhead{\Large 5-3.動画を効率的に集めるWebアプリ}
-
+課題）
 \begin{itemize}
 	\item 一つの動画に複数種類の電車が写っていると\\データセットをうまく作れない．
 	\item 特定の車両タイプのみが写っている動画を集める必要がある.
-	\item 特定の車両タイプのみが写っている場面を元の動画から\\切り抜きできれば良い.
+\end{itemize}
+解決策）
+\begin{itemize}	
+	\item 効率的に動画を集めるために必要な部分だけを切り抜き連結するWebアプリを作る
 \end{itemize}
 	
+\newpage
+\begin{figure}
+	\centering
+	\includegraphics[width=0.9\linewidth]{fig/frames}
+	\label{fig:frames}
+\end{figure}
+
 
 \newpage
 
@@ -170,7 +180,7 @@ bestモデルと比較して性能が高いほうが新たなbestモデルにな
 
 bestモデルが変わらなくなると学習を中断する．
 
-
+分類モデルと識別モデルはどちらも学習が中断するまで続けた．
 
 \newpage
 
@@ -236,7 +246,7 @@ bestモデルが変わらなくなると学習を中断する．
 	\end{minipage}
     \begin{minipage}[b]{0.5\linewidth}
 		\centering
-		\includegraphics[width=\linewidth]{../paper/chap4/fig/predicted_results}
+		\includegraphics[width=\linewidth]{fig/predict_results.png}
 		\textbf{図 \ref{det_confusion} :識別モデルの混同行列}
 	\end{minipage}
 \end{figure}
